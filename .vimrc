@@ -11,6 +11,10 @@ iab ot to
 "leader key
 let mapleader = ","
 
+" timeoutlenght; dddd interferes a bit with dd....
+set timeout
+set timeoutlen=200 ttimeoutlen=0
+
 " Specify a directory for plugins 
 call plug#begin('~/.vim/plugged')
 "Linter

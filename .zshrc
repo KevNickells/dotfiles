@@ -4,6 +4,7 @@
 alias insatll=install
 alias isntall=install
 alias cd..='cd ..'
+alias ./='~/.'
 
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
