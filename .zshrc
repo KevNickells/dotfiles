@@ -3,6 +3,7 @@
 # Because who needs to type accurately?
 alias insatll=install
 alias isntall=install
+alias cd..='cd ..'
 
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
@@ -10,6 +11,7 @@ alias sz="source ~/.zshrc"
 
 # Because Vim
 alias ZZ="exit"
+alias jj="pwd"
 
 # Because lazy
 alias v="vim"
@@ -23,7 +25,15 @@ alias o="open"
 alias ll="ls -lhA"
 
 # Config yute dem
-#
+
+# Wee grep thing
+
+# Nice colours for grep
+alias grep='grep --color=auto'
+
+# nice colours for git log
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -56,6 +66,7 @@ HIST_STAMPS="dd.mm.yyyy"
 plugins=(
   git
   zsh-autosuggestions
+  history-substring-search 
 )
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -63,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 # You may need to manually set your language environment
-export LANG=en_UK.UTF-8
+export LANG=en_US.UTF-8
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -71,8 +82,12 @@ export LANG=en_UK.UTF-8
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
+
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+  #
+# IRIS config
+
+export PATH
+export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
+
+alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'

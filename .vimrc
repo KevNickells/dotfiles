@@ -167,6 +167,7 @@ inoremap PP <esc>xxpa
 " --follow: Follow symlinks 
 " --glob: Additional conditions for search (in this case ignore everything in the .git/ folder) 
 " --color: Search color options 
+"
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!.git/*" --glob "!*.json" --glob "!*.yaml" --glob "!*.xml" --glob "!*node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0) 
  
 "remap above to tt 
@@ -211,6 +212,16 @@ nnoremap <leader>cp :let @*=expand("%")<cr>
 
 "Copy filename only to clipboard
 nnoremap <leader>cf :let @*=expand("%:t")<cr>
+
+"show full path
+nnoremap <leader>sp :echo expand('%:p')<cr> 
+
+" Show filepath 
+nnoremap ;; :pwd<cr>
+
+" Scroll up / down and centre
+nnoremap H Hzz
+nnoremap L Lzz
 
 "TODO cycle through next thing at the same indent level. 
 "Have to come back to this
