@@ -5,6 +5,7 @@ alias insatll=install
 alias isntall=install
 alias cd..='cd ..'
 alias ./='~/.'
+alias ..='cd ../'
 
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
@@ -20,14 +21,13 @@ alias gst="git status"
 alias ga="git add"
 alias gc="git commit"
 alias gpsh="git push"
+alias gp="git pull"
 alias o="open"
 
 # Because stealing ideas from others   
 alias ll="ls -lhA"
 
 # Config yute dem
-
-# Wee grep thing
 
 # Nice colours for grep
 alias grep='grep --color=auto'
@@ -65,7 +65,7 @@ HIST_STAMPS="dd.mm.yyyy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(
- git
+  git
   zsh-autosuggestions
   history-substring-search 
 )
@@ -89,3 +89,5 @@ export LANG=en_US.UTF-8
 # IRIS config
 
 alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
+alias ag='cd agora'
+alias at='cd agora/athena'
