@@ -27,7 +27,10 @@ let mapleader = ","
 
 " timeoutlenght; dddd interferes a bit with dd....
 set timeout
-set timeoutlen=200 ttimeoutlen=0
+set timeoutlen=300 ttimeoutlen=0
+
+" TODO use mouse to scroll 
+" set mouse=n
 
 " Specify a directory for plugins 
 call plug#begin('~/.vim/plugged')
@@ -38,7 +41,8 @@ Plug 'scrooloose/nerdtree'
 " syntax highlighting
 Plug 'scheakur/vim-scheakur'
 "Fuzzy finder
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 " elm amazingness
 Plug 'elmcast/elm-vim'
 " More colour schemes
@@ -158,18 +162,50 @@ vnoremap <leader>' lb<esc>i'<esc>ea'<esc>v
 
 nnoremap <leader>) lbi(<esc>ea)<esc> 
 vnoremap <leader>) lb<esc>i(<esc>ea)<esc>v 
+nnoremap <leader>( lbi(<esc>ea)<esc> 
+vnoremap <leader>( lb<esc>i(<esc>ea)<esc>v 
 
 nnoremap <leader>] lbi[<esc>ea]<esc> 
 vnoremap <leader>] lb<esc>i[<esc>ea]<esc>v 
+nnoremap <leader>[ lbi[<esc>ea]<esc> 
+vnoremap <leader>[ lb<esc>i[<esc>ea]<esc>v 
+
 
 nnoremap <leader>} lbi{<esc>ea}<esc> 
 vnoremap <leader>} lb<esc>i{<esc>ea}<esc>v 
+nnoremap <leader>{ lbi{<esc>ea}<esc> 
+vnoremap <leader>{ lb<esc>i{<esc>ea}<esc>v 
 
+"Surround current line in quotes; terrifying similar to the previous, you may note
+nnoremap <leader>"" l0i"<esc>A"<esc>
+vnoremap <leader>"" l0<esc>i"<esc>A"<esc>v 
+
+nnoremap <leader>'' l0i'<esc>A'<esc> 
+vnoremap <leader>'' l0<esc>i'<esc>ea'<esc>v 
+
+nnoremap <leader>)) l0i(<esc>A)<esc> 
+vnoremap <leader>)) l0<esc>i(<esc>A)<esc>v 
+nnoremap <leader>(( l0i(<esc>A)<esc> 
+vnoremap <leader>(( l0<esc>i(<esc>A)<esc>v 
+
+nnoremap <leader>]] l0i[<esc>A]<esc> 
+vnoremap <leader>]] l0<esc>i[<esc>A]<esc>v 
+nnoremap <leader>[[ l0i[<esc>A]<esc> 
+vnoremap <leader>[[ l0<esc>i[<esc>A]<esc>v 
+
+
+nnoremap <leader>}} l0i{<esc>A}<esc> 
+vnoremap <leader>}} l0<esc>i{<esc>A}<esc>v 
+nnoremap <leader>{{ l0i{<esc>A}<esc> 
+vnoremap <leader>{{ l0<esc>i{<esc>A}<esc>v 
+
+" escape twice to save
 nnoremap <Esc><Esc> :w<cr>
  
 "paste in insert mode. Arguably shonky.  
 inoremap PP <esc>xxpa 
- 
+
+" Note that the below depends upon ripgrep - brew install ripgrep
 " Text search with fuzzy finder. Parameters:  
 " --column: Show column number 
 " --line-number: Show line number 
@@ -183,7 +219,10 @@ inoremap PP <esc>xxpa
 " --color: Search color options 
 "
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!.git/*" --glob "!*.json" --glob "!*.yaml" --glob "!*.xml" --glob "!*node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0) 
- 
+
+"fzf as glbal search ting
+set rtp+=/usr/local/opt/fzf
+
 "remap above to tt 
 :nnoremap tt :Find  
  

@@ -85,9 +85,16 @@ export LANG=en_US.UTF-8
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 
 # For a full list of active aliases, run `alias`.
-  #
 # IRIS config
 
 alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
 alias ag='cd ~/agora'
 alias at='cd ~/agora/athena'
+
+# NOTE RElies upon ripgrep, install with  brew install reipgrep
+# --files: List files that would be searched but do not search
+# --no-ignore: Do not respect .gitignore, etc...
+# --hidden: Search hidden files and folders
+# --follow: Follow symlinks
+# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
