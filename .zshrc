@@ -89,5 +89,5 @@ export LANG=en_US.UTF-8
 # IRIS config
 
 alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
-alias ag='cd agora'
-alias at='cd agora/athena'
+alias ag='cd ~/agora'
+alias at='cd ~/agora/athena'
