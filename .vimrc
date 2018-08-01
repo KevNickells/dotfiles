@@ -1,3 +1,17 @@
+" TODO 
+" nnoremap <leader>rc :-1read $HOME/Documents/Snippets/SkeletonRubyClass<CR>A 
+" context=dependant snippets - eg ,c brings up a class snippet based on filetype
+
+"TODO cycle through next thing at the same indent level. 
+"Have to come back to this
+"nnoremap <leader>n 0vwy/"+p<cr>n
+
+"TODO search for current wordwith tt 
+" nnoremap & yw:Find<D-v><cr> 
+
+"TODO new blank window in this folder with ,e. 
+"nnoremap <leader>e :vsplit <D-v><cr><cr>
+
 " words I can't spell. iab == iabbrev
 iab strign string
 iab stirng string
@@ -107,11 +121,7 @@ match OverLength /\%81v.\+/
 "go to tags
 command! MakeTags !ctags -R .
 
-" TODO 
-" nnoremap <leader>rc :-1read $HOME/Documents/Snippets/SkeletonRubyClass<CR>A 
-" nnoremap <leader>rm :-1read $HOME/Documents/Snippets/SkeletonRubyMethod<CR>A 
-" nnoremap <leader>pcl :-1read $HOME/Documents/Snippets/SkeletonPythonClass<CR>f(a
-" "Probably should amend this to be a file-spefic global command
+"
 
 "upper-case current word with ctrl+u
 :nnoremap <c-u> veU<esc>
@@ -177,10 +187,7 @@ command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-h
 "remap above to tt 
 :nnoremap tt :Find  
  
-" TODO search for current wordwith tt 
-" nnoremap & yw:Find<D-v><cr> 
-
-"move between buffers with ctrl+l/ h
+" move between buffers with ctrl+l/ h
 nnoremap <C-h> <C-w>h 
 nnoremap <C-l> <C-w>l
 inoremap <C-h> <esc><C-w>h 
@@ -192,9 +199,6 @@ nnoremap <C-k> :bnext<cr>
 
 "new window 
 nnoremap vv :vsplit<cr><C-w>l
-
-"TODO new blank window in this folder with ,e. 
-"nnoremap <leader>e :vsplit <D-v><cr><cr>
 
 "tab text while in visual mode
 vnoremap <Tab> > 
@@ -226,10 +230,6 @@ nnoremap ;; :pwd<cr>
 " Scroll up / down and centre
 nnoremap H Hzz
 nnoremap L Lzz
-
-"TODO cycle through next thing at the same indent level. 
-"Have to come back to this
-"nnoremap <leader>n 0vwy/"+p<cr>n
 
 "Copy all file to clipboard [2<C-o> is again returning to current position]
 nnoremap <leader>ca ggvG$y<esc>2<C-o>

@@ -46,7 +46,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/iris/.oh-my-zsh"
+export ZSH="/Users/kev/.oh-my-zsh"
 
 ZSH_THEME="random"
 
@@ -65,7 +65,7 @@ HIST_STAMPS="dd.mm.yyyy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(
-  git
+ git
   zsh-autosuggestions
   history-substring-search 
 )
@@ -87,8 +87,5 @@ export LANG=en_US.UTF-8
 # For a full list of active aliases, run `alias`.
   #
 # IRIS config
-
-export PATH
-export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 
 alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
