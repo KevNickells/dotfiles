@@ -70,6 +70,8 @@ plugins=(
   history-substring-search 
 )
 
+setopt hist_ignore_all_dups
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -98,3 +100,9 @@ alias at='cd ~/agora/athena'
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+source $HOME/.zshenv
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

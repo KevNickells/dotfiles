@@ -51,6 +51,9 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ngmy/vim-rubocop'
 " Matches coceblocks with % 
 Plug 'adelarsq/vim-matchit'
+" Git ting yo
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 "Colourscheme stuff
@@ -64,14 +67,16 @@ endtry
 set tw=80
 
 " Does this even work?
-"Enable folding  
+"  Enable folding  
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
-"Set clipboard as global register for vim
-set clipboard=unnamed
+" Requires brew install macvim --withoverride-system-vim 
+" Set clipboard as global register for vim
+set clipboard=unnamed  
+
 
 "line numbers
 set number
