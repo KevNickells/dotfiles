@@ -138,6 +138,9 @@ command! MakeTags !ctags -R .
 "Fuzzy file finder. 
 nnoremap ff :FZF<CR>
 
+" Because apparently by default backspace doesn't do what you'd expect
+set backspace=indent,eol,start
+
 "Spacebar turn on/ off highlighting for search term; displays same
 noremap <Space> :set hlsearch! hlsearch?<CR>
 
@@ -223,7 +226,7 @@ inoremap PP <esc>xxpa
 " --glob: Additional conditions for search (in this case ignore everything in the .git/ folder) 
 " --color: Search color options 
 "
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!.git/*" --glob "!*.json" --glob "!*.yaml" --glob "!*.xml" --glob "!*node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0) 
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!.git/*" --glob "!CHANGELOG*" --glob "!*.json" --glob "!*.yaml" --glob "!*.xml" --glob "!*node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0) 
 
 "fzf as glbal search ting
 set rtp+=/usr/local/opt/fzf

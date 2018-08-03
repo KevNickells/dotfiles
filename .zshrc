@@ -15,9 +15,18 @@ alias sz="source ~/.zshrc"
 alias ZZ="exit"
 alias jj="pwd"
 
+# Hopefully temporary thing; remove npm logs before doing a git status. This is
+# in lieu of faffing about with npm. 
+function gst {
+  if ls npm-debug.log* 1> /dev/null 2>&1 
+  then
+    rm npm-debug.log*
+  fi;
+  git status
+}
+
 # Because lazy
 alias v="vim"
-alias gst="git status"
 alias ga="git add"
 alias gc="git commit -m"
 alias gpsh="git push"
@@ -33,7 +42,7 @@ alias ll="ls -lhA"
 alias grep='grep --color=auto'
 
 # nice colours for git log
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
