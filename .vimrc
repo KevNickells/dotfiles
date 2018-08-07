@@ -21,6 +21,7 @@ iab ojbect object
 iab funciton function
 iab gatehring gathering
 iab ot to 
+iab bp binding.pry
 
 "leader key
 let mapleader = ","
@@ -36,7 +37,7 @@ set timeoutlen=300 ttimeoutlen=0
 call plug#begin('~/.vim/plugged')
 "Linter
 Plug 'w0rp/ale'
-"File broswer
+"File browser 
 Plug 'scrooloose/nerdtree'
 " syntax highlighting
 Plug 'scheakur/vim-scheakur'
@@ -226,7 +227,7 @@ inoremap PP <esc>xxpa
 " --glob: Additional conditions for search (in this case ignore everything in the .git/ folder) 
 " --color: Search color options 
 "
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!.git/*" --glob "!CHANGELOG*" --glob "!*.json" --glob "!*.yaml" --glob "!*.xml" --glob "!*node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0) 
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!*.po*" --glob "!.git/*" --glob "!CHANGELOG*" --glob "!*.json" --glob "!*.yaml" --glob "!*.xml" --glob "!*node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0) 
 
 "fzf as glbal search ting
 set rtp+=/usr/local/opt/fzf
@@ -273,6 +274,9 @@ nnoremap <leader>sp :echo expand('%:p')<cr>
 
 " Show filepath 
 nnoremap ;; :pwd<cr>
+
+" semi-colon at the end of the current line in insert mode
+inoremap ;; <esc>A;<esc>
 
 " Scroll up / down and centre
 nnoremap H Hzz

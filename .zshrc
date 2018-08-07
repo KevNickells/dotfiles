@@ -1,4 +1,10 @@
 # My tings
+#
+plugins=(
+  git
+  zsh-autosuggestions
+  history-substring-search 
+)
 
 # Because who needs to type accurately?
 alias insatll=install
@@ -6,6 +12,9 @@ alias isntall=install
 alias cd..='cd ..'
 alias ./='~/.'
 alias ..='cd ../'
+
+# check running processes
+processes="lsof -wni tcp:3000"
 
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
@@ -18,9 +27,11 @@ alias jj="pwd"
 # Hopefully temporary thing; remove npm logs before doing a git status. This is
 # in lieu of faffing about with npm. 
 function gst {
-  if ls npm-debug.log* 1> /dev/null 2>&1 
+raw=(npm-debug*)
+count=${#raw[@]}
+if (( count > 0 ))  
   then
-    rm npm-debug.log*
+    rm npm-debug* 
   fi;
   git status
 }
@@ -33,11 +44,18 @@ alias gpsh="git push"
 alias gp="git pull"
 alias o="open"
 
+# Iris lazy
+alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
+alias ag='cd ~/agora'
+alias at='cd ~/agora/athena'
+
+
 # Because stealing ideas from others   
 alias ll="ls -lhA"
 
-# Config yute dem
+alias cath="head -10"
 
+# Config yute dem
 # Nice colours for grep
 alias grep='grep --color=auto'
 
@@ -67,18 +85,12 @@ HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
- COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # see 'man strftime' for details; time format
 HIST_STAMPS="dd.mm.yyyy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(
-  git
-  zsh-autosuggestions
-  history-substring-search 
-)
-
 setopt hist_ignore_all_dups
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -97,10 +109,6 @@ export LANG=en_US.UTF-8
 
 # For a full list of active aliases, run `alias`.
 # IRIS config
-
-alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
-alias ag='cd ~/agora'
-alias at='cd ~/agora/athena'
 
 # NOTE RElies upon ripgrep, install with  brew install reipgrep
 # --files: List files that would be searched but do not search
