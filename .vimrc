@@ -12,6 +12,13 @@
 "TODO new blank window in this folder with ,e. 
 "nnoremap <leader>e :vsplit <D-v><cr><cr>
 
+"TODO save strips whitespace from end of line (eg :%s\ $\\g)
+" except this shegged the vimrc
+
+"TODO copy  & paste current code block
+" nnoremap <Tab><Tab> v%lyO<esc>p
+
+
 " words I can't spell. iab == iabbrev
 iab strign string
 iab stirng string
@@ -22,16 +29,17 @@ iab funciton function
 iab gatehring gathering
 iab ot to 
 iab bp binding.pry
+iab thubmnail thumbnail
 
 "leader key
 let mapleader = ","
 
-" timeoutlenght; dddd interferes a bit with dd....
+" timeoutlength; dddd interferes a bit with dd....
 set timeout
 set timeoutlen=300 ttimeoutlen=0
 
-" TODO use mouse to scroll 
-" set mouse=n
+" Scroll with mouse. Possibly could do with centring the screen?
+set mouse=n
 
 " Specify a directory for plugins 
 call plug#begin('~/.vim/plugged')
@@ -77,7 +85,6 @@ augroup END
 " Requires brew install macvim --withoverride-system-vim 
 " Set clipboard as global register for vim
 set clipboard=unnamed  
-
 
 "line numbers
 set number
@@ -130,8 +137,6 @@ match OverLength /\%81v.\+/
 
 "go to tags
 command! MakeTags !ctags -R .
-
-"
 
 "upper-case current word with ctrl+u
 :nnoremap <c-u> veU<esc>
@@ -227,7 +232,7 @@ inoremap PP <esc>xxpa
 " --glob: Additional conditions for search (in this case ignore everything in the .git/ folder) 
 " --color: Search color options 
 "
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!*.po*" --glob "!.git/*" --glob "!CHANGELOG*" --glob "!*.json" --glob "!*.yaml" --glob "!*.xml" --glob "!*node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0) 
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!*.po*" --glob "!.git/*" --glob "!CHANGELOG*" --glob "!*.json" --glob "!*.yaml" --glob "!*.log" --glob "!*.xml" --glob "!*node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0) 
 
 "fzf as glbal search ting
 set rtp+=/usr/local/opt/fzf
@@ -254,9 +259,6 @@ vnoremap <Tab> >
 "copy current parenteses 
 nnoremap <Tab> v%lyO<esc>
 
-"copy  & paste current code block
-nnoremap <Tab><Tab> v%lyO<esc>p
-
 " delete to end of file
 nnoremap dddd dG
 
@@ -282,5 +284,9 @@ inoremap ;; <esc>A;<esc>
 nnoremap H Hzz
 nnoremap L Lzz
 
-"Copy all file to clipboard [2<C-o> is again returning to current position]
-nnoremap <leader>ca ggvG$y<esc>2<C-o>
+" Make windows the same size
+nnoremap <C-w> <C-w>= 
+
+"Copy all file to clipboard [2<C-o> is returning to current cursor position and
+"centering]
+nnoremap <leader>ca ggvG$y<esc>2<C-o><Enter>

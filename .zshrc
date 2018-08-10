@@ -1,3 +1,6 @@
+# TODO = vim / git / open modified files
+# TODO cath to cat only the head
+
 # My tings
 #
 plugins=(
@@ -12,6 +15,7 @@ alias isntall=install
 alias cd..='cd ..'
 alias ./='~/.'
 alias ..='cd ../'
+alias rspect='rspec'
 
 # check running processes
 processes="lsof -wni tcp:3000"
@@ -36,6 +40,12 @@ if (( count > 0 ))
   git status
 }
 
+function killy {
+  processes=$(pgrep ruby)
+  kill -9 $processes;
+  runathena
+ }
+
 # Because lazy
 alias v="vim"
 alias ga="git add"
@@ -43,12 +53,15 @@ alias gc="git commit -m"
 alias gpsh="git push"
 alias gp="git pull"
 alias o="open"
+alias c="clear"
 
 # Iris lazy
 alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
+#doubly lazy
+alias rat='runathena'
+alias ra='runathena'
 alias ag='cd ~/agora'
 alias at='cd ~/agora/athena'
-
 
 # Because stealing ideas from others   
 alias ll="ls -lhA"
