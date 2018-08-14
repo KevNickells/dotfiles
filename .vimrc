@@ -13,12 +13,15 @@
 "nnoremap <leader>e :vsplit <D-v><cr><cr>
 
 "TODO save strips whitespace from end of line (eg :%s\ $\\g)
-" except this shegged the vimrc
+" except this shegged the vimrc so should probably  be ignored for this file
+" only
 
 "TODO copy  & paste current code block
 " nnoremap <Tab><Tab> v%lyO<esc>p
 
 " TODO shortcut to open browser & refresh?
+
+" TODO fuzzy finder in buffers - see: https://github.com/junegunn/fzf/wiki/Examples-(vim)
 
 " words I can't spell. iab == iabbrev
 iab strign string
