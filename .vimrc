@@ -20,7 +20,6 @@
 
 " TODO shortcut to open browser & refresh?
 
-
 " words I can't spell. iab == iabbrev
 iab strign string
 iab stirng string
@@ -251,6 +250,11 @@ inoremap <C-l> <esc><C-w>l
 "cycle through open buffers in current window
 nnoremap <C-j> :bprevious<cr>
 nnoremap <C-k> :bnext<cr>
+
+" Show buffers / delete from buffer. 
+" Makes more sense to be on bb but that's a navigation command....
+nnoremap mm :ls
+nnoremap md :bdelete 
 
 "new window 
 nnoremap vv :vsplit<cr><C-w>l
