@@ -161,9 +161,9 @@ nnoremap <Enter> zz
 nnoremap n nzz
 nnoremap N Nzz
 
-"edit and source vimrc quickly
+"edit and source vimrc quickly, remove it from buffer
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :w<cr>:source $MYVIMRC<cr><esc>:q<cr> 
+nnoremap <leader>sv :w<cr>:source $MYVIMRC<cr><esc>:bdelete<cr>
 
 " highlights all and aligns
 " the 2<C-o> is taking you back two positions, FYI
@@ -256,8 +256,10 @@ nnoremap <C-k> :bnext<cr>
 
 " Show buffers / delete from buffer. 
 " Makes more sense to be on bb but that's a navigation command....
-nnoremap mm :ls
-nnoremap md :bdelete 
+nnoremap mm :ls<cr>
+"Remove current file from buffer
+nnoremap mmm :bdelete<cr>
+nnoremap md :bdelete  
 
 "new window 
 nnoremap vv :vsplit<cr><C-w>l
@@ -299,3 +301,29 @@ nnoremap <C-w> <C-w>=
 "Copy all file to clipboard [2<C-o> is returning to current cursor position and
 "centering]
 nnoremap <leader>ca ggvG$y<esc>2<C-o><Enter>
+
+
+" Save session on close; stolen from here: http://vim.wikia.com/wiki/Go_away_and_come_back
+" Seemingly not working right now... come back to.
+function! MakeSession()
+  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+  if (filewritable(b:sessiondir) != 2)
+    exe 'silent !mkdir -p ' b:sessiondir
+    redraw!
+  endif
+  let b:filename = b:sessiondir . '/session.vim'
+  exe "mksession! " . b:filename
+endfunction
+
+function! LoadSession()
+  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+  let b:sessionfile = b:sessiondir . "/session.vim"
+  if (filereadable(b:sessionfile))
+    exe 'source ' b:sessionfile
+  else
+    echo "No session loaded."
+  endif
+endfunction
+
+au VimEnter * nested :call LoadSession()
+au VimLeave * :call MakeSession()
