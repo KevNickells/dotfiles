@@ -18,6 +18,8 @@
 "TODO copy  & paste current code block
 " nnoremap <Tab><Tab> v%lyO<esc>p
 
+" TODO shortcut to open browser & refresh?
+
 
 " words I can't spell. iab == iabbrev
 iab strign string
