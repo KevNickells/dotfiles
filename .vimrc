@@ -21,8 +21,6 @@
 
 " TODO shortcut to open browser & refresh?
 
-" TODO fuzzy finder in buffers - see: https://github.com/junegunn/fzf/wiki/Examples-(vim)
-
 " words I can't spell. iab == iabbrev
 iab strign string
 iab stirng string
@@ -238,7 +236,26 @@ inoremap PP <esc>xxpa
 "
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!*.po*" --glob "!.git/*" --glob "!CHANGELOG*" --glob "!*.json" --glob "!*.yaml" --glob "!*.log" --glob "!*.xml" --glob "!*node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0) 
 
-"fzf as glbal search ting
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+nnoremap <silent> <Leader><Enter> :call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '+m',
+\   'down':    len(<sid>buflist()) + 2
+\ })<CR>
+
+
+"fzf as global search ting
 set rtp+=/usr/local/opt/fzf
 
 "remap above to tt 
@@ -277,10 +294,10 @@ nnoremap dddd dG
 nnoremap qqq :q!<cr>
 
 "Copy filepath to clipboard
-nnoremap <leader>cp :let @*=expand("%")<cr>
+nnoremap <silent> <leader>cp :let @*=expand("%")<cr>:echo @*<cr>
 
 "Copy filename only to clipboard
-nnoremap <leader>cf :let @*=expand("%:t")<cr>
+nnoremap <silent> <leader>cf :let @*=expand("%:t")<cr>:echo @*<cr>
 
 "show full path
 nnoremap <leader>sp :echo expand('%:p')<cr> 
