@@ -1,8 +1,3 @@
-" TODO escape twice to save; strip whitespace from end of line
-"nnoremap <silent> <Esc><Esc> :%s/ $//g<cr><bar>:w<cr>
-"https://stackoverflow.com/questions/7225509/vim-silent-nmap
-" Needs a try catch to get rid of annoying output.
-
 " TODO
 " nnoremap <leader>rc :-1read $HOME/Documents/Snippets/SkeletonRubyClass<CR>A
 " context=dependant snippets - eg ,c brings up a class snippet based on filetype
@@ -16,7 +11,6 @@
 
 "TODO new blank window in this folder with ,e.
 "nnoremap <leader>e :vsplit <D-v><cr><cr>
-
 
 "TODO copy  & paste current code block
 " nnoremap <Tab><Tab> v%lyO<esc>p
