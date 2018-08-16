@@ -218,7 +218,7 @@ nnoremap <leader>{{ l0i{<esc>A}<esc>
 vnoremap <leader>{{ l0<esc>i{<esc>A}<esc>v
 
 " escape twice to save
-nnoremap <Esc><Esc> :w<cr>
+nnoremap <Esc><Esc> :silent!:%s/ $//g<cr><bar>:w<cr>
 nnoremap wh :%s/ $//g<cr>
 
 
