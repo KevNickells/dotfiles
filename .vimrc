@@ -30,6 +30,7 @@ iab gatehring gathering
 iab ot to
 iab bp binding.pry
 iab thubmnail thumbnail
+iab thubmnails thumbnails
 
 "leader key
 let mapleader = ","
