@@ -17,6 +17,8 @@
 
 " TODO shortcut to open browser & refresh?
 
+" TODO Change background based on mode; highlight currently active panel?
+
 " words I can't spell. iab == iabbrev
 iab strign string
 iab stirng string
