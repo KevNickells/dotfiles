@@ -1,12 +1,17 @@
 # TODO = vim / git / open modified files
-# TODO cath to cat only the head
+# Because Linux and Mac don't always play nice
+SYSTEM=$(uname)
+
+# Because my shell on Linux doesn't open here and I can't be bothered to make to
+# do otherwise 
+cd ~/
 
 # My tings
-#
 plugins=(
   git
   zsh-autosuggestions
   history-substring-search 
+  git battery
 )
 
 # Because who needs to type accurately?
@@ -17,12 +22,26 @@ alias ./='~/.'
 alias ..='cd ../'
 alias rspect='rspec'
 
+
 # check running processes
 processes="lsof -wni tcp:3000"
 
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
+alias rs="rails server -e development -b 0.0.0.0 -p 3000"
+
+# open current folder 
+function open_this_folder {
+  if [ "$SYSTEM" = "Linux" ]; then
+    dolphin </dev/null &>/dev/null . & 
+  elif [ "$SYSTEM" = "Darwin" ]; then
+    open .
+  else
+    echo "check open_this_folder() in .zshrc; $SYSTEM is not a recognised system"
+  fi
+}
+
 
 # Because Vim
 alias ZZ="exit"
@@ -31,20 +50,21 @@ alias jj="pwd"
 # Hopefully temporary thing; remove npm logs before doing a git status. This is
 # in lieu of faffing about with npm. 
 function gst {
-raw=(npm-debug*)
-count=${#raw[@]}
-if (( count > 0 ))  
+  raw=(npm-debug*)
+  count=${#raw[@]}
+  if (( count > 0 ))  
   then
     rm npm-debug* 
   fi;
   git status
 }
 
+# kill off local server running & restart
 function killy {
   processes=$(pgrep ruby)
   kill -9 $processes;
   runathena
- }
+}
 
 # Because lazy
 alias v="vim"
@@ -52,8 +72,9 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gpsh="git push"
 alias gp="git pull"
-alias o="open"
 alias c="clear"
+alias cath="head -10"
+alias o="open_this_folder"
 
 # Iris lazy
 alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
@@ -65,8 +86,6 @@ alias at='cd ~/agora/athena'
 
 # Because stealing ideas from others   
 alias ll="ls -lhA"
-
-alias cath="head -10"
 
 # Config yute dem
 # Nice colours for grep
@@ -86,12 +105,12 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kev/.oh-my-zsh"
+export ZSH="/home/kev/.oh-my-zsh"
 
 ZSH_THEME="random"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+  # sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to enable command auto-correction.
@@ -106,7 +125,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 setopt hist_ignore_all_dups
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -121,18 +140,18 @@ export LANG=en_US.UTF-8
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 
 # For a full list of active aliases, run `alias`.
-# IRIS config
+  # IRIS config
 
-# NOTE RElies upon ripgrep, install with  brew install reipgrep
+# NOTE RElies upon ripgrep, install with  install ripgrep
 # --files: List files that would be searched but do not search
-# --no-ignore: Do not respect .gitignore, etc...
-# --hidden: Search hidden files and folders
-# --follow: Follow symlinks
-# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+  # --no-ignore: Do not respect .gitignore, etc...
+    # --hidden: Search hidden files and folders
+    # --follow: Follow symlinks
+    # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# source $(brew --prefix nvm)/nvm.sh
 source $HOME/.zshenv
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
