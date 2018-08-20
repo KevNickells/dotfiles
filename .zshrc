@@ -3,14 +3,14 @@
 SYSTEM=$(uname)
 
 # Because my shell on Linux doesn't open here and I can't be bothered to make to
-# do otherwise 
+# do otherwise
 cd ~/
 
 # My tings
 plugins=(
   git
   zsh-autosuggestions
-  history-substring-search 
+  history-substring-search
   git battery
 )
 
@@ -31,10 +31,10 @@ alias zs="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 alias rs="rails server -e development -b 0.0.0.0 -p 3000"
 
-# open current folder 
+# open current folder
 function open_this_folder {
   if [ "$SYSTEM" = "Linux" ]; then
-    dolphin </dev/null &>/dev/null . & 
+    dolphin </dev/null &>/dev/null . &
   elif [ "$SYSTEM" = "Darwin" ]; then
     open .
   else
@@ -48,13 +48,13 @@ alias ZZ="exit"
 alias jj="pwd"
 
 # Hopefully temporary thing; remove npm logs before doing a git status. This is
-# in lieu of faffing about with npm. 
+# in lieu of faffing about with npm.
 function gst {
   raw=(npm-debug*)
   count=${#raw[@]}
-  if (( count > 0 ))  
+  if (( count > 0 ))
   then
-    rm npm-debug* 
+    rm npm-debug*
   fi;
   git status
 }
@@ -72,6 +72,7 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gpsh="git push"
 alias gp="git pull"
+alias glf="git show --pretty="" --name-only HEAD" # git last files amended
 alias c="clear"
 alias cath="head -10"
 alias o="open_this_folder"
@@ -84,7 +85,7 @@ alias ra='runathena'
 alias ag='cd ~/agora'
 alias at='cd ~/agora/athena'
 
-# Because stealing ideas from others   
+# Because stealing ideas from others
 alias ll="ls -lhA"
 
 # Config yute dem
@@ -109,20 +110,19 @@ export ZSH="/home/kev/.oh-my-zsh"
 
 ZSH_THEME="random"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-  # sensitive completion must be off. _ and - will be interchangeable.
+# hyphen insensitive completion
 HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to enable command auto-correction.
+# enable auto-correction.
 ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
+# red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# see 'man strftime' for details; time format
+# time format
 HIST_STAMPS="dd.mm.yyyy"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Ignores duplicates in autosearch
 setopt hist_ignore_all_dups
 
 source ~/
