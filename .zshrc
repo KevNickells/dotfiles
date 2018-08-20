@@ -1,5 +1,8 @@
-# TODO = vim / git / open modified files
-# Because Linux and Mac don't always play nice
+# TODO = vim / git / open most recently  modified files
+# So at the moment that means taking the output of
+# alias glf="git show --pretty="" --name-only HEAD"
+# And passing it to vim
+
 SYSTEM=$(uname)
 
 # Because my shell on Linux doesn't open here and I can't be bothered to make to
