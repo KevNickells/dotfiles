@@ -1,3 +1,11 @@
+# git config --global elm-stuff.json ~/.gitignore_global
+#
+# At some point in the future I will wonder why something hasn't updated when it
+# should have
+# The above is the command that adds something to a global ignore file, outside
+# fo the current project. This was a 'hopefully temporary' workaround. I hope
+# this helps you, future me
+
 SYSTEM=$(uname)
 
 # Because my shell on Linux doesn't open here and I can't be bothered to make to
