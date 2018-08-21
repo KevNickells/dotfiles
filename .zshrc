@@ -1,8 +1,3 @@
-# TODO = vim / git / open most recently  modified files
-# So at the moment that means taking the output of
-# alias glf="git show --pretty="" --name-only HEAD"
-# And passing it to vim
-
 SYSTEM=$(uname)
 
 # Because my shell on Linux doesn't open here and I can't be bothered to make to
@@ -66,7 +61,8 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gpsh="git push"
 alias gp="git pull"
-alias glf="git show --pretty="" --name-only HEAD" # git last files amended
+alias grf="git show --pretty="" --name-only HEAD" # git last files amended
+alias vr"v `grf`" # open last files amended in vim.
 alias c="clear"
 alias cath="head -10"
 alias o="open_this_folder"

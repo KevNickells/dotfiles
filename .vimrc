@@ -1,3 +1,4 @@
+
 " TODO
 " nnoremap <leader>rc :-1read $HOME/Documents/Snippets/SkeletonRubyClass<CR>A
 " context=dependant snippets - eg ,c brings up a class snippet based on filetype
