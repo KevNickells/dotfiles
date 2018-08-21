@@ -34,7 +34,7 @@ alias zs="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 alias rs="rails server -e development -b 0.0.0.0 -p 3000"
 
-# open current folder
+# open current folder; note that functions don't seem to work as single letters
 function open_this_folder {
   if [ "$SYSTEM" = "Linux" ]; then
     dolphin </dev/null &>/dev/null . &
@@ -61,13 +61,6 @@ function gst {
   git status
 }
 
-# kill off local server running & restart
-function killy {
-  processes=$(pgrep ruby)
-  kill -9 $processes;
-  runathena
-}
-
 # Because lazy
 alias v="vim"
 alias ga="git add"
@@ -78,6 +71,8 @@ alias glf="git show --pretty="" --name-only HEAD" # git last files amended
 alias c="clear"
 alias cath="head -10"
 alias o="open_this_folder"
+# kill off local server running & restart
+alias atr='kill -9 $(pgrep ruby); at; runathena'
 
 # Iris lazy
 alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
