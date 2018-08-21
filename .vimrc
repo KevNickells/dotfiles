@@ -29,7 +29,6 @@ iab ojbect object
 iab funciton function
 iab gatehring gathering
 iab ot to
-iab bp binding.pry
 iab thubmnail thumbnail
 iab thubmnails thumbnails
 
@@ -220,7 +219,7 @@ nnoremap <Esc><Esc> :silent!:%s/ $//g<cr><bar>:w<cr>
 nnoremap wh :%s/ $//g<cr>
 
 
-"paste in insert mode. Arguably shonky.
+"paste in insert mode. Doesn't really work right
 inoremap PP <esc>xxpa<Space>
 
 " Note that the below depends upon ripgrep - brew install ripgrep
@@ -308,6 +307,10 @@ nnoremap ;; :pwd<cr>
 
 " semi-colon at the end of the current line in insert mode
 inoremap ;; <esc>A;<esc>
+
+inoremap bp binding.pry
+" This might make more sense as a contenxtual debugger TODO
+nnoremap bp Obinding.pry<esc>
 
 " Scroll up / down and centre
 nnoremap H Hzz
