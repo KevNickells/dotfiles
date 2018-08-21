@@ -61,8 +61,8 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gpsh="git push"
 alias gp="git pull"
-alias grf="git show --pretty="" --name-only HEAD" # git last files amended
-alias vr"v `grf`" # open last files amended in vim.
+alias grf="git show --pretty='' --name-only HEAD" # git last files amended
+alias vr="v `grf | tr '\n' ' '`" # open last files amended in vim.
 alias c="clear"
 alias cath="head -10"
 alias o="open_this_folder"
