@@ -51,10 +51,9 @@ alias ZZ="exit"
 alias jj="pwd"
 
 # Hopefully temporary thing; remove npm logs before doing a git status. This is
-# in lieu of faffing about with npm.
+# in lieu of faffing about with npm. Needs to have quiet output TODO
 function gst {
-  raw=(npm-debug*)
-  count=${#raw[@]}
+  count = ls npm-debug* -l | wc -l
   if (( count > 0 ))
   then
     rm npm-debug*
