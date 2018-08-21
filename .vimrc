@@ -20,6 +20,8 @@
 
 " TODO Change background based on mode; highlight currently active panel?
 
+" TODO search for current word in open buffers only
+
 " words I can't spell. iab == iabbrev
 iab strign string
 iab stirng string
