@@ -25,7 +25,6 @@ alias ./='~/.'
 alias ..='cd ../'
 alias rspect='rspec'
 
-
 # check running processes
 processes="lsof -wni tcp:3000"
 
@@ -76,9 +75,8 @@ alias atr='kill -9 $(pgrep ruby); at; runathena'
 
 # Iris lazy
 alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
+
 #doubly lazy
-alias rat='runathena'
-alias ra='runathena'
 alias ag='cd ~/agora'
 alias at='cd ~/agora/athena'
 
@@ -96,7 +94,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# Add RVM to PATH for scripting.
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # If you come from bash you might have to change your $PATH.
@@ -119,7 +117,7 @@ COMPLETION_WAITING_DOTS="true"
 # time format
 HIST_STAMPS="dd.mm.yyyy"
 
-# Ignores duplicates in autosearch
+# Ignores duplicates history
 setopt hist_ignore_all_dups
 
 source ~/
