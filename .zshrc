@@ -1,9 +1,9 @@
-# git config --global elm-stuff.json ~/.gitignore_global
-#
+# ~/.gitignore_global
+
 # At some point in the future I will wonder why something hasn't updated when it
 # should have
 # The above is the command that adds something to a global ignore file, outside
-# fo the current project. This was a 'hopefully temporary' workaround. I hope
+# of the current project. This was a 'hopefully temporary' workaround. I hope
 # this helps you, future me
 
 SYSTEM=$(uname)
@@ -70,6 +70,7 @@ alias gc="git commit -m"
 alias gpsh="git push"
 alias gp="git pull"
 alias grf="git show --pretty='' --name-only HEAD" # git last files amended
+alias lg="lazygit"
 alias vr="v `git show --pretty='' --name-only HEAD | tr '\n' ' '`" # open last files amended in vim; nearly working, just need to lop off root folder
 alias c="clear"
 alias cath="head -10"
