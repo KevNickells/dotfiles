@@ -1,15 +1,14 @@
 # ~/.gitignore_global
-
 # At some point in the future I will wonder why something hasn't updated when it
-# should have
-# The above is the command that adds something to a global ignore file, outside
-# of the current project. This was a 'hopefully temporary' workaround. I hope
-# this helps you, future me
+# should have. The above is the command that adds something to a global ignore
+# file, outside of the current project. This was a 'hopefully temporary'
+# workaround. I hope this helps you, future me
 
 SYSTEM=$(uname)
 
 # Because my shell on Linux doesn't open here and I can't be bothered to make to
 # do otherwise
+# TODO but I really should because it's annoying on my work computer.
 cd ~/
 
 # My tings
@@ -26,6 +25,7 @@ alias isntall=install
 alias cd..='cd ..'
 alias ./='~/.'
 alias ..='cd ../'
+alias ...='cd ~/'
 alias rspect='rspec'
 
 # check running processes
@@ -127,17 +127,17 @@ setopt hist_ignore_all_dups
 
 source ~/
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# User configuration
+
+# This will need looking at for Linux
+if [ "$SYSTEM" = "Darwin" ]; then
+  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
 
 # For a full list of active aliases, run `alias`.
   # IRIS config
