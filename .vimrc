@@ -237,7 +237,7 @@ inoremap PP <esc>xxpa<Space>
 " --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 " --color: Search color options
 "
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!*.po*" --glob "!.git/*" --glob "!CHANGELOG*" --glob "!*.json" --glob "!*.yaml" --glob "!*.log" --glob "!*.xml" --glob "!*node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!*.po*" --glob "!.git/*" --glob "!CHANGELOG*" --glob "!*.json" --glob "!*.yaml" --glob "!*.log" --glob "!Library/*" --glob "!*.xml" --glob "!node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
 " <leader><Enter> - fuzzy search in current buffers
 function! s:buflist()
