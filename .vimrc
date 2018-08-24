@@ -250,8 +250,8 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 "Remove current file from buffer
 nnoremap mm :bdelete<cr>
 
-"Remove current file from buffer
-nnoremap mmmm :bufdo bd<cr>
+"Remove all files from buffer
+nnoremap mmm :bufdo bd<cr>
 
 "fzf as global search ting
 set rtp+=/usr/local/opt/fzf
