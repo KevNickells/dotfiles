@@ -9,6 +9,7 @@
 
 "TODO search for current wordwith tt
 " nnoremap & yw:Find<D-v><cr>
+" should be yt [non alpha / numeric / - _ char]
 
 "TODO new blank window in this folder with ,e.
 "nnoremap <leader>e :vsplit <D-v><cr><cr>
