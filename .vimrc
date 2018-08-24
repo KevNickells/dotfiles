@@ -1,27 +1,21 @@
-
+" TODO tidy up - abbreviations in one file, nnoremaps another etc?
 " TODO
 " nnoremap <leader>rc :-1read $HOME/Documents/Snippets/SkeletonRubyClass<CR>A
 " context=dependant snippets - eg ,c brings up a class snippet based on filetype
-
-"TODO cycle through next thing at the same indent level.
+" TODO cycle through next thing at the same indent level.
 "Have to come back to this
 "nnoremap <leader>n 0vwy/"+p<cr>n
-
-"TODO search for current wordwith tt
+" TODO search for current wordwith tt
 " nnoremap & yw:Find<D-v><cr>
 " should be yt [non alpha / numeric / - _ char]
-
-"TODO new blank window in this folder with ,e.
+" TODO new blank window in this folder with ,e.
 "nnoremap <leader>e :vsplit <D-v><cr><cr>
-
-"TODO copy  & paste current code block
+" TODO copy  & paste current code block
 " nnoremap <Tab><Tab> v%lyO<esc>p
-
 " TODO shortcut to open browser & refresh?
-
 " TODO Change background based on mode; highlight currently active panel?
-
 " TODO search for current word in open buffers only
+" TODO open new file automatically names it temp.txt and puts it in ~/
 
 " words I can't spell. iab == iabbrev
 iab strign string
@@ -42,31 +36,21 @@ let mapleader = ","
 set timeout
 set timeoutlen=300 ttimeoutlen=0
 
-" Scroll with mouse. Possibly could do with centring the screen?
+" Scroll with mouse. TODO Possibly could do with centering the screen?
 set mouse=n
 
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
-"Linter
-Plug 'w0rp/ale'
-"File browser
-Plug 'scrooloose/nerdtree'
-" syntax highlighting
-Plug 'scheakur/vim-scheakur'
-"Fuzzy finder
+Plug 'w0rp/ale'                         " Linter
+Plug 'scrooloose/nerdtree'              "File browser
+Plug 'scheakur/vim-scheakur'            " syntax highlighting
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-" elm amazingness
-Plug 'elmcast/elm-vim'
-" More colour schemes
-Plug 'altercation/vim-colors-solarized'
-" Rubocop innit
-Plug 'ngmy/vim-rubocop'
-" Matches coceblocks with %
-Plug 'adelarsq/vim-matchit'
-" Git ting yo
-Plug 'tpope/vim-fugitive'
-
+Plug 'junegunn/fzf.vim'                 "Fuzzy finder
+Plug 'elmcast/elm-vim'                  " elm amazingness
+Plug 'altercation/vim-colors-solarized' " More colour schemes
+Plug 'ngmy/vim-rubocop'                 " Rubocop innit
+Plug 'adelarsq/vim-matchit'             " Matches codeblocks with % TODO look at this
+Plug 'tpope/vim-fugitive'               " Git ting yo
 call plug#end()
 
 "Colourscheme stuff
@@ -79,13 +63,14 @@ endtry
 " text width
 set tw=80
 
-" Does this even work?
+" TODO Does this even work?
 "  Enable folding
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
+" TODO variable system installs if found?
 " Requires brew install macvim --withoverride-system-vim
 " Set clipboard as global register for vim
 set clipboard=unnamed
@@ -122,6 +107,7 @@ set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 "Turns off compatibility with vi
 set nocompatible
 
+"TODO what is this actually doing?
 "enable syntax and plugins (for netrw)
 syntax enable
 filetype plugin on
@@ -129,20 +115,23 @@ filetype plugin on
 "Fuzzy find - path looks through every subdirectory, and subdirectory of
 "subdirectory - hence fuzzy.
 set path+=**
-"not sure this is necessary with fzf but meh
+"TODO see if this can be deleted not
+" sure this is necessary with fzf but meh
 
 "File menu type thing
 set wildmenu
-"also probably not necessary because NERDtree
+"TODO also probably not necessary because NERDtree
 
 "Text over 80 chars in red
 highlight OverLength ctermfg=red guibg=#592929
 match OverLength /\%81v.\+/
 
-"go to tags
+"TODO go to tags - find out how to use these
 command! MakeTags !ctags -R .
 
 "upper-case current word with ctrl+u
+" TODO does this from cursor position, not
+"for whole word
 :nnoremap <c-u> veU<esc>
 
 "Fuzzy file finder.
@@ -157,7 +146,7 @@ noremap <Space> :set hlsearch! hlsearch?<CR>
 "Enter centres screen to current position
 nnoremap <Enter> zz
 
-"When cycling through searches with n/ N, centre screen.
+"When cycling through searches with n / N, centre screen.
 nnoremap n nzz
 nnoremap N Nzz
 
@@ -220,7 +209,6 @@ vnoremap <leader>{{ l0<esc>i{<esc>A}<esc>v
 " escape twice to save
 nnoremap <Esc><Esc> :silent!:%s/ $//g<cr><bar>:w<cr>
 nnoremap wh :%s/ $//g<cr>
-
 
 "paste in insert mode. Doesn't really work right
 inoremap PP <esc>xxpa<Space>
@@ -312,7 +300,7 @@ nnoremap ;; :pwd<cr>
 inoremap ;; <esc>A;<esc>
 
 inoremap bp binding.pry
-" This might make more sense as a contenxtual debugger TODO
+" This might make more sense as a contextual debugger TODO
 nnoremap bp Obinding.pry<esc>
 
 " Scroll up / down and centre
@@ -325,7 +313,6 @@ nnoremap <C-w> <C-w>=
 "Copy all file to clipboard [2<C-o> is returning to current cursor position and
 "centering]
 nnoremap <leader>ca ggvG$y<esc>2<C-o><Enter>
-
 
 " Save session on close; stolen from here: http://vim.wikia.com/wiki/Go_away_and_come_back
 " Seemingly not working right now... come back to.
