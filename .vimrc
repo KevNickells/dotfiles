@@ -1,4 +1,5 @@
 " TODO tidy up - abbreviations in one file, nnoremaps another etc?
+
 " TODO
 " nnoremap <leader>rc :-1read $HOME/Documents/Snippets/SkeletonRubyClass<CR>A
 " context=dependant snippets - eg ,c brings up a class snippet based on filetype
@@ -14,7 +15,7 @@
 " nnoremap <Tab><Tab> v%lyO<esc>p
 " TODO shortcut to open browser & refresh?
 " TODO Change background based on mode; highlight currently active panel?
-" TODO search for current word in open buffers only
+
 " TODO open new file automatically names it temp.txt and puts it in ~/
 
 " words I can't spell. iab == iabbrev
@@ -229,6 +230,7 @@ inoremap PP <esc>xxpa<Space>
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --smart-case --glob "!*.po*" --glob "!.git/*" --glob "!CHANGELOG*" --glob "!*.json" --glob "!*.yaml" --glob "!*.log" --glob "!Library/*" --glob "!*.xml" --glob "!node_modules*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
 " <leader><Enter> - fuzzy search in current buffers
+" TODO probably could do with passing this a variable. & showing the filename
 function! s:buflist()
   redir => ls
   silent ls
@@ -246,6 +248,31 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 \   'options': '+m',
 \   'down':    len(<sid>buflist()) + 2
 \ })<CR>
+
+" Search in open buffers
+function! s:line_handler(l)
+  let keys = split(a:l, ':\t')
+  exec 'buf' keys[0]
+  exec keys[1]
+  normal! ^zz
+endfunction
+
+function! s:buffer_lines()
+  let res = []
+  for b in filter(range(1, bufnr('$')), 'buflisted(v:val)')
+    call extend(res, map(getbufline(b,0,"$"), 'b . ":\t" . (v:key + 1) . ":\t" . v:val '))
+  endfor
+  return res
+endfunction
+
+command! FZFLines call fzf#run({
+\   'source':  <sid>buffer_lines(),
+\   'sink':    function('<sid>line_handler'),
+\   'options': '--extended --nth=3..',
+\   'down':    '60%'
+\})
+
+nnoremap <Leader>b :FZFLines<cr>
 
 "Remove current file from buffer
 nnoremap mm :bdelete<cr>
@@ -314,7 +341,20 @@ nnoremap <C-w> <C-w>=
 "centering]
 nnoremap <leader>ca ggvG$y<esc>2<C-o><Enter>
 
-" Save session on close; stolen from here: http://vim.wikia.com/wiki/Go_away_and_come_back
+"   from https://github.com/junegunn/dotfiles/blob/bc9038c/vimrc  - google with ,?
+" let url = 'https://www.google.co.kr/search?q='
+" " Excerpt from vim-unimpared
+" let q = substitute(
+"         \ '"'.@0.'"',
+"         \ '[^A-Za-z0-9_.~-]',
+"         \ '\="%".printf("%02X", char2nr(submatch(0)))',
+"         \ 'g')
+"   call system('open ' . url . q)
+" endfunction
+"
+" xnoremap <leader>? y:call <SID>goog()<cr>
+
+" Save session on close; stolen from here: http://vim.wikia.com/wiki/Go_away_and_come_back TODO not currently working
 " Seemingly not working right now... come back to.
 " function! MakeSession()
 "   let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
