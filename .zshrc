@@ -31,7 +31,6 @@ alias zs="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 alias rs="rails server -e development -b 0.0.0.0 -p 3000"
 
-
 # Because Vim
 alias ZZ="exit"
 alias jj="pwd"

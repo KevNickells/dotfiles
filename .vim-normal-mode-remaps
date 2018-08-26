@@ -90,11 +90,17 @@ nnoremap <silent> <leader>cp :let @*=expand("%")<cr>:echo @*<cr>
 "Copy filename only to clipboard & display
 nnoremap <silent> <leader>cf :let @*=expand("%:t")<cr>:echo @*<cr>
 
-" show current folder & copy to clipboard
-nnoremap <leader>sp :let @*=expand("%:p:h")<cr>echo @*<cr>
+" DRY for the below
+function! FullPath()
+    let @*=expand("%:p:h")
+endfunction
 
-" Open new file in the current folder
-nnoremap <leader>ee :let @*=expand("%:p:h")<cr>:<c-f>ie<space><esc>pA/<c-c>
+" show current folder & copy to clipboard
+nnoremap <leader>sp :call FullPath()<bar>:echo @*<cr>
+
+" Open new file in the current folder [wouldn't work on Windows but let's stick
+" with Unix shall we?
+nnoremap <leader>ee :call FullPath()<cr><bar>:<c-f>ie<space><esc>pA/<c-c>
 
 " Show root filepath
 nnoremap ;; :pwd<cr>
@@ -106,10 +112,9 @@ nnoremap L Lzz
 "Copy all file to clipboard [2<C-o> is returning to current cursor position and centering]
 nnoremap <leader>ca ggvG$y<esc>2<C-o><Enter>
 
-
 " Make windows the same size
 nnoremap <C-w> <C-w>=
 
-
-
+" Got to next thing at this indent level
+nnoremap <leader>n 0yw/<c-f>i^<esc>pa\w<esc><c-c><cr>
 
