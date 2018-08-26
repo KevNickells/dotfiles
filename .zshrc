@@ -67,7 +67,7 @@ alias v="vim"
 alias ga="git add"
 alias gc="git commit -m"
 alias gpsh="git push"
-alias gp="git pull"
+alias gp="git pull --recurse-submodules"
 alias grf="git show --pretty='' --name-only HEAD" # git last files amended
 alias lg="lazygit"
 alias vr="v `git show --pretty='' --name-only HEAD | tr '\n' ' '`" # open last files amended in vim; nearly working, just need to lop off root folder
@@ -143,10 +143,10 @@ export LANG=en_US.UTF-8
 
 # NOTE RElies upon ripgrep, install with  install ripgrep
 # --files: List files that would be searched but do not search
-  # --no-ignore: Do not respect .gitignore, etc...
-    # --hidden: Search hidden files and folders
-    # --follow: Follow symlinks
-    # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+# --no-ignore: Do not respect .gitignore, etc...
+# --hidden: Search hidden files and folders
+# --follow: Follow symlinks
+# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 export NVM_DIR=~/.nvm
