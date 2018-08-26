@@ -1,0 +1,115 @@
+" escape twice to save [escape is mapped to caps lock]
+nnoremap <Esc><Esc> :silent!:%s/ $//g<cr><bar>:w<cr>
+nnoremap wh :%s/ $//g<cr>
+
+"upper-case current word with ctrl+u
+nnoremap <c-u> EvBU<esc>
+
+"Fuzzy file finder.
+nnoremap ff :FZF<CR>
+
+"Spacebar turn on/ off highlighting for search term; displays same
+noremap <Space> :set hlsearch! hlsearch?<CR>
+
+"Enter centres screen to current position
+nnoremap <Enter> zz
+
+"When cycling through searches with n / N, centre screen.
+nnoremap n nzz
+nnoremap N Nzz
+
+"edit and source vimrc quickly, remove it from buffer
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :w<cr>:source $MYVIMRC<cr><esc>:bdelete<cr>
+
+" highlights all and aligns
+" the 2<C-o> is taking you back two positions, FYI
+nnoremap == ggvG==<esc>2<C-o>
+
+"Surround current word in ...
+nnoremap <leader>" lbi"<esc>ea"<esc>
+nnoremap <leader>" lb<esc>i"<esc>ea"<esc>v
+nnoremap <leader>' lbi'<esc>ea'<esc>
+nnoremap <leader>) lbi(<esc>ea)<esc>
+nnoremap <leader>( lbi(<esc>ea)<esc>
+nnoremap <leader>] lbi[<esc>ea]<esc>
+nnoremap <leader>[ lbi[<esc>ea]<esc>
+nnoremap <leader>} lbi{<esc>ea}<esc>
+nnoremap <leader>{ lbi{<esc>ea}<esc>
+
+"Surround current line in ...
+nnoremap <leader>"" l0i"<esc>A"<esc>
+nnoremap <leader>"" l0<esc>i"<esc>A"<esc>v
+nnoremap <leader>'' l0i'<esc>A'<esc>
+nnoremap <leader>)) l0i(<esc>A)<esc>
+nnoremap <leader>(( l0i(<esc>A)<esc>
+nnoremap <leader>]] l0i[<esc>A]<esc>
+nnoremap <leader>[[ l0i[<esc>A]<esc>
+nnoremap <leader>}} l0i{<esc>A}<esc>
+nnoremap <leader>{{ l0i{<esc>A}<esc>
+
+
+" search buffer names; defined in .vim-functions-and-commands
+nnoremap <Leader>b :FZFLines<cr>
+
+"Remove current file from buffer
+nnoremap mm :bdelete<cr>
+
+"Remove all files from buffer
+nnoremap mmm :bufdo bd<cr>
+
+"remap fzf to tt
+nnoremap tt :Find<Space>
+
+" move between buffers with ctrl+l/ h
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Search for current word in whole project
+nnoremap ttt EvBy:<c-f>iFind<Space><esc>p<c-c><Enter>
+
+" cycle through open buffers in current window
+nnoremap <C-j> :bprevious<cr>
+nnoremap <C-k> :bnext<cr>
+
+"new window
+nnoremap vv :vsplit<cr><C-w>l
+
+"copy current parentheses
+nnoremap <Tab> v%lyO<esc>
+
+" delete to end of file
+nnoremap dddd dG
+
+" quit without saving
+nnoremap qqq :q!<cr>
+
+"Copy full filepath to clipboard & display
+nnoremap <silent> <leader>cp :let @*=expand("%")<cr>:echo @*<cr>
+
+"Copy filename only to clipboard & display
+nnoremap <silent> <leader>cf :let @*=expand("%:t")<cr>:echo @*<cr>
+
+" show current folder & copy to clipboard
+nnoremap <leader>sp :let @*=expand("%:p:h")<cr>echo @*<cr>
+
+" Open new file in the current folder
+nnoremap <leader>ee :let @*=expand("%:p:h")<cr>:<c-f>ie<space><esc>pA/<c-c>
+
+" Show root filepath
+nnoremap ;; :pwd<cr>
+
+" Scroll up / down and centre
+nnoremap H Hzz
+nnoremap L Lzz
+
+"Copy all file to clipboard [2<C-o> is returning to current cursor position and centering]
+nnoremap <leader>ca ggvG$y<esc>2<C-o><Enter>
+
+
+" Make windows the same size
+nnoremap <C-w> <C-w>=
+
+
+
+

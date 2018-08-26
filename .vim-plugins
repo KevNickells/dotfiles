@@ -1,0 +1,14 @@
+call plug#begin('~/.vim/plugged')
+Plug 'w0rp/ale'                         " Linter
+Plug 'scrooloose/nerdtree'              "File browser
+Plug 'scheakur/vim-scheakur'            " syntax highlighting
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'                 "Fuzzy finder
+Plug 'elmcast/elm-vim'                  " elm amazingness
+Plug 'altercation/vim-colors-solarized' " More colour schemes
+Plug 'ngmy/vim-rubocop'                 " Rubocop innit
+Plug 'adelarsq/vim-matchit'             " Matches codeblocks with % TODO look at this
+Plug 'tpope/vim-fugitive'               " Git ting yo
+call plug#end()
+
+
