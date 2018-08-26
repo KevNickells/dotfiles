@@ -26,6 +26,8 @@ augroup BgHighlight
   autocmd WinLeave * set colorcolumn=0
 augroup END
 
+" TODO Rails plugin by TPope. Who is good
+
 " TODO copy  & paste current code block
 " nnoremap <Tab><Tab> v%lyO<esc>p
 
