@@ -48,18 +48,17 @@ nnoremap <leader>[[ l0i[<esc>A]<esc>
 nnoremap <leader>}} l0i{<esc>A}<esc>
 nnoremap <leader>{{ l0i{<esc>A}<esc>
 
-
-" search buffer names; defined in .vim-functions-and-commands
+" search buffer names; defined in .vim-functions-and-commands [probably]
 nnoremap <Leader>b :FZFLines<cr>
+
+"remap fzf to tt
+nnoremap tt :Find<Space>
 
 "Remove current file from buffer
 nnoremap mm :bdelete<cr>
 
 "Remove all files from buffer
 nnoremap mmm :bufdo bd<cr>
-
-"remap fzf to tt
-nnoremap tt :Find<Space>
 
 " move between buffers with ctrl+l/ h
 nnoremap <C-h> <C-w>h

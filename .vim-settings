@@ -2,9 +2,8 @@
 set timeout
 set timeoutlen=300 ttimeoutlen=0
 
-" Scroll with mouse. TODO Possibly could do with centering the screen?
+" Scroll with mouse.
 set mouse=n
-
 
 "Colourscheme stuff
 set background=dark
