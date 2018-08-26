@@ -5,6 +5,7 @@ let mapleader = ","
 source .vim-spellings
 source .vim-plugins
 source .vim-settings
+source .vim-functions-and-commands
 source .vim-normal-mode-remaps
 source .vim-visual-mode-remaps
 source .vim-insert-mode-remaps
