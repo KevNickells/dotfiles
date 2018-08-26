@@ -6,11 +6,6 @@
 
 SYSTEM=$(uname)
 
-# Because my shell on Linux doesn't open here and I can't be bothered to make to
-# do otherwise
-# TODO but I really should because it's annoying on my work computer.
-cd ~/
-
 # My tings
 plugins=(
   git
@@ -36,6 +31,11 @@ alias zs="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 alias rs="rails server -e development -b 0.0.0.0 -p 3000"
 
+
+# Because Vim
+alias ZZ="exit"
+alias jj="pwd"
+
 # open current folder; note that functions don't seem to work as single letters
 function open_this_folder {
   if [ "$SYSTEM" = "Linux" ]; then
@@ -47,10 +47,10 @@ function open_this_folder {
   fi
 }
 
-
-# Because Vim
-alias ZZ="exit"
-alias jj="pwd"
+# Linux shell Doesn't open here
+if [ "$SYSTEM" = "Linux" ]; then
+  cd ~/
+fi
 
 # Hopefully temporary thing; remove npm logs before doing a git status. This is
 # in lieu of faffing about with npm. Needs to have quiet output TODO
