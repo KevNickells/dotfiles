@@ -3,3 +3,5 @@
 !.vimrc
 !.zshrc
 !.vim-*
+!.vim/ftplugin/*
+!Snippets/*

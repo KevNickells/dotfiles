@@ -2,28 +2,27 @@
 let mapleader = ","
 
 " different files for different things
-source .vim-spellings
-source .vim-plugins
-source .vim-settings
-source .vim-functions-and-commands
-source .vim-normal-mode-remaps
-source .vim-visual-mode-remaps
-source .vim-insert-mode-remaps
+source ~/.vim-spellings
+source ~/.vim-plugins
+source ~/.vim-settings
+source ~/.vim-functions-and-commands
+source ~/.vim-normal-mode-remaps
+source ~/.vim-visual-mode-remaps
+source ~/.vim-insert-mode-remaps
 
 " And from syntax highlighting for each
-autocmd BufNewFile,BufRead .vim-spellings              set syntax=vim
-autocmd BufNewFile,BufRead .vim-plugins                set syntax=vim
-autocmd BufNewFile,BufRead .vim-settings               set syntax=vim
-autocmd BufNewFile,BufRead .vim-normal-mode-remaps     set syntax=vim
-autocmd BufNewFile,BufRead .vim-visual-mode-remaps     set syntax=vim
-autocmd BufNewFile,BufRead .vim-functions-and-commands set syntax=vim
-autocmd BufNewFile,BufRead .vim-insert-mode-remaps     set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim-spellings              set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim-plugins                set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim-settings               set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim-normal-mode-remaps     set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim-visual-mode-remaps     set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim-functions-and-commands set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim-insert-mode-remaps     set syntax=vim
 
-" TODO nnoremap <leader>rc :-1read $HOME/Documents/Snippets/SkeletonRubyClass<CR>A
-" context=dependant snippets - eg ,c brings up a class snippet based on filetype
+" NOTE: ~/Snippets contains file specific snippets
+" NOTE: ~/.vim/ftplugin/{filetype}.vim has thefile specific shortcuts
 
 " TODO cycle through next thing at the same indent level.
-" Have to come back to this
 " nnoremap <leader>n 0vwy/"+p<cr>n
 
 " TODO copy  & paste current code block
