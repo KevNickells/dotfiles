@@ -70,7 +70,7 @@ alias gpsh="git push"
 alias gp="git pull --recurse-submodules"
 alias grf="git show --pretty='' --name-only HEAD" # git last files amended
 alias lg="lazygit"
-alias vr="v `git show --pretty='' --name-only HEAD | tr '\n' ' '`" # open last files amended in vim; nearly working, just need to lop off root folder
+alias vr="v `git show --pretty='' --name-only HEAD | tr '\n' ' '`" # open last files amended in vim; nearly working, just need to lop off root folder TODO
 alias c="clear"
 alias cath="head -10"
 alias o="open_this_folder"
