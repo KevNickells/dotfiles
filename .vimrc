@@ -30,13 +30,17 @@ augroup END
 
 " TODO copy  & paste current code block
 " nnoremap <Tab><Tab> v%lyO<esc>p
+" Can probably leverage generic js
+" (eg Bvt{%y)
+" and Ruby indent-wise for this
+" (eg <leader>nNvn or something less stupid)
 
 " TODO figure out 'install if not found...' so I don't have to do a load of instally bore every time I'm on a new machine
 
 " TODO go to tags - find out how to use these
 command! MakeTags !ctags -R .
 
-" TODO Search for current word in open buffers; - doesn't work bcause FZFLines doesn't  take pasted characters
+" TODO Search for current word in open buffers; - doesn't work bcause FZFLines doesn't  take pasted characters; so probably one to re-figure FZFLines as a function which takes a param?
 " nnoremap tttt EvBy:<c-f>iFZFLines<Space><esc>p<c-c><cr>
 
 " TODO shortcut to open browser & refresh? Can probably crib it from the blow
