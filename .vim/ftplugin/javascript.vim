@@ -2,5 +2,5 @@
 nnoremap <leader>c  :r<space>~/Snippets/classJavascript.js<cr>
 nnoremap <leader>m  :r<space>~/Snippets/methodJavascript.js<cr>
 
-nnoremap db Odebugger;
-inoremap db debugger;<space>
+nnoremap db Odebugger;<esc>
+inoremap db debugger;<space><esc>
