@@ -1,2 +1,3 @@
-nnoremap db Obinding.pry
-inoremap db binding.pry
+nnoremap db O- binding.pry
+inoremap db - binding.pry
+
