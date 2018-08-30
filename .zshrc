@@ -4,6 +4,8 @@
 # file, outside of the current project. This was a 'hopefully temporary'
 # workaround. I hope this helps you, future me
 
+# TODO look into open new tab > rails s > run athenaspecs in this tab
+
 SYSTEM=$(uname)
 
 # My tings
@@ -75,10 +77,12 @@ alias c="clear"
 alias cath="head -10"
 alias o="open_this_folder"
 # kill off local server running & restart
+lias atr='kill -9 $(pgrep ruby); at; runathena'
 alias atr='kill -9 $(pgrep ruby); at; runathena'
 
 # Iris lazy
 alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
+
 
 #doubly lazy
 alias ag='cd ~/agora'
