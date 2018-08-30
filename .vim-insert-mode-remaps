@@ -4,5 +4,3 @@ inoremap <C-l> <esc><C-w>l
 
 " semi-colon at the end of the current line in insert mode
 inoremap ;; <esc>A;<esc>
-
-
