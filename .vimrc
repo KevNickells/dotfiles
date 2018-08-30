@@ -18,6 +18,9 @@ source ~/.vim-insert-mode-remaps
 " Syntax highlighting for these config files
 autocmd BufNewFile,BufRead ~/.vim-* set syntax=vim
 
+" TODO change between static numbers in normal mode and relative in visual?
+" http://vim.wikia.com/wiki/Display_line_numbers
+
 " TODO Change background based on mode; highlight currently active panel?
 " This highlights current active window in a subtle way
 augroup BgHighlight
