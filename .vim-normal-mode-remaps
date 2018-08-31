@@ -117,3 +117,7 @@ nnoremap <C-w> <C-w>=
 " Got to next thing at this indent level
 nnoremap <leader>n 0yw/<c-f>i^<esc>pa\w<esc><c-c><cr>
 
+" To shell... Probably want to have a more general key for this
+nnoremap !! :!<space>
+
+nnoremap ed :e<space>
