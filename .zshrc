@@ -48,7 +48,24 @@ function open_this_folder {
   fi
 }
 
-# Linux shell Doesn't open here
+# function new_tab_with_rails {
+#   osascript
+#   tell application "iTerm"
+#     activate
+#     tell current session of current window to write text "pwd"
+#     tell current window to set tb to create tab with default profile
+#     tell current session of current window to set newSplit to split horizontally with same profile
+#     tell newSplit
+#       select
+#       write text "pwd"
+#     end tell
+#   end tell
+#   EOF"
+# }
+
+
+
+# Linux shell Doesn't open here TODO but it should
 if [ "$SYSTEM" = "Linux" ]; then
   cd ~/
 fi
@@ -77,11 +94,9 @@ alias c="clear"
 alias cath="head -10"
 alias o="open_this_folder"
 # kill off local server running & restart
-lias atr='kill -9 $(pgrep ruby); at; runathena'
 alias atr='kill -9 $(pgrep ruby); at; runathena'
 
-# Iris lazy
-alias runathena='nvm use; PORT=3000 bundle exec foreman start --procfile Procfile.dev'
+alias runathena="nvm use; ./node_modules/.bin/webpack-dev-server --config config/webpack.config.js --host 0.0.0.0"
 
 
 #doubly lazy
