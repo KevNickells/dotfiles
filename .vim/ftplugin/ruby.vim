@@ -4,7 +4,7 @@ nnoremap <leader>m  :r<space>~/Snippets/methodRuby.rb<cr>
 nnoremap <leader>mo :r<space>~/Snippets/moduleRuby.rb<cr>
 
 "Debugger
-nnoremap db Obinding.pry
+nnoremap db obinding.pry<esc>
 inoremap db binding.pry
 
 "Make this word a symbol

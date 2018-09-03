@@ -5,6 +5,12 @@
 # workaround. I hope this helps you, future me
 
 # TODO look into open new tab > rails s > run athenaspecs in this tab
+# Wiundow one:
+# nvm use; ./node_modules/.bin/webpack-dev-server --config config/webpack.config.js --host 0.0.0.0
+# Window two: rails s
+#
+# TODO git diff -show-names could use a shortcut because I cna't remember it.
+#
 
 SYSTEM=$(uname)
 
@@ -32,6 +38,7 @@ processes="lsof -wni tcp:3000"
 alias zs="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 alias rs="rails server -e development -b 0.0.0.0 -p 3000"
+alias e="eval"
 
 # Because Vim
 alias ZZ="exit"

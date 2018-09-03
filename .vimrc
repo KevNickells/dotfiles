@@ -15,6 +15,15 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
+" Trying out relative numbers current pane / absolute non active pane
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 " Syntax highlighting for these config files
 autocmd BufNewFile,BufRead ~/.vim-* set syntax=vim
 
