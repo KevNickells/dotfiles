@@ -48,7 +48,7 @@ nnoremap <leader>[[ l0i[<esc>A]<esc>
 nnoremap <leader>}} l0i{<esc>A}<esc>
 nnoremap <leader>{{ l0i{<esc>A}<esc>
 
-" search buffer names; defined in .vim-functions-and-commands [probably]
+" text search in open buffers; defined in .vim-functions-and-commands [probably]
 nnoremap <Leader>b :FZFLines<cr>
 
 "remap fzf to tt
@@ -97,9 +97,12 @@ endfunction
 " show current folder & copy to clipboard
 nnoremap <leader>sp :call FullPath()<bar>:echo @*<cr>
 
-" Open new file in the current folder [wouldn't work on Windows but let's stick
-" with Unix shall we?
+" Open new file in the current folder [wouldn't work on Windows but let's stick with Unix shall we?
 nnoremap <leader>ee :call FullPath()<cr><bar>:<c-f>ie<space><esc>pA/<c-c>
+
+
+" Edit a file
+nnoremap ed :e<space>
 
 " Show root filepath
 nnoremap ;; :pwd<cr>
@@ -120,4 +123,3 @@ nnoremap <leader>n 0yw/<c-f>i^<esc>pa\w<esc><c-c><cr>
 " To shell... Probably want to have a more general key for this
 nnoremap !! :!<space>
 
-nnoremap ed :e<space>

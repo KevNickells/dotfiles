@@ -10,7 +10,8 @@
 # Window two: rails s
 #
 # TODO git diff -show-names could use a shortcut because I cna't remember it.
-#
+# TODO should probably sepearate Linux / MAc set-up, move work stuff into a specific file
+
 
 SYSTEM=$(uname)
 
