@@ -65,3 +65,14 @@ set backspace=indent,eol,start
 
 "fzf as global search ting
 set rtp+=/usr/local/opt/fzf
+
+"Relative number when in normal mode, not relative otherwise
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+

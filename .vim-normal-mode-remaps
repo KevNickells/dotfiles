@@ -1,5 +1,6 @@
-" escape twice to save [escape is mapped to caps lock]
-nnoremap <Esc><Esc> :silent!:%s/ $//g<cr><bar>:w<cr>
+" escape twice to save; strip whitespace from end of line; return to current
+" cursor position; Ah. But <c-o> moves a man back somewhere he doesn't wanna be.
+nnoremap <Esc><Esc> :silent!:%s/\s\+$//g<cr><bar>:w<cr>
 nnoremap wh :%s/ $//g<cr>
 
 "upper-case current word with ctrl+u

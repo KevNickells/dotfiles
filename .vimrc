@@ -6,6 +6,9 @@
 "commands don't work until sourcing .vimrc
 let mapleader = ","
 
+" Syntax highlighting for these config files
+autocmd BufNewFile,BufRead ~/.vim-* set syntax=vim
+
 " Separating concerns for ease of use. Or unecessary  abstractions, depending on taste
 source ~/.vim-spellings
 source ~/.vim-plugins
@@ -15,20 +18,9 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
-" Trying out relative numbers current pane / absolute non active pane
-set number relativenumber
-
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
-
-" Syntax highlighting for these config files
-autocmd BufNewFile,BufRead ~/.vim-* set syntax=vim
-
-" TODO change between static numbers in normal mode and relative in visual?
-" http://vim.wikia.com/wiki/Display_line_numbers
+" TODO run this spec file (eg rr drop
+"nnoremap rr :!
+"
 
 " TODO Change background based on mode; highlight currently active panel?
 " This highlights current active window in a subtle way
@@ -40,7 +32,7 @@ augroup END
 
 " TODO Rails plugin by TPope. Who is good
 
-" TODO copy  & paste current code block
+" TODO copy  & paste current code block; needs to be context depetndant?
 " nnoremap <Tab><Tab> v%lyO<esc>p
 " Can probably leverage generic js
 " (eg Bvt{%y)
