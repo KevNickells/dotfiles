@@ -84,25 +84,30 @@ nnoremap dddd dG
 " quit without saving
 nnoremap qqq :q!<cr>
 
+" DRY for the below
+function! FullFilePath()
+  let @*=expand("%")
+endfunction
+
 "Copy full filepath to clipboard & display
-nnoremap <silent> <leader>cp :let @*=expand("%")<cr>:echo @*<cr>
+nnoremap <silent> <leader>cp :call FullFilePath()<bar>:echo@*<cr>
+
+" Run this spec
+nnoremap rr :call FullFilePath()<cr><bar>:<c-f>i! rspec <esc>p<c-c><cr>
 
 "Copy filename only to clipboard & display
 nnoremap <silent> <leader>cf :let @*=expand("%:t")<cr>:echo @*<cr>
 
 " DRY for the below
-function! FullPath()
+function! CurrentFolder()
     let @*=expand("%:p:h")
 endfunction
 
 " show current folder & copy to clipboard
-nnoremap <leader>sp :call FullPath()<bar>:echo @*<cr>
+nnoremap <leader>sp :call CurrentFolder()<bar>:echo @*<cr>
 
 " Open new file in the current folder [wouldn't work on Windows but let's stick with Unix shall we?
-nnoremap <leader>ee :call FullPath()<cr><bar>:<c-f>ie<space><esc>pA/<c-c>
-
-" Run this spec
-nnoremap rr :call FullPath()<cr><bar>:<c-f>i! rspec <esc>p<c-c>2<cr>
+nnoremap <leader>ee :call CurrentFolder()<cr><bar>:<c-f>ie<space><esc>pA/<c-c>
 
 " Edit a file
 nnoremap ed :e<space>
@@ -125,4 +130,3 @@ nnoremap <leader>n 0yw/<c-f>i^<esc>pa\w<esc><c-c><cr>
 
 " To shell... Probably want to have a more general key for this
 nnoremap !! :!<space>
-
