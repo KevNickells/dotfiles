@@ -101,6 +101,8 @@ nnoremap <leader>sp :call FullPath()<bar>:echo @*<cr>
 " Open new file in the current folder [wouldn't work on Windows but let's stick with Unix shall we?
 nnoremap <leader>ee :call FullPath()<cr><bar>:<c-f>ie<space><esc>pA/<c-c>
 
+" Run this spec
+nnoremap rr :call FullPath()<cr><bar>:<c-f>i! rspec <esc>p<c-c>2<cr>
 
 " Edit a file
 nnoremap ed :e<space>
