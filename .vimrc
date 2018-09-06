@@ -20,6 +20,13 @@ source ~/.vim-insert-mode-remaps
 
 " TODO ~/.vim-normal-mode-remaps inclyudes something to run this spec; maybe
 " could do with pausing at the end
+"
+" TODO - tempoararily change to this folder to search only within it?
+"
+" TODO dj to delete blank lines between here and below.(eg
+" line\n\n\n\n\n\n\n\nnextline becomes line\nnextline)
+
+" TODO construct list of random words to be generated for variables, make sure none are present when committing (except in specs)
 
 " TODO Change background based on mode; highlight currently active panel?
 " This highlights current active window in a subtle way
