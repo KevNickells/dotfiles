@@ -18,6 +18,8 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
+" TODO toggle tw=0 quickly with 000; is set as merely turn it off for now.
+
 " TODO ~/.vim-normal-mode-remaps inclyudes something to run this spec; maybe
 " could do with pausing at the end
 "

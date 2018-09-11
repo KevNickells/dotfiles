@@ -134,3 +134,5 @@ nnoremap !! :!<space>
 " change directory. One key saved. Woot
 nnoremap cd :cd<space>
 
+" quickly turn off text width 80
+nnoremap 000 :set tw=0
