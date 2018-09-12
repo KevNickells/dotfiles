@@ -1,3 +1,4 @@
+# :vim set tw=0
 # ~/.gitignore_global
 # At some point in the future I will wonder why something hasn't updated when it
 # should have. The above is the command that adds something to a global ignore
@@ -10,8 +11,10 @@
 # Window two: rails s
 #
 # TODO git diff -show-names could use a shortcut because I cna't remember it.
-# TODO should probably sepearate Linux / MAc set-up, move work stuff into a specific file
-
+# TODO should probably sepearate Linux / Mac set-up, move work stuff into a specific, private file
+# also probably as well to separate aliases / functions / vars / plugins
+# TODO look up :h terminal; :term zsh will open a zsh; looks like there's a debugger function that might be useful
+# TODO file-specific disable red 80c+
 
 SYSTEM=$(uname)
 
@@ -89,6 +92,7 @@ function gst {
   git status
 }
 
+
 # Because lazy
 alias v="vim"
 alias ga="git add"
@@ -97,15 +101,16 @@ alias gpsh="git push"
 alias gp="git pull --recurse-submodules"
 alias grf="git show --pretty='' --name-only HEAD" # git last files amended
 alias lg="lazygit"
-alias vr="v `git show --pretty='' --name-only HEAD | tr '\n' ' '`" # open last files amended in vim; nearly working, just need to lop off root folder TODO
 alias c="clear"
 alias cath="head -10"
 alias o="open_this_folder"
+# open last files amended in vim; get list, replace \n with ' ', pass to vim. Sweet.
+# Except it's not working in anything except root. Boo.
+alias vr="git show --pretty='' --name-only HEAD | tr '\n' ' ' | xargs vim"
 # kill off local server running & restart
 alias atr='kill -9 $(pgrep ruby); at; runathena'
 
 alias runathena="nvm use; ./node_modules/.bin/webpack-dev-server --config config/webpack.config.js --host 0.0.0.0"
-
 
 #doubly lazy
 alias ag='cd ~/agora'
@@ -124,6 +129,7 @@ alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Do I need these things?
 
 # Add RVM to PATH for scripting.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -168,7 +174,7 @@ export LANG=en_US.UTF-8
 # For a full list of active aliases, run `alias`.
   # IRIS config
 
-# NOTE RElies upon ripgrep, install with  install ripgrep
+# NOTE relies upon ripgrep, install with  install ripgrep
 # --files: List files that would be searched but do not search
 # --no-ignore: Do not respect .gitignore, etc...
 # --hidden: Search hidden files and folders
