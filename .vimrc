@@ -29,7 +29,6 @@ source ~/.vim-insert-mode-remaps
 " line\n\n\n\n\n\n\n\nnextline becomes line\nnextline)
 "
 " TODO construct list of random words to be generated for variables, make sure none are present when committing (except in specs)
-"
 
 " TODO convert " to ' around a word to satiate the linter; ... possibly it's
 " just needed to figure out how to accept rubocop suggestions with ruby?

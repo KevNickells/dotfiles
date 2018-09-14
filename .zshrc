@@ -105,8 +105,10 @@ alias c="clear"
 alias cath="head -10"
 alias o="open_this_folder"
 # open last files amended in vim; get list, replace \n with ' ', pass to vim. Sweet.
-# Except it's not working in anything except root. Boo.
-alias vr="git show --pretty='' --name-only HEAD | tr '\n' ' ' | xargs vim"
+# Except it's not working in anything except root. Boo. TODO
+# May have shegged other things
+# alias vr="git show --pretty='' --name-only HEAD | tr '\n' ' ' | xargs vim"
+
 # kill off local server running & restart
 alias atr='kill -9 $(pgrep ruby); at; runathena'
 
