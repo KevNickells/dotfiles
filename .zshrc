@@ -34,6 +34,7 @@ alias ./='~/.'
 alias ..='cd ../'
 alias ...='cd ~/'
 alias rspect='rspec'
+alias fidd='diff'
 
 # check running processes
 processes="lsof -wni tcp:3000"

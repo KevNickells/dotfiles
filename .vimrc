@@ -18,11 +18,10 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
+" TODO fp to find binding.pry in open buffers (eg ,b)
+
 " TODO toggle tw=0 quickly with 000; is set as merely turn it off for now.
 
-" TODO ~/.vim-normal-mode-remaps inclyudes something to run this spec; maybe
-" could do with pausing at the end
-"
 " TODO - tempoararily change to this folder to search only within it?
 "
 " TODO dj to delete blank lines between here and below.(eg
@@ -58,7 +57,7 @@ command! MakeTags !ctags -R .
 " TODO Search for current word in open buffers; - doesn't work bcause FZFLines doesn't  take pasted characters; so probably one to re-figure FZFLines as a function which takes a param?
 " nnoremap tttt EvBy:<c-f>iFZFLines<Space><esc>p<c-c><cr>
 
-" TODO shortcut to open browser & refresh? Can probably crib it from the blow
+" TODO shortcut to open browser & refresh? Can probably crib it from the below
 "   from https://github.com/junegunn/dotfiles/blob/bc9038c/vimrc  - google with ,?
 " let url = 'https://www.google.co.kr/search?q='
 " " Excerpt from vim-unimpared
