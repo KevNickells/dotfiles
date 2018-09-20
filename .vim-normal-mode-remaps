@@ -136,3 +136,6 @@ nnoremap cd :cd<space>
 
 " quickly turn off text width 80
 nnoremap 000 :set tw=0
+
+" yank whole word rather than to - etc
+nnoremap yw yW
