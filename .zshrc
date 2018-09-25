@@ -60,6 +60,12 @@ function open_this_folder {
   fi
 }
 
+if [ "$SYSTEM" = "Linux" ]; then
+  xmodmap  ~/.Xmodmap
+fi
+
+
+
 # function new_tab_with_rails {
 #   osascript
 #   tell application "iTerm"

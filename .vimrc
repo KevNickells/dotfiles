@@ -9,7 +9,7 @@ let mapleader = ","
 " Syntax highlighting for these config files
 autocmd BufNewFile,BufRead ~/.vim-* set syntax=vim
 
-" Separating concerns for ease of use. Or unecessary  abstractions, depending on taste
+" Separating concerns for ease of use. Or unecessary abstractions, depending on taste
 source ~/.vim-spellings
 source ~/.vim-plugins
 source ~/.vim-settings
@@ -18,21 +18,27 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
+" TODO zs currently opens zsh - make it better and probably more emac-y
+
+" TODO open shell with REPL with zn [node], zr [ruby] etc
+
 " TODO fp to find binding.pry in open buffers (eg ,b)
 
 " TODO toggle tw=0 quickly with 000; is set as merely turn it off for now.
 
 " TODO - tempoararily change to this folder to search only within it?
-"
+
 " TODO dj to delete blank lines between here and below.(eg
 " line\n\n\n\n\n\n\n\nnextline becomes line\nnextline)
-"
+
 " TODO construct list of random words to be generated for variables, make sure none are present when committing (except in specs)
 
 " TODO convert " to ' around a word to satiate the linter; ... possibly it's
 " just needed to figure out how to accept rubocop suggestions with ruby?
 
 " TODO Change background based on mode; highlight currently active panel?
+
+
 " This highlights current active window in a subtle way
 augroup BgHighlight
   autocmd!
