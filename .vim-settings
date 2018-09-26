@@ -42,6 +42,9 @@ set hidden
 "Let's be honest, no-one really cares about case when searching.
 set ignorecase
 
+" Except when they do - this mostly ignores case except when upper
+set smartcase
+
 "highlight line and column
 set cursorline
 set cursorcolumn

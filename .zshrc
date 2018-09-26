@@ -1,18 +1,6 @@
 # :vim set tw=0
-# ~/.gitignore_global
-# At some point in the future I will wonder why something hasn't updated when it
-# should have. The above is the command that adds something to a global ignore
-# file, outside of the current project. This was a 'hopefully temporary'
-# workaround. I hope this helps you, future me
 
-# TODO look into open new tab > rails s > run athenaspecs in this tab
-# Wiundow one:
-# nvm use; ./node_modules/.bin/webpack-dev-server --config config/webpack.config.js --host 0.0.0.0
-# Window two: rails s
-#
 # TODO git diff -show-names could use a shortcut because I cna't remember it.
-# TODO should probably sepearate Linux / Mac set-up, move work stuff into a specific, private file
-# also probably as well to separate aliases / functions / vars / plugins
 # TODO look up :h terminal; :term zsh will open a zsh; looks like there's a debugger function that might be useful
 # TODO file-specific disable red 80c+
 
@@ -36,14 +24,9 @@ alias ...='cd ~/'
 alias rspect='rspec'
 alias fidd='diff'
 
-# check running processes
-processes="lsof -wni tcp:3000"
-
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
-alias rs="rails server -e development -b 0.0.0.0 -p 3000"
-alias e="eval"
 
 # Because Vim
 alias ZZ="exit"
@@ -64,42 +47,6 @@ if [ "$SYSTEM" = "Linux" ]; then
   xmodmap  ~/.Xmodmap
 fi
 
-
-
-# function new_tab_with_rails {
-#   osascript
-#   tell application "iTerm"
-#     activate
-#     tell current session of current window to write text "pwd"
-#     tell current window to set tb to create tab with default profile
-#     tell current session of current window to set newSplit to split horizontally with same profile
-#     tell newSplit
-#       select
-#       write text "pwd"
-#     end tell
-#   end tell
-#   EOF"
-# }
-
-
-
-# Linux shell Doesn't open here TODO but it should
-if [ "$SYSTEM" = "Linux" ]; then
-  cd ~/
-fi
-
-# Hopefully temporary thing; remove npm logs before doing a git status. This is
-# in lieu of faffing about with npm. Needs to have quiet output TODO
-function gst {
-  count = ls npm-debug* -l | wc -l
-  if (( count > 0 ))
-  then
-    rm npm-debug*
-  fi;
-  git status
-}
-
-
 # Because lazy
 alias v="vim"
 alias ga="git add"
@@ -116,19 +63,9 @@ alias o="open_this_folder"
 # May have shegged other things
 # alias vr="git show --pretty='' --name-only HEAD | tr '\n' ' ' | xargs vim"
 
-# kill off local server running & restart
-alias atr='kill -9 $(pgrep ruby); at; runathena'
-
-alias runathena="nvm use; ./node_modules/.bin/webpack-dev-server --config config/webpack.config.js --host 0.0.0.0"
-
-#doubly lazy
-alias ag='cd ~/agora'
-alias at='cd ~/agora/athena'
-
 # Because stealing ideas from others
 alias ll="ls -lhA"
 
-# Config yute dem
 # Nice colours for grep
 alias grep='grep --color=auto'
 
@@ -169,19 +106,8 @@ setopt hist_ignore_all_dups
 source ~/
 source $ZSH/oh-my-zsh.sh
 
-# This will need looking at for Linux
-if [ "$SYSTEM" = "Darwin" ]; then
-  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
-
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# For a full list of active aliases, run `alias`.
-  # IRIS config
 
 # NOTE relies upon ripgrep, install with  install ripgrep
 # --files: List files that would be searched but do not search
@@ -193,6 +119,11 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.g
 
 export NVM_DIR=~/.nvm
 # source $(brew --prefix nvm)/nvm.sh
-source $HOME/.zshenv
+# source $HOME/.zshenv
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# for TILIX terminal 
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
