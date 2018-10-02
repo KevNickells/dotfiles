@@ -6,6 +6,13 @@
 "commands don't work until sourcing .vimrc
 let mapleader = ","
 
+" Tryinng this out; to migrate if it works
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
+
 " Syntax highlighting for these config files
 autocmd BufNewFile,BufRead ~/.vim-* set syntax=vim
 

@@ -1,8 +1,7 @@
 # :vim set tw=0
 
 # TODO git diff -show-names could use a shortcut because I cna't remember it.
-# TODO look up :h terminal; :term zsh will open a zsh; looks like there's a debugger function that might be useful
-# TODO file-specific disable red 80c+
+# TODO o to take a param and if text/html then xdg-open, else dolphin
 
 SYSTEM=$(uname)
 
@@ -58,6 +57,8 @@ alias lg="lazygit"
 alias c="clear"
 alias cath="head -10"
 alias o="open_this_folder"
+alias b="xdg-open"
+
 # open last files amended in vim; get list, replace \n with ' ', pass to vim. Sweet.
 # Except it's not working in anything except root. Boo. TODO
 # May have shegged other things
@@ -79,6 +80,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add RVM to PATH for scripting.
 export PATH="$PATH:$HOME/.rvm/bin"
+# More pathery
+export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin"
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -123,7 +126,7 @@ export NVM_DIR=~/.nvm
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# for TILIX terminal 
+# for TILIX terminal
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi

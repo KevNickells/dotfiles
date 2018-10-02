@@ -4,11 +4,8 @@ nnoremap <leader>m  :r<space>~/Snippets/methodRuby.rb<cr>
 nnoremap <leader>mo :r<space>~/Snippets/moduleRuby.rb<cr>
 
 "Debugger
-nnoremap db obinding.pry<esc>
-inoremap db binding.pry
-" Capybara open screenshot
-nnoremap ss osave_and_open_screenshot
-inoremap sss save_and_open_screenshot
+nnoremap db orequire pry; binding.pry<esc>;
+inoremap db require pry; binding.pry
 
 "Make this word a symbol
 inoremap :: <esc>lbi:<esc>w
