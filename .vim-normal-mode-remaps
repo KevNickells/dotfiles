@@ -143,3 +143,5 @@ nnoremap yw yW
 " open a shell in-window
 nnoremap zs :term zsh<cr>
 
+" I don't remember ever going to the end of the file and not wanting to be at the end end
+nnoremap G G$

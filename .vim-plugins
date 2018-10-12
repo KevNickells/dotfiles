@@ -9,6 +9,7 @@ Plug 'altercation/vim-colors-solarized' " More colour schemes
 Plug 'ngmy/vim-rubocop'                 " Rubocop innit
 Plug 'adelarsq/vim-matchit'             " Matches codeblocks with % TODO look at this
 Plug 'tpope/vim-fugitive'               " Git ting yo
+Plug 'elixir-editors/vim-elixir'        " Man like Elixir
 call plug#end()
 
 
