@@ -79,7 +79,7 @@ nnoremap vv :vsplit<cr><C-w>l
 nnoremap <Tab> v%lyO<esc>
 
 " delete to end of file
-nnoremap dddd dG
+nnoremap ddd dG
 
 " quit without saving
 nnoremap qqq :q!<cr>

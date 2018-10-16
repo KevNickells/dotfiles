@@ -108,6 +108,7 @@ setopt hist_ignore_all_dups
 
 source ~/
 source $ZSH/oh-my-zsh.sh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
