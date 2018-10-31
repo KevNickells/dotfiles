@@ -8,3 +8,5 @@ class ClassName {
     return something
   }
 }
+
+export { ClassName as default };
