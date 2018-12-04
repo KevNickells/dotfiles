@@ -2,6 +2,9 @@
 " NOTE: ~/.vim/ftplugin/{filetype}.vim has the file-specific shortcuts
 " NOTE: This file is now mostly to-dos
 
+" TODO insert 'skip' / remove 'skip' from next in rb files with 'test' in the
+" name?
+
 "leader key; needs to be set before sourcing the below otherwise leader
 "commands don't work until sourcing .vimrc
 let mapleader = ","

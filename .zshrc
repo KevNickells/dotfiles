@@ -2,6 +2,7 @@
 
 # TODO git diff -show-names could use a shortcut because I cna't remember it.
 # TODO o to take a param and if text/html then xdg-open, else dolphin
+# TODO automatically update Linux? sudo pacman -Syu
 
 SYSTEM=$(uname)
 
@@ -22,6 +23,7 @@ alias ..='cd ../'
 alias ...='cd ~/'
 alias rspect='rspec'
 alias fidd='diff'
+# alias v*='v *'
 
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
@@ -82,6 +84,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:$HOME/.rvm/bin"
 # More pathery
 export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin"
+
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
