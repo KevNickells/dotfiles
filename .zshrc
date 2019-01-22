@@ -23,6 +23,7 @@ alias ..='cd ../'
 alias ...='cd ~/'
 alias rspect='rspec'
 alias fidd='diff'
+alias hsk='stack ghci'
 # alias v*='v *'
 
 # Because I won't remember these commands
