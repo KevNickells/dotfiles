@@ -34,6 +34,14 @@ alias sz="source ~/.zshrc"
 alias ZZ="exit"
 alias jj="pwd"
 
+alias o="open_this_folder"
+#alias o="/mnt/c/Windows/explorer.exe"
+# TODO this is going to need some work in that it'll need to look at where the system is mounted, then append the address on the end.
+function open_this_folder {
+  FOLDER="$(pwd)"
+  /mnt/c/Windows/explorer.exe FOLDER
+}
+
 # open current folder; note that functions don't seem to work as single letters
 # This will need some thought re: being on Windows & Linux
 # function open_this_folder {
@@ -45,7 +53,8 @@ alias jj="pwd"
 #     echo "check open_this_folder() in .zshrc; $SYSTEM is not a recognised system"
 #   fi
 # }
-#
+
+
 # Because lazy
 alias v="vim"
 alias ga="git add"
@@ -56,8 +65,9 @@ alias grf="git show --pretty='' --name-only HEAD" # git last files amended
 alias lg="lazygit"
 alias c="clear"
 alias cath="head -10"
-alias o="open_this_folder"
 alias b="xdg-open"
+alias py="python3"
+
 
 # open last files amended in vim; get list, replace \n with ' ', pass to vim. Sweet.
 # Except it's not working in anything except root. Boo. TODO
