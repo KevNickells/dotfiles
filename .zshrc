@@ -1,7 +1,7 @@
 # :vim set tw=0
 
-# TODO git diff -show-names could use a shortcut because I cna't remember it.
-# TODO o to take a param and if text/html then xdg-open, else dolphin
+# TODO git diff -show-names could use a shortcut because I can't remember it.
+# TODO o to take a param and if text/html then
 # TODO automatically update Linux? sudo pacman -Syu
 
 SYSTEM=$(uname)
@@ -34,13 +34,13 @@ alias sz="source ~/.zshrc"
 alias ZZ="exit"
 alias jj="pwd"
 
-alias o="open_this_folder"
+#alias o="open_this_folder"
 #alias o="/mnt/c/Windows/explorer.exe"
 # TODO this is going to need some work in that it'll need to look at where the system is mounted, then append the address on the end.
-function open_this_folder {
-  FOLDER="$(pwd)"
-  /mnt/c/Windows/explorer.exe FOLDER
-}
+#function open_this_folder {
+#  FOLDER="$(pwd)"
+#  /mnt/c/Windows/explorer.exe FOLDER
+#}
 
 # open current folder; note that functions don't seem to work as single letters
 # This will need some thought re: being on Windows & Linux
