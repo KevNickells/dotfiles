@@ -35,20 +35,17 @@ alias ZZ="exit"
 alias jj="pwd"
 
 # open current folder; note that functions don't seem to work as single letters
-function open_this_folder {
-  if [ "$SYSTEM" = "Linux" ]; then
-    dolphin </dev/null &>/dev/null . &
-  elif [ "$SYSTEM" = "Darwin" ]; then
-    open .
-  else
-    echo "check open_this_folder() in .zshrc; $SYSTEM is not a recognised system"
-  fi
-}
-
-if [ "$SYSTEM" = "Linux" ]; then
-  xmodmap  ~/.Xmodmap
-fi
-
+# This will need some thought re: being on Windows & Linux
+# function open_this_folder {
+#   if [ "$SYSTEM" = "Linux" ]; then
+#     dolphin </dev/null &>/dev/null . &
+#   elif [ "$SYSTEM" = "Darwin" ]; then
+#     open .
+#   else
+#     echo "check open_this_folder() in .zshrc; $SYSTEM is not a recognised system"
+#   fi
+# }
+#
 # Because lazy
 alias v="vim"
 alias ga="git add"
@@ -112,7 +109,9 @@ setopt hist_ignore_all_dups
 
 source ~/
 source $ZSH/oh-my-zsh.sh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# TODO need to think about this in terms of Windows / Linux
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
