@@ -1,8 +1,9 @@
-# :vim set tw=0
-
 # TODO git diff -show-names could use a shortcut because I can't remember it.
 # TODO o to take a param and if text/html then
 # TODO automatically update Linux? sudo pacman -Syu
+# TODO Hoglet scripted to oopen sepaerate shells etc
+# TODO If / else for Windows > Linux / Actual Linux
+# TODO remove the themes that refer to rbenv / rvm
 
 SYSTEM=$(uname)
 

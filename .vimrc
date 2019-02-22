@@ -2,19 +2,9 @@
 " NOTE: ~/.vim/ftplugin/{filetype}.vim has the file-specific shortcuts
 " NOTE: This file is now mostly to-dos
 
-" TODO insert 'skip' / remove 'skip' from next in rb files with 'test' in the
-" name?
-
 "leader key; needs to be set before sourcing the below otherwise leader
 "commands don't work until sourcing .vimrc
 let mapleader = ","
-
-" Tryinng this out; to migrate if it works
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
-augroup END
 
 " Syntax highlighting for these config files
 autocmd BufNewFile,BufRead ~/.vim-* set syntax=vim
@@ -28,26 +18,28 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
-" TODO zs currently opens zsh - make it better and probably more emac-y
+" Locations for filetype specific stuff:
+" ~/.vim/ftplugin/ [html.haml.vim, javascript.vim, python.vim, ruby.vim]
+" ~/Snippets/ [thing] + [language] + [language extension]
+"
+" TODO go to line (eg :106) also centres
+
+" TODO toggle 000 for line length - does this need to refresh or something? (tw=0)
+
+" TODO zs currently opens zsh - make it better and probably more emac-y; is this
+" a tmux question?
 
 " TODO open shell with REPL with zn [node], zr [ruby] etc
+" Or even better, zs (yeek) opens a contextual shell dependant on filetype
 
-" TODO fp to find binding.pry in open buffers (eg ,b)
-
-" TODO toggle tw=0 quickly with 000; is set as merely turn it off for now.
-
-" TODO - tempoararily change to this folder to search only within it?
+" TODO - tempoararily change to this folder to search only within it
 
 " TODO dj to delete blank lines between here and below.(eg
 " line\n\n\n\n\n\n\n\nnextline becomes line\nnextline)
 
 " TODO construct list of random words to be generated for variables, make sure none are present when committing (except in specs)
 
-" TODO convert " to ' around a word to satiate the linter; ... possibly it's
-" just needed to figure out how to accept rubocop suggestions with ruby?
-
 " TODO Change background based on mode; highlight currently active panel?
-
 
 " This highlights current active window in a subtle way
 augroup BgHighlight
@@ -55,8 +47,6 @@ augroup BgHighlight
   autocmd WinEnter * set colorcolumn=80
   autocmd WinLeave * set colorcolumn=0
 augroup END
-
-" TODO Rails plugin by TPope. Who is good
 
 " TODO copy  & paste current code block; needs to be context depetndant?
 " nnoremap <Tab><Tab> v%lyO<esc>p
