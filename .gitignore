@@ -3,6 +3,7 @@
 !.vimrc
 !.zshrc
 !.vim-*
+!.tmux*
 !/Snippets/
 !/.vim/
 /.vim/*

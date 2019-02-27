@@ -4,6 +4,8 @@
 # TODO Hoglet scripted to oopen sepaerate shells etc
 # TODO If / else for Windows > Linux / Actual Linux
 # TODO remove the themes that refer to rbenv / rvm
+#
+tmux # start tmux
 
 SYSTEM=$(uname)
 
@@ -29,7 +31,7 @@ alias hsk='stack ghci'
 
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
-alias sz="source ~/.zshrc"
+alias sz="source ~/.zshrc" # should this be an on close for the file?
 
 # Because Vim
 alias ZZ="exit"
@@ -68,7 +70,6 @@ alias c="clear"
 alias cath="head -10"
 alias b="xdg-open"
 alias py="python3"
-
 
 # open last files amended in vim; get list, replace \n with ' ', pass to vim. Sweet.
 # Except it's not working in anything except root. Boo. TODO
