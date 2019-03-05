@@ -12,6 +12,7 @@ Plug 'tpope/vim-fugitive'               " Git ting yo
 Plug 'elixir-editors/vim-elixir'        " Man like Elixir
 Plug 'pangloss/vim-javascript'          " javscript ting
 Plug 'mxw/vim-jsx'                      " jsx syntax highlighting
+Plug 'gabrielelana/vim-markdown'        " markdown
 call plug#end()
 
 

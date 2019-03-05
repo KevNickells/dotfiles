@@ -4,8 +4,11 @@
 # TODO Hoglet scripted to oopen sepaerate shells etc
 # TODO If / else for Windows > Linux / Actual Linux
 # TODO remove the themes that refer to rbenv / rvm
+# TODO source this file on close rather than manually?
+# TODO script start-hoglet to open a new tmux sesssion, split panes, run server
 #
-tmux # start tmux
+# tmux # start tmux on start up - this is going to need a bit of thinking before I can commit to it.
+#
 
 SYSTEM=$(uname)
 
@@ -70,6 +73,7 @@ alias c="clear"
 alias cath="head -10"
 alias b="xdg-open"
 alias py="python3"
+alias python="python3"
 
 # open last files amended in vim; get list, replace \n with ' ', pass to vim. Sweet.
 # Except it's not working in anything except root. Boo. TODO
