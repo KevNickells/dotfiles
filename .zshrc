@@ -8,7 +8,6 @@
 # TODO script start-hoglet to open a new tmux sesssion, split panes, run server
 #
 # tmux # start tmux on start up - this is going to need a bit of thinking before I can commit to it.
-#
 
 SYSTEM=$(uname)
 
