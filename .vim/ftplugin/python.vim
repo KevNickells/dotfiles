@@ -1,4 +1,4 @@
-nnoremap <leader>c  :r<space>~/Snippets/classPython.rb<cr>
+nnoremap <leader>c  :r<space>~/Snippets/classPython.py<cr>
 
 nnoremap <leader>te :r<space>~/Snippets/test.py<cr>
 

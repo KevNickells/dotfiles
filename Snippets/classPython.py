@@ -4,3 +4,5 @@ class ClassName:
 
     def method(param):
         print(param)
+
+
