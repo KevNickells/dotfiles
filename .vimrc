@@ -22,7 +22,8 @@ source ~/.vim-insert-mode-remaps
 " ~/.vim/ftplugin/ [html.haml.vim, javascript.vim, python.vim, ruby.vim]
 " ~/Snippets/ [thing] + [language] + [language extension]
 "
-
+" TODO ttt serach for current word in whole project (.vim-normal-mode-remaps)
+" doesn't work
 " TODO silver surfer ff search?
 " TODO better ignore params for FF!
 " TODO go to line (eg :106) also centres

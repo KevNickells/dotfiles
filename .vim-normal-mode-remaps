@@ -1,5 +1,5 @@
 " escape twice to save; strip whitespace from end of line; return to current
-" cursor position; Ah. But <c-o> moves a man back somewhere he doesn't wanna be.
+" cursor position;
 nnoremap <Esc><Esc> :silent!:%s/\s\+$//g<cr><bar>:w<cr>
 nnoremap wh :%s/ $//g<cr>
 
@@ -92,9 +92,6 @@ endfunction
 "Copy full filepath to clipboard & display
 nnoremap <silent> <leader>cp :call FullFilePath()<bar>:echo@*<cr>
 
-" Run this spec
-nnoremap rr :call FullFilePath()<cr><bar>:<c-f>i! rspec <esc>p<c-c><cr>
-
 "Copy filename only to clipboard & display
 nnoremap <silent> <leader>cf :let @*=expand("%:t")<cr>:echo @*<cr>
 
@@ -106,7 +103,7 @@ endfunction
 " show current folder & copy to clipboard
 nnoremap <leader>sp :call CurrentFolder()<bar>:echo @*<cr>
 
-" Open new file in the current folder [wouldn't work on Windows but let's stick with Unix shall we?
+" Open new file in the current folder [needs to work with windows...]
 nnoremap <leader>ee :call CurrentFolder()<cr><bar>:<c-f>ie<space><esc>pA/<c-c>
 
 " Edit a file
@@ -145,3 +142,6 @@ nnoremap zs :term zsh<cr>
 
 " I don't remember ever going to the end of the file and not wanting to be at the end end
 nnoremap G G$
+
+" Is this efficient? No idea
+nnoremap da dt
