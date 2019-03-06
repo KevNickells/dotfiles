@@ -43,6 +43,7 @@ alias jj="pwd"
 
 # Because convenience
 alias ls="ls && gst"
+
 #alias o="open_this_folder"
 #alias o="/mnt/c/Windows/explorer.exe"
 # TODO this is going to need some work in that it'll need to look at where the system is mounted, then append the address on the end.
