@@ -64,7 +64,7 @@ alias jj="pwd"
 alias v="vim"
 alias ga="git add"
 alias gst="git status"
-alias gc="git commit -m"
+alias gc="git commit -a -m"
 alias gpsh="git push"
 alias gp="git pull --recurse-submodules"
 alias grf="git show --pretty='' --name-only HEAD" # git last files amended
