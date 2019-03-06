@@ -64,6 +64,7 @@ alias jj="pwd"
 # Because lazy
 alias v="vim"
 alias ga="git add"
+alias gst="git status"
 alias gc="git commit -m"
 alias gpsh="git push"
 alias gp="git pull --recurse-submodules"
@@ -74,7 +75,7 @@ alias cath="head -10"
 alias b="xdg-open"
 alias py="python3"
 alias python="python3"
-
+alias pytest="pytest -rs"
 # open last files amended in vim; get list, replace \n with ' ', pass to vim. Sweet.
 # Except it's not working in anything except root. Boo. TODO
 # May have shegged other things
@@ -98,7 +99,6 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:$HOME/.rvm/bin"
 # More pathery
 export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin"
-
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -167,3 +167,4 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
+
