@@ -9,6 +9,7 @@
 #
 # tmux # start tmux on start up - this is going to need a bit of thinking before I can commit to it.
 
+
 SYSTEM=$(uname)
 
 # My tings
@@ -26,7 +27,6 @@ alias cd..='cd ..'
 alias ./='~/.'
 alias ..='cd ../'
 alias ...='cd ~/'
-alias rspect='rspec'
 alias fidd='diff'
 alias hsk='stack ghci'
 # alias v*='v *'
@@ -40,9 +40,8 @@ alias ZZ="exit"
 alias ZZZ="exit"
 alias jj="pwd"
 
-
 # Because convenience
-alias ls="ls && gst"
+# alias ls="ls --color=auto && gst"
 
 #alias o="open_this_folder"
 #alias o="/mnt/c/Windows/explorer.exe"
