@@ -1,3 +1,4 @@
+# TODO plugin manager?https://github.com/zplug/zplug
 # TODO git diff -show-names could use a shortcut because I can't remember it.
 # TODO o to take a param and if text/html then
 # TODO automatically update Linux? sudo pacman -Syu
@@ -40,9 +41,6 @@ alias ZZ="exit"
 alias ZZZ="exit"
 alias jj="pwd"
 
-# Because convenience
-# alias ls="ls --color=auto && gst"
-
 #alias o="open_this_folder"
 #alias o="/mnt/c/Windows/explorer.exe"
 # TODO this is going to need some work in that it'll need to look at where the system is mounted, then append the address on the end.
@@ -72,13 +70,14 @@ alias gc="git commit -a -m"
 alias gpsh="git push"
 alias gp="git pull --recurse-submodules"
 alias grf="git show --pretty='' --name-only HEAD" # git last files amended
-alias lg="lazygit"
 alias c="clear"
 alias cath="head -10"
 alias b="xdg-open"
 alias py="python3"
 alias python="python3"
 alias pytest="pytest -rs"
+alias lg="ls --color=auto && gst"
+
 # open last files amended in vim; get list, replace \n with ' ', pass to vim. Sweet.
 # Except it's not working in anything except root. Boo. TODO
 # May have shegged other things
@@ -109,7 +108,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # hyphen insensitive completion
 HYPHEN_INSENSITIVE="true"
@@ -170,4 +169,3 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
-
