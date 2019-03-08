@@ -1,6 +1,6 @@
+# TODO lazygit looks useful. Would be nice if it displayed ok
 # TODO plugin manager?https://github.com/zplug/zplug
-# TODO fzf (etc) to read from the nearest .gitignore file
-# TODO GEt rid of the kev@computer stuff from the shell $(powerline-shell --shell zsh $?)
+# TODO Get rid of the kev@computer stuff from the shell $(powerline-shell --shell zsh $?)
 # TODO git diff -show-names could use a shortcut because I can't remember it.
 # TODO o to take a param and if text/html then
 # TODO automatically update Linux? sudo pacman -Syu

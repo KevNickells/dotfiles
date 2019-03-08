@@ -21,19 +21,14 @@ source ~/.vim-insert-mode-remaps
 " Locations for filetype specific stuff:
 " ~/.vim/ftplugin/ [html.haml.vim, javascript.vim, python.vim, ruby.vim]
 " ~/Snippets/ [thing] + [language] + [language extension]
-"
+
+" TODO figure out how to link file within file
+" TODO fzf (etc) to read from the nearest .gitignore file " .vim-functions-and-commands
 " TODO ttt serach for current word in whole project (.vim-normal-mode-remaps)
 " doesn't work
-" TODO silver surfer ff search?
-" TODO better ignore params for FF!
 " TODO go to line (eg :106) also centres
-
 " TODO toggle 000 for line length - does this need to refresh or something? (tw=0)
 
-" TODO zs currently opens zsh - make it better and probably more emac-y; is this
-" a tmux question?
-
-" TODO open shell with REPL with zn [node], zr [ruby] etc
 " Or even better, zs (yeek) opens a contextual shell dependant on filetype
 
 " TODO - tempoararily change to this folder to search only within it
