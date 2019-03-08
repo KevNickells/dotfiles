@@ -66,11 +66,16 @@ alias jj="pwd"
 # }
 
 
+function git_add_commit_push {
+   git commit -a -m \"$1\" && git push
+}
+
 # Because lazy
 alias v="vim"
 alias ga="git add"
 alias gst="git status"
-alias gc="git commit -a -m"
+# alias gc="git commit -a -m"
+alias gc="git_add_commit_push"
 alias gpsh="git push"
 alias gp="git pull --recurse-submodules"
 alias grf="git show --pretty='' --name-only HEAD" # git last files amended
