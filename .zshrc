@@ -41,10 +41,16 @@ alias hsk='stack ghci'
 alias zs="vim ~/.zshrc"
 alias sz="source ~/.zshrc" # should this be an on close for the file?
 
+# Just so tired of that extra keypress
+function exiter {
+  exit echo
+}
+
 # Because Vim
-alias Z="exit"
-alias ZZ="exit"
-alias ZZZ="exit"
+alias Z="exiter"
+alias ZZ="exiter"
+alias ZZZ="exiter"
+
 alias jj="pwd"
 
 #alias o="open_this_folder"
