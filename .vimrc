@@ -21,7 +21,7 @@ source ~/.vim-insert-mode-remaps
 " Locations for filetype specific stuff:
 " ~/.vim/ftplugin/ [html.haml.vim, javascript.vim, python.vim, ruby.vim]
 " ~/Snippets/ [thing] + [language] + [language extension]
-
+" TODO include time on the statusline for vim
 " TODO figure out how to link file within file
 " TODO fzf (etc) to read from the nearest .gitignore file " .vim-functions-and-commands
 " TODO ttt serach for current word in whole project (.vim-normal-mode-remaps)

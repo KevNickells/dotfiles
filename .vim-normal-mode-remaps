@@ -134,11 +134,11 @@ nnoremap cd :cd<space>
 " quickly turn off text width 80
 nnoremap 000 :set tw=0
 
-" yank whole word rather than to - etc
+" yank whole word rather than to hyphen-y things
 nnoremap yw yW
 
 " open a shell in-window
-nnoremap zs :term zsh<cr>
+nnoremap ss :term zsh<cr>
 
 " I don't remember ever going to the end of the file and not wanting to be at the end end
 nnoremap G G$

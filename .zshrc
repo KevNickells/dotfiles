@@ -1,3 +1,6 @@
+export TERM="xterm-256color" # colour ting. Dont' really understand it.
+
+# TODO put a warning on git_add_commit_push - 'this will cdd commit push these # files yeah?
 # TODO lazygit looks useful. Would be nice if it displayed ok
 # TODO plugin manager?https://github.com/zplug/zplug
 # TODO Get rid of the kev@computer stuff from the shell $(powerline-shell --shell zsh $?)
@@ -11,7 +14,6 @@
 # TODO script start-hoglet to open a new tmux sesssion, split panes, run server
 #
 # tmux # start tmux on start up - this is going to need a bit of thinking before I can commit to it.
-#
 
 
 SYSTEM=$(uname)

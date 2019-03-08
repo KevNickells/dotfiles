@@ -7,3 +7,4 @@ nnoremap db :r<space>~/Snippets/debuggerPython.py<cr>
 inoremap db :r<space>~/Snippets/debuggerPython.py<cr>
 
 nnoremap zs :term python<cr>
+nnoremap tst :term pytest -rs<cr>
