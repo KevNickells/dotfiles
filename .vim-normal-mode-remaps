@@ -145,3 +145,6 @@ nnoremap G G$
 
 " Is this efficient? No idea
 nnoremap da dt
+
+" Whelp
+nnoremap Z ZZ

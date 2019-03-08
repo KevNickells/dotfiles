@@ -1,4 +1,6 @@
 # TODO plugin manager?https://github.com/zplug/zplug
+# TODO fzf (etc) to read from the nearest .gitignore file
+# TODO GEt rid of the kev@computer stuff from the shell $(powerline-shell --shell zsh $?)
 # TODO git diff -show-names could use a shortcut because I can't remember it.
 # TODO o to take a param and if text/html then
 # TODO automatically update Linux? sudo pacman -Syu
@@ -9,6 +11,7 @@
 # TODO script start-hoglet to open a new tmux sesssion, split panes, run server
 #
 # tmux # start tmux on start up - this is going to need a bit of thinking before I can commit to it.
+#
 
 
 SYSTEM=$(uname)
@@ -37,6 +40,7 @@ alias zs="vim ~/.zshrc"
 alias sz="source ~/.zshrc" # should this be an on close for the file?
 
 # Because Vim
+alias Z="exit"
 alias ZZ="exit"
 alias ZZZ="exit"
 alias jj="pwd"
