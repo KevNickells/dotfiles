@@ -95,6 +95,8 @@ alias python="python3"
 alias pytest="pytest -rs"
 alias lg="ls --color=auto && gst"
 
+gp # pull on login
+
 # open last files amended in vim; get list, replace \n with ' ', pass to vim. Sweet.
 # Except it's not working in anything except root. Boo. TODO
 # May have shegged other things
