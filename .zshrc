@@ -74,12 +74,17 @@ alias jj="pwd"
 # }
 
 function git_add_commit_push {
- INPUT=$1
- MODIFIED=$(git status | grep modified | sed "s/[[:space:]]\+modified:[[:space:]]\+//g")
+  INPUT=$1
+  MODIFIED=$(git status | grep modified | sed "s/[[:space:]]\+modified:[[:space:]]\+//g")
 
- echo this will commit the following files:
- echo $MODIFIED
   while true; do
+    case $INPUT in
+      "") echo Needs a commit message, exiting; break;;
+    esac
+
+    echo this will commit the following files:
+    echo $MODIFIED
+
     read yesno"?Is that ok? Yes or no?"
     case "$yesno" in
       [Yy]* ) git commit -a -m \"$1\" && git push; break;;
