@@ -1,6 +1,6 @@
 export TERM="xterm-256color" # colour ting. Dont' really understand it.
 
-# TODO put a warning on git_add_commit_push - 'this will cdd commit push these # files yeah?
+# TODO put a warning on git_add_commit_push - 'this will add commit push these # files yeah?
 # TODO lazygit looks useful. Would be nice if it displayed ok
 # TODO plugin manager?https://github.com/zplug/zplug
 # TODO Get rid of the kev@computer stuff from the shell $(powerline-shell --shell zsh $?)
@@ -73,9 +73,17 @@ alias jj="pwd"
 #   fi
 # }
 
-
 function git_add_commit_push {
-   git commit -a -m \"$1\" && git push
+  INPUT=$1
+  echo $1
+  MODIFIED=$(git status | grep modified | sed "s/[[:space:]]\+modified:[[:space:]]\+//g")
+  echo this will commit the following files:
+  echo $MODIFIED
+  select yn in "Yes" "No"
+  case $yn in
+    Yes ) git commit -a -m \"$1\" && git push;;
+    No ) exit;;
+  esac
 }
 
 # Because lazy
@@ -94,8 +102,6 @@ alias py="python3"
 alias python="python3"
 alias pytest="pytest -rs"
 alias lg="ls --color=auto && gst"
-
-gp # pull on login
 
 # open last files amended in vim; get list, replace \n with ' ', pass to vim. Sweet.
 # Except it's not working in anything except root. Boo. TODO

@@ -9,6 +9,7 @@ nnoremap csl Oconsole.log()<esc>i
 inoremap csl console.log()<esc>i
 
 nnoremap zs :term node<cr>
+nnoremap tst :term npm test<cr>
 
 
 
