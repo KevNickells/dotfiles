@@ -1,0 +1,58 @@
+# Splitting up into separate files
+
+# at work or at home, change file opening program
+COMPUTER_NAME=$(uname -n)
+
+function open_this_folder {
+  if [ "$COMPUTER_NAME" = "horsey-horserson" ]; then
+    dolphin $1 &
+  # elif windows /mnt/c/Windows/explorer.exe FOLDER
+  else
+    echo "check open_this_folder() in .zshrc; $COMPUTER_NAME is not recognised"
+  fi
+}
+
+# Just so tired of that extra keypress
+function exiter {
+  exit echo
+}
+
+# git commit / add / push in one go with error handling
+function git_add_commit_push {
+  INPUT=$1
+  MODIFIED=$(git status | grep modified | sed "s/[[:space:]]\+modified:[[:space:]]\+//g")
+
+  while true; do
+    case $INPUT in
+      "") echo Needs a commit message, exiting; break;;
+    esac
+
+    echo this will commit the following files:
+    echo $MODIFIED
+
+    read yesno"?Is that ok? Yes or no?"
+    case "$yesno" in
+      [Yy]* ) git commit -a -m \"$1\" && git push; break;;
+      [Nn]* ) break;;
+      * ) echo "The question was yes or no, dickface"
+    esac
+  done
+}
+
+# powerline bits...
+function powerline_precmd() {
+  PS1="$(powerline-shell --shell zsh $?)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+  install_powerline_precmd
+fi

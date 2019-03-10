@@ -1,0 +1,15 @@
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# hyphen insensitive completion
+HYPHEN_INSENSITIVE="true"
+
+# enable auto-correction.
+ENABLE_CORRECTION="true"
+
+# red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# time format
+HIST_STAMPS="dd.mm.yyyy"
+
+setopt hist_ignore_all_dups

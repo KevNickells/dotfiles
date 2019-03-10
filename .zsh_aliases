@@ -1,0 +1,50 @@
+# Because who needs to type accurately?
+alias insatll=install
+alias isntall=install
+alias cd..='cd ..'
+alias ./='~/.'
+alias ..='cd ../'
+alias ...='cd ~/'
+alias fidd='diff'
+alias hsk='stack ghci'
+# alias v*='v *'
+
+# Because I won't remember these commands
+alias zs="vim ~/.zshrc"
+alias sz="source ~/.zshrc" # should this be an on close for the file?
+
+
+# Because Vim
+alias Z="exiter"
+alias ZZ="exiter"
+alias ZZZ="exiter"
+alias jj="pwd"
+
+alias o="open_this_folder"
+
+# Because lazy
+alias v="vim"
+alias ga="git add"
+alias gst="git status"
+alias gc="git_add_commit_push"
+alias gpsh="git push"
+alias gp="git pull --recurse-submodules"
+alias grf="git show --pretty='' --name-only HEAD" # git last files amended
+alias c="clear"
+alias cath="head -10"
+alias b="xdg-open"
+alias py="python3"
+alias python="python3"
+alias pytest="pytest -rs"
+alias lg="ls --color=auto && gst"
+
+# Because stealing ideas from others
+alias ll="ls -lhA"
+
+# Nice colours for grep
+alias grep='grep --color=auto'
+
+# nice colours for git log
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
+
