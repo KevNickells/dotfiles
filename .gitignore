@@ -9,3 +9,7 @@
 /.vim/*
 !/.vim/ftplugin/
 !/.vim/plugged/
+!.zsh_exports
+!.zsh_functions
+!.zsh_aliases
+!.zsh_my_settings
