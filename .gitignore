@@ -1,7 +1,6 @@
 /*
 !.gitignore
 !.vimrc
-!.zshrc
 !.vim-*
 !.tmux*
 !/Snippets/
@@ -9,7 +8,10 @@
 /.vim/*
 !/.vim/ftplugin/
 !/.vim/plugged/
+!.zshrc
 !.zsh_exports
 !.zsh_functions
 !.zsh_aliases
 !.zsh_my_settings
+!.zsh_plugins
+!.zsh_plugins.sh
