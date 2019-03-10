@@ -54,4 +54,8 @@ augroup remember_folds
   autocmd BufWinEnter * silent! loadview
 augroup END
 
+aug AutoSourceZshrc
+    au!
+    au BufWritePost .zshrc !source ~/.zshrc
+aug END
 
