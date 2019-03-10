@@ -1,5 +1,14 @@
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+  dir
+)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+  vcs
+  status
+  time
+)
+
 # hyphen insensitive completion
 HYPHEN_INSENSITIVE="true"
 
