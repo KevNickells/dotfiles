@@ -2,7 +2,7 @@ export TERM="xterm-256color" # colour ting. Dont' really understand it.
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 export NVM_DIR=~/.nvm
 
