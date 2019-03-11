@@ -7,12 +7,9 @@ alias ..='cd ../'
 alias ...='cd ~/'
 alias fidd='diff'
 alias hsk='stack ghci'
-# alias v*='v *'
 
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
-alias sz="source ~/.zshrc" # should this be an on close for the file?
-
 
 # Because Vim
 alias Z="exiter"
@@ -46,5 +43,3 @@ alias grep='grep --color=auto'
 
 # nice colours for git log
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
-
-
