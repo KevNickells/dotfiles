@@ -30,8 +30,11 @@ function git_add_commit_push {
     esac
 
     echo this will commit the following files:
-    echo Modified files:\n$MODIFIED
-    echo Adding files:\n$NEW
+    echo Modified files:
+    echo $MODIFIED
+    echo \n
+    echo Adding files:
+    echo $NEW
 
     read yesno"?Is that ok? Yes or no?"
     case "$yesno" in
