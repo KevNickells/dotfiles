@@ -21,10 +21,10 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
+" TODO better syntax for regex find and replace
 " TODO figure out 'install if not found...' so I don't have to do a load of instally bore every time I'm on a new machine
-" TODO include time on the statusline for vim
 " TODO fzf (etc) to read from the nearest .gitignore file " .vim-functions-and-commands
-" TODO ttt serach for current word in whole project (.vim-normal-mode-remaps)
+" TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps)
 " doesn't work
 " TODO Change background based on mode; highlight currently active panel?
 
