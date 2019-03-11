@@ -6,5 +6,5 @@ nnoremap <leader>te :r<space>~/Snippets/test.py<cr>
 nnoremap db :r<space>~/Snippets/debuggerPython.py<cr>
 inoremap db :r<space>~/Snippets/debuggerPython.py<cr>
 
-nnoremap zs :term python<cr>
+nnoremap zs :term python3<cr>
 nnoremap tst :term pytest -rs<cr>

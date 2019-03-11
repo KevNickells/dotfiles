@@ -30,11 +30,8 @@ function git_add_commit_push {
       "") echo Needs a commit message, exiting; break;;
     esac
 
-    echo This will add these modified files:
-    echo $MODIFIED
-    echo And create these new files:
-    echo $NEW
-
+    echo These files were affected:
+    echo $(git status -s)
 
     read yesno"?Is that ok? Yes or no?"
     case "$yesno" in
