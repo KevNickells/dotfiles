@@ -20,21 +20,21 @@ function exiter {
 # git commit / add / push in one go with error handling
 function git_add_commit_push {
   INPUT=$1
-  STATUS=git status
+  STATUS=$(git status)
   MODIFIED=$($STATUS | grep modified | sed "s/[[:space:]]\+modified:[[:space:]]\+//g")
   NEW=$($STATUS | grep "^\s\+\w" | sed "s/\s\+//g")
+
 
   while true; do
     case $INPUT in
       "") echo Needs a commit message, exiting; break;;
     esac
 
-    echo this will commit the following files:
-    echo Modified files:
+    echo This will add these modified files:
     echo $MODIFIED
-    echo \n
-    echo Adding files:
+    echo And create these new files:
     echo $NEW
+
 
     read yesno"?Is that ok? Yes or no?"
     case "$yesno" in
