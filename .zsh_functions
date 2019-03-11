@@ -20,7 +20,9 @@ function exiter {
 # git commit / add / push in one go with error handling
 function git_add_commit_push {
   INPUT=$1
-  MODIFIED=$(git status | grep modified | sed "s/[[:space:]]\+modified:[[:space:]]\+//g")
+  STATUS=git status
+  MODIFIED=$($STATUS | grep modified | sed "s/[[:space:]]\+modified:[[:space:]]\+//g")
+  NEW=$($STATUS | grep "^\s\+\w" | sed "s/\s\+//g")
 
   while true; do
     case $INPUT in
@@ -28,11 +30,12 @@ function git_add_commit_push {
     esac
 
     echo this will commit the following files:
-    echo $MODIFIED
+    echo Modified files:\n$MODIFIED
+    echo Adding files:\n$NEW
 
     read yesno"?Is that ok? Yes or no?"
     case "$yesno" in
-      [Yy]* ) git commit -a -m \"$1\" && git push; break;;
+      [Yy]* ) git add . && git commit -m \"$1\" && git push; break;;
       [Nn]* ) break;;
       * ) echo "The question was yes or no, dickface"
     esac
