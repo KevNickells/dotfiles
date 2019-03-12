@@ -5,6 +5,8 @@ source ~/.zsh_my_settings
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# TODO source on save OR every 8 hours? Which'd mean putting a wee timestamp in
+# a config file and not updating if now - that is less than 8?
 # TODO sort out gc in .zsh_functions
 # TODO automatically update Linux? sudo pacman -Syu
 # TODO script start-hoglet to open a new tmux sesssion, split panes, run server

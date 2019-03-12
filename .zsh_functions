@@ -20,10 +20,6 @@ function exiter {
 # git commit / add / push in one go with error handling
 function git_add_commit_push {
   INPUT=$1
-  STATUS=$(git status)
-  MODIFIED=$($STATUS | grep modified | sed "s/[[:space:]]\+modified:[[:space:]]\+//g")
-  NEW=$($STATUS | grep "^\s\+\w" | sed "s/\s\+//g")
-
 
   while true; do
     case $INPUT in

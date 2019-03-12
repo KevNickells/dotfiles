@@ -10,6 +10,7 @@ alias hsk='stack ghci'
 
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
+alias sz="source ~/.zshrc"
 
 # Because Vim
 alias Z="exiter"
