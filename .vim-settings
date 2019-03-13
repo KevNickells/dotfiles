@@ -1,9 +1,36 @@
-" timeoutlength; dddd interferes a bit with dd....
-set timeout
-set timeoutlen=300 ttimeoutlen=0
+"------------------ Obvious stuff
+"Tab as two spaces
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+
+"Turns off compatibility with vi
+set nocompatible
 
 " Scroll with mouse.
 set mouse=n
+
+" text width
+set tw=80
+
+"Don't include a swapfile
+set noswapfile
+
+" Set clipboard as global register for vim
+set clipboard=unnamedplus
+
+"Let's be honest, no-one really cares about case when searching.
+set ignorecase
+
+" Except when they do - this mostly ignores case except when upper
+set smartcase
+
+" Because apparently by default backspace doesn't do what you'd expect
+set backspace=indent,eol,start
+
+"------------------ End obvious stuff
+
+" timeoutlength; dddd interferes a bit with dd....
+set timeout
+set timeoutlen=300 ttimeoutlen=0
 
 "Colourscheme stuff
 set background=dark
@@ -12,12 +39,6 @@ try
 catch
 endtry
 
-" text width
-set tw=80
-
-" Set clipboard as global register for vim
-set clipboard=unnamed
-
 "line numbers
 set number
 
@@ -25,9 +46,6 @@ set number
 set statusline=%F
 set statusline+=\ \ \ \ \ \
 set statusline+=%l/%L
-
-"Don't include a swapfile
-set noswapfile
 
 " TODO Does this even work?
 "  Enable folding
@@ -39,21 +57,9 @@ augroup END
 " keeps buffers open in the background
 set hidden
 
-"Let's be honest, no-one really cares about case when searching.
-set ignorecase
-
-" Except when they do - this mostly ignores case except when upper
-set smartcase
-
 "highlight line and column
 set cursorline
 set cursorcolumn
-
-"Tab as two spaces
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
-
-"Turns off compatibility with vi
-set nocompatible
 
 "enable syntax and plugins (for netrw)
 syntax enable
@@ -62,9 +68,6 @@ filetype plugin on
 "Text over 80 chars in red
 highlight OverLength ctermfg=red guibg=#592929
 match OverLength /\%81v.\+/
-
-" Because apparently by default backspace doesn't do what you'd expect
-set backspace=indent,eol,start
 
 "fzf as global search ting
 set rtp+=/usr/local/opt/fzf

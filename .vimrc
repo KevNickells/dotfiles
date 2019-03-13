@@ -21,6 +21,9 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
+" TODO copy to system registery windows
+" TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
+" TODO gf --> gv (open in new thing)
 " TODO better syntax for regex find and replace
 " TODO figure out 'install if not found...' so I don't have to do a load of instally bore every time I'm on a new machine
 " TODO fzf (etc) to read from the nearest .gitignore file " .vim-functions-and-commands

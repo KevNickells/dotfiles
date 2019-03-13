@@ -78,6 +78,9 @@ nnoremap <C-k> :bnext<cr>
 "new window
 nnoremap vv :vsplit<cr><C-w>l
 
+" open this file in a new window
+nnoremap gv :vs <cfile><cr>
+
 "copy current parentheses
 nnoremap <Tab> v%lyO<esc>
 
@@ -110,7 +113,7 @@ nnoremap <leader>sp :call CurrentFolder()<bar>:echo @*<cr>
 nnoremap <leader>ee :call CurrentFolder()<cr><bar>:<c-f>ie<space><esc>pA/<c-c>
 
 " Edit a file
-nnoremap ed :e<space>
+nnoremap ee :e<space>
 
 " Show root filepath
 nnoremap ;; :pwd<cr>
@@ -154,4 +157,6 @@ nnoremap Z ZZ
 
 " open shell > git status
 nnoremap gst :term zsh<cr>gst<cr>
+
+
 
