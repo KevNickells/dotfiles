@@ -21,6 +21,7 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
+" TODO ev to open new file in a split window
 " TODO copy to system registery windows
 " TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
 " TODO gf --> gv (open in new thing)

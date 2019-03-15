@@ -5,6 +5,8 @@ source ~/.zsh_my_settings
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# TODO let's put some colour into the # git_add_commit_push:
+# https://stackoverflow.com/questions/38931107/how-to-syntax-highlight-a-bash-output-some-help-information
 # TODO cd [ last command  on each load
 # TODO source on save OR every 8 hours? Which'd mean putting a wee timestamp in
 # a config file and not updating if now - that is less than 8?

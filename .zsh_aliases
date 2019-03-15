@@ -1,12 +1,10 @@
 # Because who needs to type accurately?
+alias cd..='cd ..'
+alias fidd='diff'
 alias insatll=install
 alias isntall=install
-alias cd..='cd ..'
-alias ./='~/.'
-alias ..='cd ../'
-alias ...='cd ~/'
-alias fidd='diff'
-alias hsk='stack ghci'
+alias mdkir='mkdir'
+alias mdkri='mkdir'
 
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
@@ -21,23 +19,25 @@ alias jj="pwd"
 alias o="open_this_folder"
 
 # Because lazy
-alias v="vim"
+alias b="xdg-open"
+alias c="clear"
+alias cath="head -10"
 alias ga="git add"
-alias gst="git status"
 alias gc="git_add_commit_push"
 alias gpsh="git push"
 alias gp="git pull --recurse-submodules"
 alias grf="git show --pretty='' --name-only HEAD" # git last files amended
-alias c="clear"
-alias cath="head -10"
-alias b="xdg-open"
-alias py="python3"
-alias python="python3"
-alias pytest="pytest -rs"
+alias gst="git status"
+alias hsk='stack ghci'
 alias lg="ls --color=auto && gst"
-
-# Because stealing ideas from others
 alias ll="ls -lhA"
+alias py="python3"
+alias pytest="pytest -rs"
+alias python="python3"
+alias v="vim"
+alias ./='~/.'
+alias ..='cd ../'
+alias ...='cd ~/'
 
 # Nice colours for grep
 alias grep='grep --color=auto'
