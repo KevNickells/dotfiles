@@ -1,5 +1,4 @@
 class ClassName {
-
   constructor(params) {
     this.params = params;
   }
