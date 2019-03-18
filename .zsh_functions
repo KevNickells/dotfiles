@@ -39,6 +39,11 @@ function git_add_commit_push {
   done
 }
 
+function mkdir_and_cd {
+  INPUT=$1
+  mkdir $1 && cd $1
+}
+
 # powerline bits...
 function powerline_precmd() {
   PS1="$(powerline-shell --shell zsh $?)"

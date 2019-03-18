@@ -22,12 +22,8 @@ source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
 " TODO ev to open new file in a split window
-" TODO copy to system registery windows
 " TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
-" TODO gf --> gv (open in new thing)
 " TODO better syntax for regex find and replace
-" TODO figure out 'install if not found...' so I don't have to do a load of instally bore every time I'm on a new machine
-" TODO fzf (etc) to read from the nearest .gitignore file " .vim-functions-and-commands
 " TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps)
 " doesn't work
 " TODO Change background based on mode; highlight currently active panel?
@@ -49,4 +45,3 @@ command! MakeTags !ctags -R .
 
 " TODO Search for current word in open buffers; - doesn't work bcause FZFLines doesn't  take pasted characters; so probably one to re-figure FZFLines as a function which takes a param?
 " nnoremap tttt EvBy:<c-f>iFZFLines<Space><esc>p<c-c><cr>
-
