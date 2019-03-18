@@ -1,5 +1,5 @@
 " NOTE: This file is now mostly to-dos
-" NOTE: File locations:
+" NOTE: Language-specific locations:
 " .vim/ftplugin/haml.vim
 " .vim/ftplugin/html.haml.vim
 " .vim/ftplugin/javascript.vim
@@ -21,11 +21,8 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
-" TODO ev to open new file in a split window
 " TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
-" TODO better syntax for regex find and replace
-" TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps)
-" doesn't work
+" TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work
 " TODO Change background based on mode; highlight currently active panel?
 
 " This highlights current active window in a subtle way

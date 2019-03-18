@@ -17,6 +17,12 @@ function! s:buffer_lines()
   return res
 endfunction
 
+function FindAndReplace()
+  let find = input('Find:')
+  let replace = input('Replace:')
+  exec '%s/' . find . '/' . replace . '/g'
+endfunction
+
 command! FZFLines call fzf#run({
 \   'source':  <sid>buffer_lines(),
 \   'sink':    function('<sid>line_handler'),
