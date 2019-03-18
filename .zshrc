@@ -2,6 +2,7 @@ source ~/.zsh_exports
 source ~/.zsh_functions
 source ~/.zsh_aliases
 source ~/.zsh_my_settings
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
