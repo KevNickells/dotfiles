@@ -21,3 +21,11 @@ source $ZSH/oh-my-zsh.sh
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
 # antibody update
 # source ~/.zsh_plugins.sh
+
+export NPM_PACKAGES="/home/kev/.npm-packages"
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules${NODE_PATH:+:$NODE_PATH}"
+export PATH="$NPM_PACKAGES/bin:$PATH"
+# Unset manpath so we can inherit from /etc/manpath via the `manpath`
+# command
+unset MANPATH  # delete if you already modified MANPATH elsewhere in your config
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
