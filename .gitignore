@@ -13,5 +13,7 @@
 !.zsh_functions
 !.zsh_aliases
 !.zsh_my_settings
+!.zsh_colours
+
 !.zsh_plugins
 !.zsh_plugins.sh

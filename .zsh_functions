@@ -23,13 +23,13 @@ function git_add_commit_push {
 
   while true; do
     case $INPUT in
-      "") echo Needs a commit message, exiting; break;;
+      "") echo ${red_with_blue}Needs a commit message, exiting${default}; break;;
     esac
 
-    echo These files were affected:
+    echo ${magenta_with_yellow}These files were affected:
     echo $(git status -s)
 
-    read yesno"?Is that ok? Yes or no?"
+    read yesno"?${default}Is that ok? Yes or no?"
     case "$yesno" in
       [Yy]* ) git add . && git commit -m \"$1\" && git push; break;;
       [Nn]* ) break;;
