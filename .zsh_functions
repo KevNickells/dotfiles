@@ -27,6 +27,7 @@ function git_add_commit_push {
     esac
 
     echo ${magenta_with_yellow}These files were affected${default}:
+
     echo $(git status -s)
 
     read yesno"?Is that ok? Yes or no?"
