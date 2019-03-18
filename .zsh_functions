@@ -1,5 +1,3 @@
-# Splitting up into separate files
-
 # at work or at home, change file opening program
 COMPUTER_NAME=$(uname -n)
 
