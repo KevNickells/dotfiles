@@ -21,10 +21,3 @@ source $ZSH/oh-my-zsh.sh
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
 # antibody update
 # source ~/.zsh_plugins.sh
-
-red='\033[0;31m'
-nc='\033[0m'
-cyan='\033[1;36m'
-
-echo "${red}No tests added"
-echo "${nc}Perhaps you should think about ${cyan}adding some tests?${nc}"
