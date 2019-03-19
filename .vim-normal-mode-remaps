@@ -156,8 +156,8 @@ nnoremap da dt
 nnoremap Z ZZ
 
 " open shell > git status
-nnoremap gst :term zsh<cr>gst<cr>:s
+nnoremap gst :term zsh<cr>gst<cr>
 
 " tidy up - ' to ", remove ending ;, respace
-nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==
+nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>ggvG==<esc>2<C-o>
 

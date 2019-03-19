@@ -21,6 +21,7 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
+" TODO todo file / note files could use a syntax highlighting
 " TODO ev to open new file in a split window
 " TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
 " TODO better syntax for regex find and replace
