@@ -11,6 +11,7 @@ nnoremap <c-u> EvBU<esc>
 
 "Fuzzy file finder.
 nnoremap ff :FZF<CR>
+nnoremap ff :FZF<CR>
 
 "Spacebar turn on/ off highlighting for search term; displays same
 noremap <Space> :set hlsearch! hlsearch?<CR>
@@ -68,15 +69,12 @@ nnoremap mmm :bufdo bd<cr>
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" Search for current word in whole project
-nnoremap ttt EvBy:<c-f>iFind<Space><esc>p<c-c><Enter>
-
 " cycle through open buffers in current window
 nnoremap <C-j> :bprevious<cr>
 nnoremap <C-k> :bnext<cr>
 
-"new window
-nnoremap vv :vsplit<cr><C-w>l
+" Search for current word in whole project
+nnoremap ttt EvBy:<c-f>iFind<Space><esc>p<c-c><Enter>
 
 " open this file in a new window
 nnoremap gv :vs <cfile><cr>
@@ -115,6 +113,12 @@ nnoremap <leader>ee :call CurrentFolder()<cr><bar>:<c-f>ie<space><esc>pA/<c-c>
 " Edit a file
 nnoremap ee :e<space>
 
+"new window
+nnoremap vv :vsplit<cr><C-w>l
+
+" Edit a file in a new window
+nnoremap ev :vsplit<cr><C-w>l:e<space>
+
 " Show root filepath
 nnoremap ;; :pwd<cr>
 
@@ -130,9 +134,6 @@ nnoremap <C-w> <C-w>=
 
 " Got to next thing at this indent level
 nnoremap <leader>n 0yw/<c-f>i^<esc>pa\w<esc><c-c><cr>
-
-" To shell... Probably want to have a more general key for this
-nnoremap !! :!<space>
 
 " change directory. One key saved. Woot
 nnoremap cd :cd<space>
@@ -150,9 +151,9 @@ nnoremap ss :term zsh<cr>
 nnoremap G G$
 
 " Is this efficient? No idea
-nnoremap da dt
+nnoremap df dt
 
-" Whelp
+" Close with one keystroke
 nnoremap Z ZZ
 
 " open shell > git status
@@ -161,3 +162,5 @@ nnoremap gst :term zsh<cr>gst<cr>
 " tidy up - ' to ", remove ending ;, respace
 nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>ggvG==<esc>2<C-o>
 
+" Simpler find and replace because I can never remember it
+nnoremap fr :call FindAndReplace()<cr>

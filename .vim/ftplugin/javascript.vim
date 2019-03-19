@@ -12,3 +12,8 @@ nnoremap zs :term node<cr>
 nnoremap tst :term npm test<cr>
 
 nnoremap <leader>t :r<space>~/Snippets/testJavascript.js<cr>
+
+" tidy up - ' to ", remove ending ;, respace
+nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==
+
+
