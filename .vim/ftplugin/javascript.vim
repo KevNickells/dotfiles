@@ -10,6 +10,7 @@ inoremap csl console.log()<esc>i
 
 nnoremap zs :term node<cr>
 nnoremap tst :term npm test<cr>
+nnoremap tstu :term npm test -- -u<cr>
 
 nnoremap <leader>t :r<space>~/Snippets/testJavascript.js<cr>
 
