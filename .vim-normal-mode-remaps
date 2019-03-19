@@ -1,6 +1,6 @@
 " escape twice to save; strip whitespace from end of line; return to current
 " cursor position;
-nnoremap <Esc><Esc> :silent!:%s/\s\+$//g<cr><bar>:w<cr>
+nnoremap <Esc><Esc> :silent!:%s/\s\+$//ge<cr><bar>:w<cr>
 nnoremap wh :%s/ $//g<cr>
 
 "delete blank lines between here and next line
@@ -160,7 +160,7 @@ nnoremap Z ZZ
 nnoremap gst :term zsh<cr>gst<cr>
 
 " tidy up - ' to ", remove ending ;, respace
-nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>ggvG==<esc>2<C-o>
+nnoremap td  :%s/'/"/ge<cr>:%s/;$//ge<cr>ggvG==<esc>2<C-o>
 
 " Simpler find and replace because I can never remember it
 nnoremap fr :call FindAndReplace()<cr>
