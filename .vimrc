@@ -21,6 +21,10 @@ source ~/.vim-normal-mode-remaps
 source ~/.vim-visual-mode-remaps
 source ~/.vim-insert-mode-remaps
 
+" TODO sort out the vim/ftplugin/javascript.vim problem with js find words
+" thing.
+" TODO contingent auto completeion - append  'common
+" TODO gf opens file from  'import'
 " TODO tm shows the time in the bar thing
 " TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
 " TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work

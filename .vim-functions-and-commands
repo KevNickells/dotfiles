@@ -17,7 +17,7 @@ function! s:buffer_lines()
   return res
 endfunction
 
-function FindAndReplace()
+function! FindAndReplace()
   let find = input('Find:')
   let replace = input('Replace:')
   exec '%s/' . find . '/' . replace . '/g'
