@@ -7,6 +7,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
 # .git/hooks/... is where post commit hooks live
 # TODO let's put some colour into the # git_add_commit_push:
 # https://stackoverflow.com/questions/38931107/how-to-syntax-highlight-a-bash-output-some-help-information
