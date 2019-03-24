@@ -1,3 +1,5 @@
+set complete+=k~/.vim/dictionaries/.javascriptDictionary
+
 " Snippets for common javascript things
 nnoremap <leader>c  :r<space>~/Snippets/classJavascript.js<cr>
 nnoremap <leader>m  :r<space>~/Snippets/methodJavascript.js<cr>
@@ -22,4 +24,3 @@ nnoremap <leader>t :r<space>~/Snippets/testJavascript.js<cr>
 
 " tidy up - ' to ", remove ending ;, respace
 nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==
-

@@ -8,6 +8,7 @@
 /.vim/*
 !/.vim/ftplugin/
 !/.vim/plugged/
+!/.vim/dictionaries/
 !.zshrc
 !.zsh_exports
 !.zsh_functions
