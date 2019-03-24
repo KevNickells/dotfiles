@@ -15,7 +15,7 @@ let mapleader = ","
 " Syntax highlighting for these config files
 autocmd BufNewFile,BufRead ~/.vim* set syntax=vim
 
-" Separating concerns for ease of use.
+" Separating concerns for ease of use... could go in plugins?
 source ~/.vim_my_settings/.spellings
 source ~/.vim_my_settings/.plugins
 source ~/.vim_my_settings/.settings
