@@ -1,8 +1,9 @@
-source ~/.zsh_colours
-source ~/.zsh_exports
-source ~/.zsh_functions
-source ~/.zsh_aliases
-source ~/.zsh_my_settings
+source ~/.zsh_my_settings/.colours
+source ~/.zsh_my_settings/.exports
+source ~/.zsh_my_settings/.functions
+source ~/.zsh_my_settings/.aliases
+source ~/.zsh_my_settings/.my_settings
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

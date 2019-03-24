@@ -16,13 +16,13 @@ let mapleader = ","
 autocmd BufNewFile,BufRead ~/.vim* set syntax=vim
 
 " Separating concerns for ease of use.
-source ~/.vim-spellings
-source ~/.vim-plugins
-source ~/.vim-settings
-source ~/.vim-functions-and-commands
-source ~/.vim-normal-mode-remaps
-source ~/.vim-visual-mode-remaps
-source ~/.vim-insert-mode-remaps
+source ~/.vim_my_settings/.spellings
+source ~/.vim_my_settings/.plugins
+source ~/.vim_my_settings/.settings
+source ~/.vim_my_settings/.functions-and-commands
+source ~/.vim_my_settings/.normal-mode-remaps
+source ~/.vim_my_settings/.visual-mode-remaps
+source ~/.vim_my_settings/.insert-mode-remaps
 
 " TODO gf opens file from  'import'
 " TODO tm shows the time in the bar thing
