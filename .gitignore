@@ -9,9 +9,9 @@
 !/.vim/ftplugin/
 !/.vim/plugged/
 !/.vim/dictionaries/
-!/.vim_my_settings/*
+!/.vim_my_settings/
 
 !.zshrc
 !.zsh_plugins
 !.zsh_plugins.sh
-!/.zsh_my_settings/*
+!/.zsh_my_settings/

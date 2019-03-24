@@ -1,0 +1,6 @@
+" move between buffers with ctrl+l/ h
+inoremap <C-h> <esc><C-w>h
+inoremap <C-l> <esc><C-w>l
+
+" semi-colon at the end of the current line in insert mode
+inoremap ;; <esc>A;<esc>
