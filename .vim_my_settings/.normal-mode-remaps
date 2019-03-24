@@ -11,9 +11,8 @@ nnoremap <c-u> EvBU<esc>
 
 "Fuzzy file finder.
 nnoremap ff :FZF<CR>
-nnoremap ff :FZF<CR>
 
-"Spacebar turn on/ off highlighting for search term; displays same
+"Spacebar turn on / off highlighting for search term; displays same
 noremap <Space> :set hlsearch! hlsearch?<CR>
 
 "Enter centres screen to current position
@@ -65,7 +64,7 @@ nnoremap mm :bdelete<cr>
 "Remove all files from buffer
 nnoremap mmm :bufdo bd<cr>
 
-" move between buffers with ctr/ h
+" move between buffers with ctrl l / h
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
