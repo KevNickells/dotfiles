@@ -24,6 +24,7 @@ source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 
+" TODO after save, remove that find and replace from the recent searches
 " TODO gf opens file from  'import'
 " TODO tm shows the time in the bar thing
 " TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
