@@ -24,6 +24,10 @@ source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 
+
+" TODO add dictionaries to gitignore while at home
+" TODO cd in vim seems to be storing the recent location in a way that's fairly " annoying
+" TODO dj in .~/.vim_my_settings/.normal-mode-remaps leaves two spaces, which is sub-optimal
 " TODO after save, remove that find and replace from the recent searches
 " TODO gf opens file from  'import'
 " TODO tm shows the time in the bar thing
