@@ -1,9 +1,12 @@
 " deletes commands from history while doing them
 function! OnSaveCommands()
+  " let current_line = line(".")
+  "let winview = winsaveview()
   exec '%s/\s\+$//ge'
   call histdel("search" -1)
   exec '%s/^\n\n\+/\r/ge'
   call histdel("search" -1)
+  "call winrestview(winview)
 endfunction
 
 augroup remember_folds

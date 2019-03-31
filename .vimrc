@@ -23,14 +23,12 @@ source ~/.vim_my_settings/.functions-and-commands
 source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
-source ~/.vim_my_settings/.command-mode-remaps
 
-" TODO nnrmal mode remaps probably could do with being functions
-" TODO cd in vim seems to be storing the recent location in a way that's fairly annoying
 " TODO gf opens file from  'import'
-" TODO tm shows the time in the bar thing
 " TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
+" TODO cd in vim seems to be storing the recent location in a way that's fairly annoying
 " TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work
+" TODO nnrmal mode remaps probably could do with being functions
 " TODO Change background based on mode; highlight currently active panel?
 " :echo bufnr('%') -> show current buffer number
 " :echo mode() n == normal
