@@ -1,10 +1,5 @@
-" escape twice to save; strip whitespace from end of line; return to current
-" cursor position;
-nnoremap <Esc><Esc> :silent!:%s/\s\+$//ge<cr><bar>:w<cr>
-nnoremap wh :%s/ $//g<cr>
-
-"delete blank lines between here and next line
-nnoremap dj jv/\S<cr>kdO<esc>
+" escape twice to save; strip whitespace from end of line; remove 2 consecutive newlines
+nnoremap <silent> <Esc><Esc> :exec OnSaveCommands()<cr>
 
 "upper-case current word with ctr
 nnoremap <c-u> EvBU<esc>

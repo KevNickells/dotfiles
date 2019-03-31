@@ -23,10 +23,10 @@ source ~/.vim_my_settings/.functions-and-commands
 source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
+source ~/.vim_my_settings/.command-mode-remaps
 
-" TODO cd in vim seems to be storing the recent location in a way that's fairly " annoying
-" TODO dj in .~/.vim_my_settings/.normal-mode-remaps leaves two spaces, which is sub-optimal
-" TODO after save, remove that find and replace from the recent searches
+" TODO nnrmal mode remaps probably could do with being functions
+" TODO cd in vim seems to be storing the recent location in a way that's fairly annoying
 " TODO gf opens file from  'import'
 " TODO tm shows the time in the bar thing
 " TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
@@ -40,7 +40,6 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " So... could change the current line / statusline/ anything else that's " changeable to colour x
 " TODO might be tidier to have [array, of, functions]
 " and a forr x in array do nnoremap function
-
 
 " This highlights current active window in a subtle way
 augroup BgHighlight
