@@ -24,7 +24,6 @@ source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 
-" TODO add dictionaries to gitignore while at home - include this in the JS one https://hackernoon.com/reactjs-component-lifecycle-methods-a-deep-dive-38275d9d13c0
 " TODO cd in vim seems to be storing the recent location in a way that's fairly " annoying
 " TODO dj in .~/.vim_my_settings/.normal-mode-remaps leaves two spaces, which is sub-optimal
 " TODO after save, remove that find and replace from the recent searches
