@@ -1,0 +1,8 @@
+componentDidMount
+componentDidUpdate
+componentWillMount
+componentWillReceiveProps
+componentWillUnmount
+componentWillUpdate
+render
+shouldComponentUpdate
