@@ -26,6 +26,8 @@ source ~/.vim_my_settings/.insert-mode-remaps
 
 " TODO gf opens file from  'import'
 " TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
+" ^ These will look like a function - gf if file, go there, if not *ggnn gf
+" ie, go to top, next twice then goto file
 " TODO cd in vim seems to be storing the recent location in a way that's fairly annoying
 " TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work
 " TODO nnrmal mode remaps probably could do with being functions

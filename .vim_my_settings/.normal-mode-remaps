@@ -1,4 +1,4 @@
-" escape twice to save; strip whitespace from end of line; remove 2 consecutive newlines
+" escape twice to save; strip whitespace from end of line; remove 2 consecutive newlines; displays current filepath (see vim_my_settings/.functions-and-commands
 nnoremap <silent> <Esc><Esc> :exec OnSaveCommands()<cr>
 
 " Soon enough I'll probably want to think a bit more about the statusline. For

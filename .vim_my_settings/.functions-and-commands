@@ -6,6 +6,8 @@ function! OnSaveCommands()
   call histdel("search" -1)
   exec '%s/^\n\n\+/\r/ge'
   call histdel("search" -1)
+  exec 'write'
+  echom expand("%") . '    <-- saved'
   "call winrestview(winview)
 endfunction
 
