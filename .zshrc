@@ -3,7 +3,7 @@
 # NOTE no need for tmux I think if I can just background tasks with task &
 # NOTE show running background tasks with jobs, fg % [task no]
 
-zsh_source_files=(.zsh_my_settings/.*)
+zsh_source_files=(~/.zsh_my_settings/.*)
 
 for source_file in $zsh_source_files
 do
