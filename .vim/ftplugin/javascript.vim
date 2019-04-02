@@ -13,6 +13,10 @@ inoremap db debugger;<space><esc>
 nnoremap csl Oconsole.log()<esc>i
 inoremap csl console.log()<esc>i
 
+" console.table
+nnoremap cst Oconsole.table()<esc>i
+inoremap cst console.table()<esc>i
+
 "open js REPL
 nnoremap zs :term node<cr>
 
