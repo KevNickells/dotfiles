@@ -36,6 +36,16 @@ function git_add_commit_push {
     esac
   done
 }
+# TODO - need to figure out traps for both of these
+# run server as background process and ignore output from both
+function run_hoglet {
+  cd ~/hoglet
+  setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
+  sh scripts/start-server.sh &
+  cd ~/hoglet/hoglet-client
+  npm start &
+  echo 'hoglet - client / backend servers started'
+}
 
 function mkdir_and_cd {
   INPUT=$1
@@ -59,3 +69,5 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
   install_powerline_precmd
 fi
+
+

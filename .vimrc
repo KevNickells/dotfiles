@@ -30,9 +30,8 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
 " ^ These will look like a function - gf if file, go there, if not *ggnn gf
 " ie, go to top, next twice then goto file
-" TODO cd in vim seems to be storing the recent location in a way that's fairly annoying
 " TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work
-" TODO nnrmal mode remaps probably could do with being functions
+" TODO some normal mode remaps probably could do with being functions
 " TODO Change background based on mode; highlight currently active panel?
 " :echo bufnr('%') -> show current buffer number
 " :echo mode() n == normal
@@ -41,7 +40,9 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " hi StatusLine ctermfg=colour ctermbg=colour -> statusline colour
 " So... could change the current line / statusline/ anything else that's " changeable to colour x
 " TODO might be tidier to have [array, of, functions]
-" and a forr x in array do nnoremap function
+" and a for x in array do nnoremap function
+" highlight bar - pink for 'insert', green for 'visual'? Might be a shortcut
+" TODO look into customising the status line (airline, maybs?)
 
 " This highlights current active window in a subtle way
 augroup BgHighlight
