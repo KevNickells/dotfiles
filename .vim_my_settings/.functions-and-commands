@@ -1,14 +1,12 @@
 " deletes commands from history while doing them
 function! OnSaveCommands()
-  " let current_line = line(".")
-  "let winview = winsaveview()
+  mark `
   exec '%s/\s\+$//ge'
   call histdel("search" -1)
   exec '%s/^\n\n\+/\r/ge'
   call histdel("search" -1)
-  exec 'write'
-  echom expand("%") . '    <-- saved'
-  "call winrestview(winview)
+  silent exec 'write'
+  normal ``
 endfunction
 
 augroup remember_folds
@@ -21,6 +19,7 @@ aug AutoSourceZshrc
     au!
     au BufWritePost .zshrc !source ~/.zshrc
 aug END
+
 " Note that the below depends upon ripgrep
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --follow --color "always" '.shellescape(<q-args>), 1, <bang>0)
 

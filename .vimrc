@@ -24,6 +24,8 @@ source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 
+" TODO find and replace this word with another --> frr?
+" TODO vim open files seem to store a different pwd than what I'd like it to an it's annoying
 " TODO gf opens file from  'import'
 " TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
 " ^ These will look like a function - gf if file, go there, if not *ggnn gf
