@@ -78,7 +78,7 @@ nnoremap ttt EvBy:<c-f>iFind<Space><esc>p<c-c><Enter>
 nnoremap gv :vs <cfile><cr>
 
 "copy current parentheses
-nnoremap <Tab> v%lyO<esc>
+" nnoremap <Tab> v%lyO<esc>
 
 " delete to end of file
 nnoremap ddd dG

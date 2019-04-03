@@ -17,4 +17,4 @@ vnoremap <leader>}} l0<esc>i{<esc>A}<esc>v
 vnoremap <leader>{{ l0<esc>i{<esc>A}<esc>v
 
 "tab text while in visual mode
-vnoremap <Tab> >
+vnoremap <Tab> ><esc>v

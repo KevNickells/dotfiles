@@ -24,6 +24,7 @@ source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 
+" TODO tab > copy current parentheses in normal mode - C-I and <Tab> are equivalent
 " TODO find and replace this word with another --> frr?
 " TODO vim open files seem to store a different pwd than what I'd like it to an it's annoying
 " TODO gf opens file from  'import'
