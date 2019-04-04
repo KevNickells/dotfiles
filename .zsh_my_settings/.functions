@@ -36,6 +36,7 @@ function git_add_commit_push {
     esac
   done
 }
+
 # TODO - need to figure out traps for both of these
 # run server as background process and ignore output from both
 function run_hoglet {
@@ -47,9 +48,16 @@ function run_hoglet {
   echo 'hoglet - client / backend servers started'
 }
 
+# self explanatory name
 function mkdir_and_cd {
   INPUT=$1
   mkdir $1 && cd $1
+}
+
+# change directory / store last directory
+function cd_and_chill {
+  \cd $1
+  echo $(pwd) > ~/.last_dir
 }
 
 # powerline bits...
@@ -69,5 +77,3 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
   install_powerline_precmd
 fi
-
-

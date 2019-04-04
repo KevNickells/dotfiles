@@ -39,6 +39,7 @@ alias v="vim"
 alias ./='~/.'
 alias ..='cd ../'
 alias ...='cd ~/'
+alias cd="cd_and_chill" # allows for opening most recent folder with  each new instance
 
 # Nice colours for grep
 alias grep='grep --color=auto'

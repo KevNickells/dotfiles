@@ -1,7 +1,9 @@
 # NOTE this file is sourced on closing within ~/.vim-functions-and-commands
 # NOTE .git/hooks/... is where post commit hooks live
-# NOTE no need for tmux I think if I can just background tasks with task &
 # NOTE show running background tasks with jobs, fg % [task no]
+
+# see 'cd_and_chill' in functions - writes last directory
+cd $(cat ~/.last_dir)
 
 zsh_source_files=(~/.zsh_my_settings/.*)
 
@@ -14,15 +16,11 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# TODO tmux versus backgrounding processes - server output still faffs about with vim
 # TODO look into ZSH traps - allows for contingent argumetns on background jobs
 # TODO open in windows with o . (.functions)
-# TODO cd as a function which also saves a file with the cwd in it
-# TODO let's put some colour into the # git_add_commit_push:
-# https://stackoverflow.com/questions/38931107/how-to-syntax-highlight-a-bash-output-some-help-information
-# TODO cd [ last command  on each load
 
 # TODO run the below weekly?
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
 # antibody update
 # source ~/.zsh_plugins.sh
-#
