@@ -60,6 +60,7 @@ function cd_and_chill {
   echo $(pwd) > ~/.last_dir
 }
 
+# open recent files
 function open_last_git_commits {
   vim $(grf)
 }
