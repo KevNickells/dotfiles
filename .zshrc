@@ -15,6 +15,8 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # TODO look into ZSH traps - allows for contingent argumetns on background jobs
+# TODO open in windows with o . (.functions)
+# TODO cd as a function which also saves a file with the cwd in it
 # TODO let's put some colour into the # git_add_commit_push:
 # https://stackoverflow.com/questions/38931107/how-to-syntax-highlight-a-bash-output-some-help-information
 # TODO cd [ last command  on each load
