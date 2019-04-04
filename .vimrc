@@ -15,7 +15,7 @@ let mapleader = ","
 " Syntax highlighting for these config files
 autocmd BufNewFile,BufRead ~/.vim_my_settings/* set syntax=vim
 
-" Separating concerns for ease of use... could go in plugins?
+" Separating concerns for ease of use...
 source ~/.vim_my_settings/.spellings
 source ~/.vim_my_settings/.plugins
 source ~/.vim_my_settings/.settings
@@ -35,6 +35,7 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work
 " TODO some normal mode remaps probably could do with being functions
 " TODO Change background based on mode; highlight currently active panel?
+" highlight bar - pink for 'insert', green for 'visual'? Might be a shortcut
 " :echo bufnr('%') -> show current buffer number
 " :echo mode() n == normal
 " :highlight Normal ctermfg=grey ctermbg=darkblue -> Changes the background
@@ -43,7 +44,6 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " So... could change the current line / statusline/ anything else that's " changeable to colour x
 " TODO might be tidier to have [array, of, functions]
 " and a for x in array do nnoremap function
-" highlight bar - pink for 'insert', green for 'visual'? Might be a shortcut
 " TODO look into customising the status line (airline, maybs?)
 
 " This highlights current active window in a subtle way
