@@ -13,7 +13,7 @@
 let mapleader = ","
 
 " Syntax highlighting for these config files
-autocmd BufNewFile,BufRead ~/.vim* set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim_my_settings/* set syntax=vim
 
 " Separating concerns for ease of use... could go in plugins?
 source ~/.vim_my_settings/.spellings
@@ -24,6 +24,7 @@ source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 
+" TODO when editing a vim file, on close source / close vimrc
 " TODO tab > copy current parentheses in normal mode - C-I and <Tab> are equivalent
 " TODO find and replace this word with another --> frr?
 " TODO vim open files seem to store a different pwd than what I'd like it to an it's annoying
