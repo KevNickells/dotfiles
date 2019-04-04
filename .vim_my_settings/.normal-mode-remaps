@@ -25,8 +25,7 @@ nnoremap N Nzz
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :w<cr>:source $MYVIMRC<cr><esc>:bdelete<cr>
 
-" highlights all and aligns
-" the 2<C-o> is taking you back two positions, FYI
+" highlights all and aligns the 2<C-o> is taking you back two positions, FYI
 nnoremap == ggvG==<esc>2<C-o>
 
 "Surround current word in ...
@@ -124,7 +123,7 @@ nnoremap ;; :pwd<cr>
 nnoremap H Hzz
 nnoremap L Lzz
 
-"Copy all file to clipboard [2<C-o> is returning to current cursor position and centering]
+"Copy all file to clipboard
 nnoremap <leader>ca ggvG$y<esc>2<C-o><Enter>
 
 " Make windows the same size
@@ -162,3 +161,7 @@ nnoremap td  :%s/'/"/ge<cr>:%s/;$//ge<cr>ggvG==<esc>2<C-o>
 
 " Simpler find and replace because I can never remember it
 nnoremap fr :call FindAndReplace()<cr>
+
+" Centre when whipping around
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz
