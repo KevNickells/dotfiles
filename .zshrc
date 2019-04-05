@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 
 # TODO tmux versus backgrounding processes - server output still faffs about with vim
 # TODO look into ZSH traps - allows for contingent argumetns on background jobs
-# TODO open in windows with o . (.functions)
+# TODO open in windows with o . (.functions) --> pain in the arse come back to
 
 # TODO run the below weekly?
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
