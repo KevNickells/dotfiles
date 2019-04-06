@@ -136,7 +136,7 @@ nnoremap <leader>n 0yw/<c-f>i^<esc>pa\w<esc><c-c><cr>
 nnoremap cd :cd<space>
 
 " quickly turn off text width 80
-nnoremap 000 :set tw=0
+nnoremap 000 :set tw=0<cr>
 
 " yank whole word rather than to hyphen-y things
 nnoremap yw yW
