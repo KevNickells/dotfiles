@@ -15,6 +15,14 @@ function exiter {
   exit echo
 }
 
+# function open_in_windows {
+#   MY_UBUNTU_FS="C:\Users\kevin\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79r hkp1fndgsc\LocalState\rootfs"
+#   THIS_DIRECTORY=$(pwd) | sed 's/\//\\/g'
+#   explorer.exe $MY_UBUNTU_FS\$THIS_DIRECTORY
+# }
+# # explorer.exe "C:\Users\kevin\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79r hkp1fndgsc\LocalState\rootfs\home"
+# echo $(pwd) | sed 's/\//\\/g'
+
 # git commit / add / push in one go with error handling
 function git_add_commit_push {
   INPUT=$1
@@ -24,7 +32,7 @@ function git_add_commit_push {
       "") echo ${red_with_blue}Needs a commit message, exiting${default}; break;;
     esac
 
-    echo ${magenta_with_yellow}These files were affected${default}:
+    echo ${magenta_with_yellow}These files were affected: ${default}:
 
     echo $(git status -s)
 
