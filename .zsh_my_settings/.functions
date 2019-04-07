@@ -69,7 +69,8 @@ function cd_and_chill {
 }
 
 # open recent files
-function open_last_git_commits {
+function open_last_git_commits_and_most_recent_directory {
+  cd $(git rev-parse --show-toplevel)
   vim $(grf)
 }
 

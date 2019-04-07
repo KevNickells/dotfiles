@@ -9,6 +9,9 @@
 " add file-specific dictionaries
 " set complete+=k~/.vim/dictionaries/.javascriptDictionary
 
+" Default to most recent folder
+exec "cd" . system("cat ~/.last_dir")
+
 "leader key; needs to be set early otherwise other bits in these files don't work
 let mapleader = ","
 
@@ -29,7 +32,7 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " TODO find and replace this word with another --> frr?
 " TODO vim open files seem to store a different pwd than what I'd like it to an it's annoying
 " TODO gf opens file from  'import'
-" TODO React with vim - gf (open file) finds the "../address/ComponenetName" and goes there
+" TODO React with vim - gf (open file) finds the "../address/ComponentName" and goes there
 " ^ These will look like a function - gf if file, go there, if not *ggnn gf
 " ie, go to top, next twice then goto file
 " TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work

@@ -45,6 +45,11 @@ function! FindAndReplace()
   exec '%s/' . find . '/' . replace . '/g'
 endfunction
 
+function! Cd_and_chill()
+  let dir = execute(":r ~/.last_dir")
+  echo dir
+endfunction
+
 command! FZFLines call fzf#run({
 \   'source':  <sid>buffer_lines(),
 \   'sink':    function('<sid>line_handler'),
