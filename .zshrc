@@ -5,6 +5,9 @@
 # see 'cd_and_chill' in functions - writes last directory
 cd $(cat ~/.last_dir)
 
+# Tells me whether I need to pull
+git status -uno
+
 zsh_source_files=(~/.zsh_my_settings/.*)
 
 for source_file in $zsh_source_files
@@ -24,3 +27,5 @@ source $ZSH/oh-my-zsh.sh
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
 # antibody update
 # source ~/.zsh_plugins.sh
+
+
