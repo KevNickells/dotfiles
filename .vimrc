@@ -30,7 +30,6 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " TODO when editing a vim file, on close source / close vimrc
 " TODO tab > copy current parentheses in normal mode - C-I and <Tab> are equivalent
 " TODO find and replace this word with another --> frr?
-" TODO vim open files seem to store a different pwd than what I'd like it to an it's annoying
 " TODO gf opens file from  'import'
 " TODO React with vim - gf (open file) finds the "../address/ComponentName" and goes there
 " ^ These will look like a function - gf if file, go there, if not *ggnn gf
@@ -48,13 +47,6 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " TODO might be tidier to have [array, of, functions]
 " and a for x in array do nnoremap function
 " TODO look into customising the status line (airline, maybs?)
-
-" This highlights current active window in a subtle way
-augroup BgHighlight
-  autocmd!
-  autocmd WinEnter * set colorcolumn=80
-  autocmd WinLeave * set colorcolumn=0
-augroup END
 
 " TODO copy  & paste current code block; needs to be context dependant?
 " nnoremap <Tab><Tab> v%lyO<esc>p

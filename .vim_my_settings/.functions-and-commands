@@ -9,6 +9,13 @@ function! OnSaveCommands()
   normal ``
 endfunction
 
+" This shows the current column as a color column
+augroup BgHighlight
+  autocmd!
+  autocmd WinEnter * set colorcolumn=80
+  autocmd WinLeave * set colorcolumn=0
+augroup END
+
 augroup remember_folds
   autocmd!
   autocmd BufWinLeave * mkview
@@ -74,7 +81,7 @@ function! s:bufopen(e)
   execute 'buffer' matchstr(a:e, '^[ 0-9]*')
 endfunction
 
-nnoremap <silent> <Leader><Enter> :call fzf#run({
+nnoremap <silent> <Leader><Leader> :call fzf#run({
 \   'source':  reverse(<sid>buflist()),
 \   'sink':    function('<sid>bufopen'),
 \   'options': '+m',
