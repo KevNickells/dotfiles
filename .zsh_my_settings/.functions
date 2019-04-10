@@ -65,6 +65,7 @@ function run_hoglet {
   cd ~/hoglet/hoglet-client
   npm start &
   echo 'hoglet - client / backend servers started'
+  cd ~/hoglet/hoglet-client/src
 }
 
 # self explanatory name

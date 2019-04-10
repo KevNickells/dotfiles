@@ -27,15 +27,7 @@ source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 
-" TODO when editing a vim file, on close source / close vimrc
-" TODO tab > copy current parentheses in normal mode - C-I and <Tab> are equivalent
-" TODO find and replace this word with another --> frr?
-" TODO gf opens file from  'import'
-" TODO React with vim - gf (open file) finds the "../address/ComponentName" and goes there
-" ^ These will look like a function - gf if file, go there, if not *ggnn gf
-" ie, go to top, next twice then goto file
-" TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work
-" TODO some normal mode remaps probably could do with being functions
+" TODO functions -----------------------
 " TODO Change background based on mode; highlight currently active panel?
 " highlight bar - pink for 'insert', green for 'visual'? Might be a shortcut
 " :echo bufnr('%') -> show current buffer number
@@ -44,9 +36,17 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " 1 bufdo exit -> closes buffer one
 " hi StatusLine ctermfg=colour ctermbg=colour -> statusline colour
 " So... could change the current line / statusline/ anything else that's " changeable to colour x
-" TODO might be tidier to have [array, of, functions]
-" and a for x in array do nnoremap function
-" TODO look into customising the status line (airline, maybs?)
+
+" TODO when editing a vim file, on close source / close vimrc
+" TODO tab > copy current parentheses in normal mode - C-I and <Tab> are equivalent
+" TODO find and replace this word with another --> frr?
+" TODO gf opens file from  'import'
+
+" TODO React with vim - gf (open file) finds the "../address/ComponentName" and goes there
+" ^ These will look like a function - gf if file, go there, if not *ggnn gf
+" ie, go to top, next twice then goto file
+
+" TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work
 
 " TODO copy  & paste current code block; needs to be context dependant?
 " nnoremap <Tab><Tab> v%lyO<esc>p
@@ -58,3 +58,10 @@ command! MakeTags !ctags -R .
 
 " TODO Search for current word in open buffers; - doesn't work bcause FZFLines doesn't  take pasted characters; so probably one to re-figure FZFLines as a function which takes a param?
 " nnoremap tttt EvBy:<c-f>iFZFLines<Space><esc>p<c-c><cr>
+" TODO tidying   -----------------------
+
+" TODO some normal mode remaps probably could do with being functions
+" TODO might be tidier to have [array, of, functions] and a for x in array do nnoremap function
+" TODO look into customising the status line (airline, maybs?)
+
+
