@@ -23,9 +23,17 @@ function exiter {
 # # explorer.exe "C:\Users\kevin\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79r hkp1fndgsc\LocalState\rootfs\home"
 # echo $(pwd) | sed 's/\//\\/g'
 
+# open recent files
+function open_last_git_commits_and_most_recent_directory {
+  cd $(git rev-parse --show-toplevel)
+  vim $(grf)
+}
+
 # git commit / add / push in one go with error handling
 function git_add_commit_push {
   INPUT=$1
+
+  cd $(git rev-parse --show-toplevel)
 
   while true; do
     case $INPUT in
@@ -66,12 +74,6 @@ function mkdir_and_cd {
 function cd_and_chill {
   \cd $1
   echo $(pwd) > ~/.last_dir
-}
-
-# open recent files
-function open_last_git_commits_and_most_recent_directory {
-  cd $(git rev-parse --show-toplevel)
-  vim $(grf)
 }
 
 # powerline bits...
