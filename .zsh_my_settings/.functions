@@ -33,8 +33,6 @@ function open_last_git_commits_and_most_recent_directory {
 function git_add_commit_push {
   INPUT=$1
 
-  cd $(git rev-parse --show-toplevel)
-
   while true; do
     case $INPUT in
       "") echo ${red_with_blue}Needs a commit message, exiting${default}; break;;
@@ -46,7 +44,8 @@ function git_add_commit_push {
 
     read yesno"?Is that ok? Yes or no?"
     case "$yesno" in
-      [Yy]* ) git add . && git commit -m \"$1\" && git push; break;;
+      [Yy]* ) cd $(git rev-parse --show-toplevel) && git add . && git commit -m \"$1\" && git push; break;;
+
       [Nn]* ) break;;
       * ) echo "The question was yes or no, dickface"
     esac
