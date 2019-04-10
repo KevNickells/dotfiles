@@ -44,7 +44,11 @@ function git_add_commit_push {
 
     read yesno"?Is that ok? Yes or no?"
     case "$yesno" in
-      [Yy]* ) cd $(git rev-parse --show-toplevel) && git add . && git commit -m \"$1\" && git push; break;;
+      [Yy]* ) cd $(git rev-parse --show-toplevel) &&
+        git add . &&
+        git commit -m \"$1\" &&
+        git push &&
+        cd -; break;;
 
       [Nn]* ) break;;
       * ) echo "The question was yes or no, dickface"
