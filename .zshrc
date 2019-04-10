@@ -20,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # TODO tmux versus backgrounding processes - server output still faffs about with vim
-# TODO look into ZSH traps - allows for contingent argumetns on background jobs
+# TODO look into ZSH traps - allows for contingent arguments on background jobs
 # TODO open in windows with o . (.functions) --> pain in the arse come back to
 
 # TODO run the below weekly?
