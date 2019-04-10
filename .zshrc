@@ -5,7 +5,6 @@
 # see 'cd_and_chill' in functions - writes last directory
 cd $(cat ~/.last_dir)
 
-
 # Tells me whether I need to pull
 git status -uno
 
