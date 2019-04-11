@@ -28,6 +28,12 @@ source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 
 " TODO functions -----------------------
+" TODO find and replace this word with another --> frr?
+" TODO gf opens file from  'import'
+" TODO React with vim - gf (open file) finds the "../address/ComponentName" and goes there
+" ^ These will look like a function - gf if file, go there, if not *ggnn gf
+" ie, go to top, next twice then goto file
+
 " TODO Change background based on mode; highlight currently active panel?
 " highlight bar - pink for 'insert', green for 'visual'? Might be a shortcut
 " :echo bufnr('%') -> show current buffer number
@@ -38,13 +44,7 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " So... could change the current line / statusline/ anything else that's " changeable to colour x
 
 " TODO when editing a vim file, on close source / close vimrc
-" TODO tab > copy current parentheses in normal mode - C-I and <Tab> are equivalent
-" TODO find and replace this word with another --> frr?
-" TODO gf opens file from  'import'
-
-" TODO React with vim - gf (open file) finds the "../address/ComponentName" and goes there
-" ^ These will look like a function - gf if file, go there, if not *ggnn gf
-" ie, go to top, next twice then goto file
+" TODO copy current parentheses in normal mode - C-I and <Tab> are equivalent
 
 " TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work
 

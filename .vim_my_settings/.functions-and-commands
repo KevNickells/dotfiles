@@ -47,8 +47,14 @@ function! s:buffer_lines()
 endfunction
 
 function! FindAndReplace()
-  let find = input('Find:')
-  let replace = input('Replace:')
+  let find = input('Find: ')
+  let replace = input('Replace: ')
+  exec '%s/' . find . '/' . replace . '/g'
+endfunction
+
+function! ReplaceThisWord()
+  let find = expand('<cword>')
+  let replace = input('Replace: ')
   exec '%s/' . find . '/' . replace . '/g'
 endfunction
 

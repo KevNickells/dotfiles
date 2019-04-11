@@ -162,6 +162,9 @@ nnoremap td  :%s/'/"/ge<cr>:%s/;$//ge<cr>ggvG==<esc>2<C-o>
 " Simpler find and replace because I can never remember it
 nnoremap fr :call FindAndReplace()<cr>
 
+" As above, replace all instances of this word with another
+nnoremap frr :call ReplaceThisWord()<cr>
+
 " Centre when whipping around
 nnoremap <C-o> <C-o>zz
 nnoremap <C-i> <C-i>zz
