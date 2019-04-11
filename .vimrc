@@ -28,7 +28,6 @@ source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 
 " TODO functions -----------------------
-" TODO find and replace this word with another --> frr?
 " TODO gf opens file from  'import'
 " TODO React with vim - gf (open file) finds the "../address/ComponentName" and goes there
 " ^ These will look like a function - gf if file, go there, if not *ggnn gf
