@@ -5,6 +5,7 @@ set complete+=k~/.vim/dictionaries/.javascriptReactDictionary
 nnoremap <leader>c :r<space>~/Snippets/classJavascript.js<cr>
 nnoremap <leader>m :r<space>~/Snippets/methodJavascript.js<cr>
 nnoremap <leader>t :r<space>~/Snippets/testJavascript.js<cr>
+nnoremap <leader>rc :r<space>~/Snippets/reactClassJavascript.js<cr>
 
 " debugger shortcut
 nnoremap db Odebugger;<esc>
