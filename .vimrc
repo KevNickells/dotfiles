@@ -1,10 +1,10 @@
 " NOTE: This file is now mostly to-dos
 " NOTE: Language-specific locations:
-" .vim/ftplugin/haml.vim
-" .vim/ftplugin/html.haml.vim
-" .vim/ftplugin/javascript.vim
-" .vim/ftplugin/python.vim
-" .vim/ftplugin/ruby.vim
+" ~/.vim/ftplugin/haml.vim
+" ~/.vim/ftplugin/html.haml.vim
+" ~/.vim/ftplugin/javascript.vim
+" ~/.vim/ftplugin/python.vim
+" ~/.vim/ftplugin/ruby.vim
 
 " add file-specific dictionaries
 " set complete+=k~/.vim/dictionaries/.javascriptDictionary
@@ -26,6 +26,11 @@ source ~/.vim_my_settings/.functions-and-commands
 source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
+source ~/.vim_my_settings/.modal-colours
+
+" now set it up to change the status line based on mode
+" au InsertEnter *
+" au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 
 " TODO functions -----------------------
 " TODO Change background based on mode; highlight currently active panel?
@@ -37,16 +42,12 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " hi StatusLine ctermfg=colour ctermbg=colour -> statusline colour
 " So... could change the current line / statusline/ anything else that's " changeable to colour x
 
-" TODO when editing a vim file, on close source / close vimrc
 " TODO copy current parentheses in normal mode - C-I and <Tab> are equivalent
-
 " TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work
-
 " TODO copy  & paste current code block; needs to be context dependant?
 " nnoremap <Tab><Tab> v%lyO<esc>p
 " Can probably leverage generic js
 " (eg Bvt{%y)
-" TODO Whoop_there_it_is -> function is a mess
 
 " TODO go to tags - find out how to use these
 command! MakeTags !ctags -R .
@@ -55,6 +56,7 @@ command! MakeTags !ctags -R .
 " nnoremap tttt EvBy:<c-f>iFZFLines<Space><esc>p<c-c><cr>
 " TODO tidying   -----------------------
 
+" TODO Whoop_there_it_is -> function is a mess
 " TODO some normal mode remaps probably could do with being functions
 " TODO might be tidier to have [array, of, functions] and a for x in array do nnoremap function
 " TODO look into customising the status line (airline, maybs?)

@@ -1,4 +1,3 @@
-" deletes commands from history while doing them
 function! OnSaveCommands()
   mark `
   exec '%s/\s\+$//ge'

@@ -165,7 +165,7 @@ nnoremap fr :call FindAndReplace()<cr>
 " As above, replace all instances of this word with another
 nnoremap frr :call ReplaceThisWord()<cr>
 
-" Messy function extending gf function
+" Messy function extending gf
 nnoremap gf :call Whoop_there_it_is()<cr>
 
 " Centre when whipping around
