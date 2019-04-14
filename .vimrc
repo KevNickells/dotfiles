@@ -28,32 +28,12 @@ source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 source ~/.vim_my_settings/.modal-colours
 
-" now set it up to change the status line based on mode
-" au InsertEnter *
-" au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
-
 " TODO functions -----------------------
-" TODO Change background based on mode; highlight currently active panel?
-" highlight bar - pink for 'insert', green for 'visual'? Might be a shortcut
-" :echo bufnr('%') -> show current buffer number
-" :echo mode() n == normal
-" :highlight Normal ctermfg=grey ctermbg=darkblue -> Changes the background
-" 1 bufdo exit -> closes buffer one
-" hi StatusLine ctermfg=colour ctermbg=colour -> statusline colour
-" So... could change the current line / statusline/ anything else that's " changeable to colour x
-
-" TODO copy current parentheses in normal mode - C-I and <Tab> are equivalent
-" TODO ttt searchfor current word in whole project (.vim-normal-mode-remaps) " doesn't work
-" TODO copy  & paste current code block; needs to be context dependant?
-" nnoremap <Tab><Tab> v%lyO<esc>p
-" Can probably leverage generic js
-" (eg Bvt{%y)
+" TODO Change background based on mode - see modal-colours; needs some work
 
 " TODO go to tags - find out how to use these
 command! MakeTags !ctags -R .
 
-" TODO Search for current word in open buffers; - doesn't work bcause FZFLines doesn't  take pasted characters; so probably one to re-figure FZFLines as a function which takes a param?
-" nnoremap tttt EvBy:<c-f>iFZFLines<Space><esc>p<c-c><cr>
 " TODO tidying   -----------------------
 
 " TODO Whoop_there_it_is -> function is a mess

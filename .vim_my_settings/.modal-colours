@@ -1,0 +1,17 @@
+function! NormalModeColours()
+  hi StatusLine ctermfg=249
+  hi CursorLine ctermbg=249
+endfunction
+
+function! VisualModeColours()
+  hi StatusLine ctermfg=79
+  hi CursorLine ctermbg=79
+endfunction
+
+"au InserttEnter * hi StatusLine ctermfg=18 CursorLine ctermbg=18
+"au InsertLeave * :call NormalModeColours()
+
+" nnoremap i <esc>:call InsertModeColours()<cr>
+" inoremap <esc> :call NormalModeColours()<cr><esc>
+
+"nnoremap <esc> :call NormalModeColours()<cr>
