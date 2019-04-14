@@ -28,11 +28,6 @@ source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 
 " TODO functions -----------------------
-" TODO gf opens file from  'import'
-" TODO React with vim - gf (open file) finds the "../address/ComponentName" and goes there
-" ^ These will look like a function - gf if file, go there, if not *ggnn gf
-" ie, go to top, next twice then goto file
-
 " TODO Change background based on mode; highlight currently active panel?
 " highlight bar - pink for 'insert', green for 'visual'? Might be a shortcut
 " :echo bufnr('%') -> show current buffer number
@@ -51,6 +46,7 @@ source ~/.vim_my_settings/.insert-mode-remaps
 " nnoremap <Tab><Tab> v%lyO<esc>p
 " Can probably leverage generic js
 " (eg Bvt{%y)
+" TODO Whoop_there_it_is -> function is a mess
 
 " TODO go to tags - find out how to use these
 command! MakeTags !ctags -R .
@@ -62,5 +58,3 @@ command! MakeTags !ctags -R .
 " TODO some normal mode remaps probably could do with being functions
 " TODO might be tidier to have [array, of, functions] and a for x in array do nnoremap function
 " TODO look into customising the status line (airline, maybs?)
-
-

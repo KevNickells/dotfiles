@@ -9,6 +9,28 @@ function! OnSaveCommands()
   normal ``
 endfunction
 
+" Expanding the gf function - open file or look for first occurence of filename or return to current position
+function! Whoop_there_it_is()
+  mark `
+  let word = expand('<cfile>')
+  if word == ''
+    echo 'No word under cursor'
+  elseif filereadable(expand(word))
+    exec 'vsplit' . word
+  else
+    call cursor(1,1)
+    exec '/' . word
+    normal! $Bgf
+    redir @a
+    silent! vertical wincmd f
+    redir END
+    if @a =~ "can't"
+      echom "no file to open"
+      normal ``
+    endif
+  endif
+endfunction
+
 " This shows the current column as a color column
 augroup BgHighlight
   autocmd!
@@ -23,8 +45,8 @@ augroup remember_folds
 augroup END
 
 aug AutoSourceZshrc
-    au!
-    au BufWritePost .zshrc !source ~/.zshrc
+  au!
+  au BufWritePost .zshrc !source ~/.zshrc
 aug END
 
 " Note that the below depends upon ripgrep
@@ -64,11 +86,11 @@ function! Cd_and_chill()
 endfunction
 
 command! FZFLines call fzf#run({
-\   'source':  <sid>buffer_lines(),
-\   'sink':    function('<sid>line_handler'),
-\   'options': '--extended --nth=3..',
-\   'down':    '60%'
-\})
+      \   'source':  <sid>buffer_lines(),
+      \   'sink':    function('<sid>line_handler'),
+      \   'options': '--extended --nth=3..',
+      \   'down':    '60%'
+      \})
 
 "Remember cursor position
 if has("autocmd")
@@ -88,8 +110,8 @@ function! s:bufopen(e)
 endfunction
 
 nnoremap <silent> <Leader><Leader> :call fzf#run({
-\   'source':  reverse(<sid>buflist()),
-\   'sink':    function('<sid>bufopen'),
-\   'options': '+m',
-\   'down':    len(<sid>buflist()) + 2
-\ })<CR>
+      \   'source':  reverse(<sid>buflist()),
+      \   'sink':    function('<sid>bufopen'),
+      \   'options': '+m',
+      \   'down':    len(<sid>buflist()) + 2
+      \ })<CR>
