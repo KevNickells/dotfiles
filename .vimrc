@@ -34,6 +34,8 @@ source ~/.vim_my_settings/.modal-colours
 " TODO fh = find here -> search in current and subfolder rather than root
 " echo expand('%:p:h')
 
+" TODO gf Whoop_there_it_is - arguably it should always find / open a file so can probably do without all the checks and just open if exists / create here if it doesn't.
+
 " TODO go to tags - find out how to use these
 command! MakeTags !ctags -R .
 
