@@ -31,6 +31,9 @@ source ~/.vim_my_settings/.modal-colours
 " TODO functions -----------------------
 " TODO Change background based on mode - see modal-colours; needs some work
 
+" TODO fh = find here -> search in current and subfolder rather than root
+" echo expand('%:p:h')
+
 " TODO go to tags - find out how to use these
 command! MakeTags !ctags -R .
 

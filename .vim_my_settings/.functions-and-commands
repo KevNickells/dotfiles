@@ -23,10 +23,10 @@ function! Whoop_there_it_is()
     redir @a
     silent! vertical wincmd f
     redir END
-    if @a =~ "can't"
-      echom "no file to open"
-      normal ``
-    endif
+    "if @a =~ "can't"
+    "  echom "no file to open"
+    "  normal ``
+    "endif
   endif
 endfunction
 
