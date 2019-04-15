@@ -28,3 +28,7 @@ nnoremap tstu :term npm test -- -u<cr>
 
 " tidy up - ' to ", remove ending ;, respace
 nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==
+
+" self-explanatory probably. Possible that it'll get on my tits if too many cc words appear
+nnoremap cc iconst<space>
+inoremap cc const<space>
