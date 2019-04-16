@@ -2,7 +2,7 @@
 # NOTE .git/hooks/... is where post commit hooks live
 # NOTE show running background tasks with jobs, fg % [task no]
 
-# see 'cd_and_chill' in functions - writes last directory
+# see "cd_and_chill" in functions - writes last directory
 cd $(cat ~/.last_dir)
 
 # Tells me whether I need to pull
@@ -22,13 +22,13 @@ source $ZSH/oh-my-zsh.sh
 # TODO copy from zsh to vim register?
 # TODO down_n_folders = this'll need soem work
 # TODO look into ZSH traps - allows for contingent arguments on background jobs
-# ... presumably can background jobs entirely (ie all output to /dev/null)
-# except on triggers - saves the faff of tmux
-# TODO open in windows with o . (.functions) --> pain in the arse come back to
+  # ... presumably can background jobs entirely (ie all output to /dev/null)
+  # except on triggers - saves the faff of tmux
+  # TODO open in windows with o . (.functions) --> pain in the arse come back to
 
 # TODO run the below weekly?
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
 # antibody update
 # source ~/.zsh_plugins.sh
 
-
+alias inst="npm install --save-dev"
