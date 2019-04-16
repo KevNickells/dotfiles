@@ -36,8 +36,7 @@ alias py="python3"
 alias pytest="pytest -rs"
 alias python="python3"
 alias v="open_last_git_commits_and_most_recent_directory"
-alias ./='~/.'
-alias ..='cd ../'
+alias ..='down_n_folder'
 alias ...='cd ~/'
 alias cd="cd_and_chill" # allows for opening most recent folder with  each new instance
 
