@@ -19,6 +19,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# TODO copy from zsh to vim register?
 # TODO down_n_folders = this'll need soem work
 # TODO look into ZSH traps - allows for contingent arguments on background jobs
 # ... presumably can background jobs entirely (ie all output to /dev/null)
