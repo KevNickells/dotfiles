@@ -10,6 +10,9 @@ function open_this_folder {
   fi
 }
 
+# x="c:\Users\Kevin\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home"
+# explorer.exe $x
+
 # Just so tired of that extra keypress
 function exiter {
   exit echo
