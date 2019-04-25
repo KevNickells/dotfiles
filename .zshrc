@@ -1,6 +1,7 @@
 # NOTE this file is sourced on closing within .vim_my_functions/.functions-and-commands
 # NOTE .git/hooks/... is where post commit hooks live
 # NOTE show running background tasks with jobs, fg % [task no]
+#
 
 # see "cd_and_chill" in functions - writes last directory
 cd $(cat ~/.last_dir)
