@@ -10,6 +10,9 @@ function open_this_folder {
   fi
 }
 
+# x="c:\Users\Kevin\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home"
+# explorer.exe $x
+
 # Just so tired of that extra keypress
 function exiter {
   exit echo
@@ -74,16 +77,16 @@ function mkdir_and_cd {
   mkdir $1 && cd $1
 }
 
-# go down n folders
+# go down n folders; go down one if noe value given
 function down_n_folder {
   if [ -n "$1" ]; then
-    N=$1
+    for n in {1..$1}
+    do
+      cd ../
+    done
   else
-    N=1
+    cd ../
   fi
-
-  for n in {1..$N} do
-      ../
 }
 
 # change directory / store last directory
