@@ -1,8 +1,9 @@
 # NOTE this file is sourced on closing within .vim_my_functions/.functions-and-commands
 # NOTE .git/hooks/... is where post commit hooks live
 # NOTE show running background tasks with jobs, fg % [task no]
-#
 
+# NOTE - take branch, branch that, and take master, and branch that, merge the
+# two then merge everything...?
 # see "cd_and_chill" in functions - writes last directory
 cd $(cat ~/.last_dir)
 alias ld="cd $(cat ~/.last_dir)"
@@ -36,3 +37,4 @@ source $ZSH/oh-my-zsh.sh
 # source ~/.zsh_plugins.sh
 
 alias inst="npm install --save-dev"
+
