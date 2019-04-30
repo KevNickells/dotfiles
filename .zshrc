@@ -21,8 +21,6 @@ done
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# TODO print branch?
 # TODO copy from zsh to vim register (for CD)?
 # TODO look into ZSH traps - allows for contingent arguments on background jobs
   # ... presumably can background jobs entirely (ie all output to /dev/null)
@@ -35,6 +33,3 @@ source $ZSH/oh-my-zsh.sh
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
 # antibody update
 # source ~/.zsh_plugins.sh
-
-alias inst="npm install --save-dev"
-

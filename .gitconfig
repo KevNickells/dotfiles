@@ -1,0 +1,13 @@
+[user]
+	name = KevNickells
+	email = kevin@themindlab.co.uk
+[credential]
+	helper = store
+[core]
+	editor = vim
+
+[color "status"]
+  added = green
+  changed = red bold
+  untracked = magenta bold
+  branch = cyan bold reverse

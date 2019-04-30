@@ -15,3 +15,5 @@
 !.zsh_plugins
 !.zsh_plugins.sh
 !/.zsh_my_settings/
+
+!.gitconfig
