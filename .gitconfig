@@ -7,7 +7,7 @@
 	editor = vim
 
 [color "status"]
-  added = green
+  added = blue
   changed = red bold
   untracked = magenta bold
-  branch = cyan bold reverse
+  branch = red bold reverse
