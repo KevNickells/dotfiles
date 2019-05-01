@@ -29,6 +29,8 @@ source ~/.vim_my_settings/.insert-mode-remaps
 source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
+" TODO :vert diffsplit filename - could do with a shortcut, eg :diff filename,
+" ideally with autocomit
 " TODO Change background based on mode - see modal-colours; needs some work
 " TODO ,b type behaviour - search for current word in open buffers
 " TODO ,b type behaviour - search for current word in project
