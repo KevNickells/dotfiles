@@ -24,6 +24,7 @@ source $ZSH/oh-my-zsh.sh
 
 # TODO hub / git - create and automatically merge pull request - if
 # automatically mergable then merge, otherwise print instructions on merging
+# Would be super helpful...
 # TODO copy from zsh to vim register (for CD)?
 # TODO look into ZSH traps - allows for contingent arguments on background jobs
   # ... presumably can background jobs entirely (ie all output to /dev/null)
