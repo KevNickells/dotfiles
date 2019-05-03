@@ -17,6 +17,8 @@ let mapleader = ","
 
 " Syntax highlighting for these config files
 autocmd BufNewFile,BufRead ~/.vim_my_settings/* set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim/ftplugin/* set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim/Snippets/*Javascript set syntax=javascript
 
 " Separating concerns for ease of use...
 source ~/.vim_my_settings/.spellings
@@ -29,6 +31,7 @@ source ~/.vim_my_settings/.insert-mode-remaps
 source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
+" TODO onwrite for .vimrc, write the relevant files to here - ie, " .vim_my_settings, Snippets, ftplugin
 " TODO :vert diffsplit filename - could do with a shortcut, eg :diff filename,
 " ideally with autocomit
 " TODO Change background based on mode - see modal-colours; needs some work
