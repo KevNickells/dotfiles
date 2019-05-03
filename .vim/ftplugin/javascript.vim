@@ -24,7 +24,7 @@ nnoremap zs :term node<cr>
 
 " run test, update fixtures
 nnoremap tst :term npm test<cr>
-nnoremap tstu :term npm test -- -u<cr>
+nnoremap tu :term npm test -- -u<cr>
 
 " tidy up - ' to ", remove ending ;, respace
 nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==

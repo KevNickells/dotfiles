@@ -22,6 +22,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# TODO git branch - show  the pull status of the branch that's being moved to
 # TODO hub / git - create and automatically merge pull request - if
 # automatically mergable then merge, otherwise print instructions on merging
 # Would be super helpful...

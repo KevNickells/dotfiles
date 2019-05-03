@@ -38,13 +38,13 @@ source ~/.vim_my_settings/.modal-colours
 " echo expand('%:p:h')
 
 " TODO gf Whoop_there_it_is - arguably it should always find / open a file so can probably do without all the checks and just open if exists / create here if it doesn't.
+" TODO Whoop_there_it_is -> function is a mess
 
 " TODO go to tags - find out how to use these
 command! MakeTags !ctags -R .
 
 " TODO tidying   -----------------------
 
-" TODO Whoop_there_it_is -> function is a mess
 " TODO some normal mode remaps probably could do with being functions
 " TODO might be tidier to have [array, of, functions] and a for x in array do nnoremap function
 " TODO look into customising the status line (airline, maybs?)
