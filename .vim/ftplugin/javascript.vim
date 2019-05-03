@@ -32,3 +32,6 @@ nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==
 " self-explanatory probably. Possible that it'll get on my tits if too many cc words appear
 nnoremap cc iconst<space>
 inoremap cc const<space>
+
+nnoremap succ isuccesful<space>
+inoremap succ succesful<space>
