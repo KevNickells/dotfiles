@@ -20,6 +20,7 @@ autocmd BufNewFile,BufRead ~/.vim_my_settings/* set syntax=vim
 autocmd BufNewFile,BufRead ~/.vim/ftplugin/* set syntax=vim
 autocmd BufNewFile,BufRead ~/.vim/Snippets/*Javascript set syntax=javascript
 
+sed: -e expression #1, char 1: missing command
 " Separating concerns for ease of use...
 source ~/.vim_my_settings/.spellings
 source ~/.vim_my_settings/.plugins

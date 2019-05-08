@@ -2,8 +2,6 @@
 # NOTE .git/hooks/... is where post commit hooks live
 # NOTE show running background tasks with jobs, fg % [task no]
 
-# NOTE - take branch, branch that, and take master, and branch that, merge the
-# two then merge everything...?
 # see "cd_and_chill" in functions - writes last directory
 cd $(cat ~/.last_dir)
 alias ld="cd $(cat ~/.last_dir)"
