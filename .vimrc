@@ -6,7 +6,7 @@
 " ~/.vim/ftplugin/python.vim
 " ~/.vim/ftplugin/ruby.vim
 
-" add file-specific dictionaries
+" add file-specific dictionaries, eg: 
 " set complete+=k~/.vim/dictionaries/.javascriptDictionary
 
 " Default to most recent folder
@@ -20,7 +20,6 @@ autocmd BufNewFile,BufRead ~/.vim_my_settings/* set syntax=vim
 autocmd BufNewFile,BufRead ~/.vim/ftplugin/* set syntax=vim
 autocmd BufNewFile,BufRead ~/.vim/Snippets/*Javascript set syntax=javascript
 
-sed: -e expression #1, char 1: missing command
 " Separating concerns for ease of use...
 source ~/.vim_my_settings/.spellings
 source ~/.vim_my_settings/.plugins
@@ -32,6 +31,8 @@ source ~/.vim_my_settings/.insert-mode-remaps
 source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
+
+" TODO frr (find and replace this) to be applied in visual mode
 " TODO onwrite for .vimrc, write the relevant files to here - ie, " .vim_my_settings, Snippets, ftplugin
 " TODO :vert diffsplit filename - could do with a shortcut, eg :diff filename,
 " ideally with autocomit

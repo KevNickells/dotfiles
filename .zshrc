@@ -2,6 +2,8 @@
 # NOTE .git/hooks/... is where post commit hooks live
 # NOTE show running background tasks with jobs, fg % [task no]
 
+DISPLAY=localhost:0.0
+
 # see "cd_and_chill" in functions - writes last directory
 cd $(cat ~/.last_dir)
 alias ld="cd $(cat ~/.last_dir)"
