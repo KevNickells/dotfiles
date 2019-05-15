@@ -6,7 +6,7 @@
 " ~/.vim/ftplugin/python.vim
 " ~/.vim/ftplugin/ruby.vim
 
-" add file-specific dictionaries, eg: 
+" add file-specific dictionaries, eg:
 " set complete+=k~/.vim/dictionaries/.javascriptDictionary
 
 " Default to most recent folder
@@ -32,6 +32,8 @@ source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
 
+" TODO dropdowns fo useful files - eg etc zsh, edit contextual files etc - see
+" 'ListThings() below
 " TODO frr (find and replace this) to be applied in visual mode
 " TODO onwrite for .vimrc, write the relevant files to here - ie, " .vim_my_settings, Snippets, ftplugin
 " TODO :vert diffsplit filename - could do with a shortcut, eg :diff filename,
@@ -53,3 +55,12 @@ command! MakeTags !ctags -R .
 " TODO some normal mode remaps probably could do with being functions
 " TODO might be tidier to have [array, of, functions] and a for x in array do nnoremap function
 " TODO look into customising the status line (airline, maybs?)
+
+" func! ListThings()
+"   call complete(col('.'), ['asdf', 'asdfasdfasdf'])
+"   return ''
+" endfunc
+"
+" inoremap <F5> <C-R>=ListThings()<CR>
+"
+" https://unix.stackexchange.com/questions/39111/vim-custom-pop-up-menu/39125

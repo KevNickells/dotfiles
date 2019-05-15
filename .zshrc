@@ -40,3 +40,5 @@ source $ZSH/oh-my-zsh.sh
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
 # antibody update
 # source ~/.zsh_plugins.sh
+
+
