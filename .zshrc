@@ -22,9 +22,10 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# TODO gc - could do with having a flag for adding specific files with commit
-# messages and / or commit all
-# TODO git branch - show  the pull status of the branch that's being moved to
+# TODO gc - could do with having a flag for adding specific files with commit # messages and / or commit all
+# TODO cd and chill could do with going to direct match or first match, eg w3
+# takes you to w3-prototype
+# TODO git checkout / branch- show  the pull status of the branch that's being moved to
 # TODO hub / git - create and automatically merge pull request - if
 # automatically mergable then merge, otherwise print instructions on merging
 # Would be super helpful...
@@ -34,7 +35,6 @@ source $ZSH/oh-my-zsh.sh
   # except on triggers - saves the faff of tmux
 
 # TODO open in windows with o . (.functions) --> pain in the arse come back to
-# Needs, like, some thought
 
 # TODO run the below weekly?
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
