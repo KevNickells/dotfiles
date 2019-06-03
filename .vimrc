@@ -32,6 +32,7 @@ source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
 
+" TODO contextual tab width - 4 at work, 2 at home.
 " TODO dropdowns fo useful files - eg etc zsh, edit contextual files etc - see
 " 'ListThings() below
 " TODO frr (find and replace this) to be applied in visual mode
