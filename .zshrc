@@ -37,6 +37,7 @@ source $ZSH/oh-my-zsh.sh
 # TODO open in windows with o . (.functions) --> pain in the arse come back to
 
 # TODO run the below weekly?
+# TODO or have a re-think of how to manage all of this lot.
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
 # antibody update
 # source ~/.zsh_plugins.sh
