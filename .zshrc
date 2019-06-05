@@ -22,6 +22,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# TODO exiter command in functions - could do with pushing on exit; will also mean amending the gc function
 # TODO gc - could do with having a flag for adding specific files with commit # messages and / or commit all
 # TODO cd and chill could do with going to direct match or first match, eg w3
 # takes you to w3-prototype
