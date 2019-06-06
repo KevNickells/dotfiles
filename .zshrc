@@ -35,6 +35,8 @@ source $ZSH/oh-my-zsh.sh
   # ... presumably can background jobs entirely (ie all output to /dev/null)
   # except on triggers - saves the faff of tmux
 
+# TODO maybe branch colours could change? I still keep ignoring it
+
 # TODO open in windows with o . (.functions) --> pain in the arse come back to
 
 # TODO run the below weekly?
