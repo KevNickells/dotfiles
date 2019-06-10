@@ -32,9 +32,8 @@ source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
 
-" TODO dropdowns fo useful files - eg etc zsh, edit contextual files etc - see
+" TODO dropdowns for useful files - eg etc zsh, edit contextual files etc - see
 " 'ListThings() below
-" TODO frr (find and replace this) to be applied in visual mode
 " TODO onwrite for .vimrc, write the relevant files to here - ie, " .vim_my_settings, Snippets, ftplugin
 " TODO :vert diffsplit filename - could do with a shortcut, eg :diff filename,
 " ideally with autocomit

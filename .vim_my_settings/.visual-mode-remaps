@@ -18,3 +18,6 @@ vnoremap <leader>{{ l0<esc>i{<esc>A}<esc>v
 
 "tab text while in visual mode
 vnoremap <Tab> ><esc>v
+
+" Find and replace highlighted text
+vnoremap fr y<esc>:call ReplaceThisText('<C-R>"')<cr>

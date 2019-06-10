@@ -25,11 +25,6 @@ source $ZSH/oh-my-zsh.sh
 # TODO gc - could do with having a flag for adding specific files with commit # messages and / or commit all
 # TODO cd and chill could do with going to direct match or first match, eg w3
 # takes you to w3-prototype
-# TODO git checkout / branch- show  the pull status of the branch that's being moved to
-# TODO hub / git - create and automatically merge pull request - if
-# automatically mergable then merge, otherwise print instructions on merging
-# Would be super helpful...
-# TODO copy from zsh to vim register (for CD)?
 # TODO look into ZSH traps - allows for contingent arguments on background jobs
   # ... presumably can background jobs entirely (ie all output to /dev/null)
   # except on triggers - saves the faff of tmux

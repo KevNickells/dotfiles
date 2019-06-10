@@ -79,6 +79,11 @@ function! ReplaceThisWord()
   exec '%s/' . find . '/' . replace . '/g'
 endfunction
 
+function! ReplaceThisText(string)
+  let replace = input('Replace: ')
+  exec '%s/' . a:string . '/' . replace . '/g'
+endfunction
+
 function! Cd_and_chill()
   let dir = execute(":r ~/.last_dir")
   echo dir
