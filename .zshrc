@@ -45,4 +45,4 @@ source $ZSH/oh-my-zsh.sh
 # antibody update
 # source ~/.zsh_plugins.sh
 
-
+# TODO lazygit shortcuts need to be less shit (looks like a faff, here's a related issue:  https://github.com/jesseduffield/lazygit/issues/27 )
