@@ -22,6 +22,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# TODO exiter command in functions - could do with pushing on exit; will also mean amending the gc function
 # TODO gc - could do with having a flag for adding specific files with commit # messages and / or commit all
 # TODO cd and chill could do with going to direct match or first match, eg w3
 # takes you to w3-prototype
@@ -29,11 +30,14 @@ source $ZSH/oh-my-zsh.sh
   # ... presumably can background jobs entirely (ie all output to /dev/null)
   # except on triggers - saves the faff of tmux
 
+# TODO maybe branch colours could change? I still keep ignoring it
+
 # TODO open in windows with o . (.functions) --> pain in the arse come back to
 
 # TODO run the below weekly?
+# TODO or have a re-think of how to manage all of this lot.
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
 # antibody update
 # source ~/.zsh_plugins.sh
 
-
+# TODO lazygit shortcuts need to be less shit (looks like a faff, here's a related issue:  https://github.com/jesseduffield/lazygit/issues/27 )

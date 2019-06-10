@@ -19,6 +19,10 @@ inoremap csl console.log()<esc>i
 nnoremap cst Oconsole.table()<esc>i
 inoremap cst console.table()<esc>i
 
+" Object.keys
+nnoremap obk OObject.keys()<esc>i
+inoremap obk Object.keys()<esc>i
+
 "open js REPL
 nnoremap zs :term node<cr>
 

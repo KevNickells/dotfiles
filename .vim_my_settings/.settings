@@ -1,6 +1,6 @@
 "------------------ Obvious stuff
 "Tab as two spaces
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 "Turns off compatibility with vi
 set nocompatible
@@ -35,7 +35,7 @@ set timeoutlen=300 ttimeoutlen=0
 "Colourscheme stuff
 set background=dark
 try
-  colorscheme scheakur
+    colorscheme scheakur
 catch
 endtry
 
@@ -76,9 +76,9 @@ set rtp+=/usr/local/opt/fzf
 set number relativenumber
 
 augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
 

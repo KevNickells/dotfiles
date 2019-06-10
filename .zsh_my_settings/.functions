@@ -89,6 +89,11 @@ function down_n_folder {
   fi
 }
 
+# git branch as inline text
+function git_brancher {
+  echo $(git branch) | tr " " \\n
+}
+
 # change directory / store last directory
 function cd_and_chill {
   \cd $1
@@ -112,3 +117,5 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
   install_powerline_precmd
 fi
+
+
