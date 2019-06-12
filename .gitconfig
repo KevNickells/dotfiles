@@ -5,9 +5,16 @@
 	helper = store
 [core]
 	editor = vim
-
+[color "push"]
+  rejected = red bold reverse
 [color "status"]
   added = blue
   changed = red bold
   untracked = magenta bold
   branch = red bold reverse
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
