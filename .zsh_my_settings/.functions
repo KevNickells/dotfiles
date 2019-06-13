@@ -50,7 +50,7 @@ function git_add_commit_push {
     case "$yesno" in
       [Yy]* ) cd $(git rev-parse --show-toplevel) &&
         git add . &&
-        git commit -m \"$1[ci skip]\" &&
+        git commit -m \"$1\" &&
         git push &&
         cd -; break;;
 
