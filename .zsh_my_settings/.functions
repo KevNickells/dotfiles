@@ -5,8 +5,8 @@ function open_this_folder {
   if [ "$COMPUTER_NAME" = "horsey-horserson" ]; then
     dolphin $1 &
     # elif windows /mnt/c/Windows/explorer.exe FOLDER
-  else
-    echo "check open_this_folder() in .zshrc; $COMPUTER_NAME is not recognised"
+    else
+      echo "check open_this_folder() in .zshrc; $COMPUTER_NAME is not recognised"
   fi
 }
 
@@ -32,12 +32,25 @@ function open_last_git_commits_and_most_recent_directory {
   vim $(grf)
 }
 
-# git commit / add / push in one go with error handling
-# NOTE - is adding a ci skip message automatically
+function git_options {
+  while getopts "s:" opt
+  do
+    case $opt in
+      s)
+        git_add_commit_push $OPTARG"[ci skip]"
+        ;;
+      *)
+        git_add_commit_push $OPTARG
+        ;;
+    esac
+  done
+}
+
 function git_add_commit_push {
   INPUT=$1
 
-  while true; do
+  while true
+  do
     case $INPUT in
       "") echo ${red_with_blue}Needs a commit message, exiting${default}; break;;
     esac
@@ -61,16 +74,16 @@ done
 }
 
 # TODO - need to figure out traps for both of these
-# run server as background process and ignore output from both
-function run_hoglet {
-  cd ~/hoglet
-  setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
-  sh scripts/start-server.sh &
-  cd ~/hoglet/hoglet-client
-  npm start &
-  echo 'hoglet - client / backend servers started'
-  cd ~/hoglet/hoglet-client/src
-}
+  # run server as background process and ignore output from both
+  function run_hoglet {
+    cd ~/hoglet
+    setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
+    sh scripts/start-server.sh &
+    cd ~/hoglet/hoglet-client
+    npm start &
+    echo 'hoglet - client / backend servers started'
+    cd ~/hoglet/hoglet-client/src
+  }
 
 # self explanatory name
 function mkdir_and_cd {
@@ -79,16 +92,16 @@ function mkdir_and_cd {
 }
 
 # go down n folders; go down one if noe value given
-function down_n_folder {
-  if [ -n "$1" ]; then
-    for n in {1..$1}
-    do
+  function down_n_folder {
+    if [ -n "$1" ]; then
+      for n in {1..$1}
+      do
+        cd ../
+      done
+    else
       cd ../
-    done
-  else
-    cd ../
-  fi
-}
+    fi
+  }
 
 # git branch as inline text
 function git_brancher {
@@ -118,5 +131,3 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
   install_powerline_precmd
 fi
-
-
