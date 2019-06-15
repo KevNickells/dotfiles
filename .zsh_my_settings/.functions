@@ -36,16 +36,16 @@ function git_options {
   while getopts "s:a:" opt
   do
     case $opt in
-      s)
-        git_add_commit_push $OPTARG"[ci skip]"
+      s) git_add_commit_push $OPTARG"[ci skip]"
         ;;
       a) git_commit_push $OPTARG
         ;;
-      *)
-        git_add_commit_push $OPTARG
-        ;;
     esac
   done
+  if (( $OPTIND == 1 ))
+  then
+    git_add_commit_push $1
+  fi
 }
 
 # TODO definitely needs a bit of DRY and to figure out using both things

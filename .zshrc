@@ -22,8 +22,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# TODO cd and chill could do with going to direct match or first match, eg w3 it takes you to w3-prototype
-  #
 # TODO look into ZSH traps - allows for contingent arguments on background jobs
   # ... presumably can background jobs entirely (ie all output to /dev/null)
   # except on triggers - saves the faff of tmux
