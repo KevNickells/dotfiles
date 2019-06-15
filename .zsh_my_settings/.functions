@@ -33,17 +33,46 @@ function open_last_git_commits_and_most_recent_directory {
 }
 
 function git_options {
-  while getopts "s:" opt
+  while getopts "s:a:" opt
   do
     case $opt in
       s)
         git_add_commit_push $OPTARG"[ci skip]"
+        ;;
+      a) git_commit_push $OPTARG
         ;;
       *)
         git_add_commit_push $OPTARG
         ;;
     esac
   done
+}
+
+# TODO definitely needs a bit of DRY and to figure out using both things
+function git_commit_push {
+  INPUT=$1
+
+  while true
+  do
+    case $INPUT in
+      "") echo ${red_with_blue}Needs a commit message, exiting${default}; break;;
+    esac
+
+    echo ${magenta_with_yellow}These files were affected: ${default}:
+
+    echo $(git diff --cached --name-only)
+
+    read yesno"?Is that ok? Yes or no?"
+    case "$yesno" in
+      [Yy]* ) cd $(git rev-parse --show-toplevel) &&
+        git commit -m \"$1\" &&
+        git push &&
+        cd -; break;;
+
+    [Nn]* ) break;;
+    * ) echo "The question was yes or no, dickface"
+  esac
+done
 }
 
 function git_add_commit_push {
