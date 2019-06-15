@@ -89,6 +89,11 @@ function! Cd_and_chill()
   echo dir
 endfunction
 
+function! VimConfigDropdown()
+  call complete(col('.'), ['asdf', 'asdfasdf'])
+  return ''
+endfunc
+
 command! FZFLines call fzf#run({
       \   'source':  <sid>buffer_lines(),
       \   'sink':    function('<sid>line_handler'),

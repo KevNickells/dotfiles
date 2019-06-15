@@ -4,3 +4,6 @@ inoremap <C-l> <esc><C-w>l
 
 " semi-colon at the end of the current line in insert mode
 inoremap ;; <esc>A;<esc>
+
+" drop down for vim stuff
+nnoremap <leader>v :call VimConfigDropdown()<cr>
