@@ -24,6 +24,7 @@ source $ZSH/oh-my-zsh.sh
 
 # TODO exiter command in functions - could do with pushing on exit; will also mean amending the gc function
 # TODO gc - could do with having a flag for adding specific files with commit # messages and / or commit all
+# TODO gc - could do with automatically appending ignore CI except when specified
 # TODO cd and chill could do with going to direct match or first match, eg w3
 # takes you to w3-prototype
 # TODO look into ZSH traps - allows for contingent arguments on background jobs

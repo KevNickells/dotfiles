@@ -33,9 +33,13 @@ source ~/.vim_my_settings/.modal-colours
 " TODO functions -----------------------
 
 " TODO go back to visual mode find and replace
-" TODO dropdowns for useful files - eg etc zsh, edit contextual files etc - see
+" TODO cd - :bufdo will change in every buffer BUT if those buffers have
+" different current directories then the relative paths won't be right.
+" Need to a) change all to pwd full path
+"         b) then perform the :bufdo relative to that.
+" TODO dropdowns for useful files - eg etc zsh, edit contextual files etc - see 'ListThings() below
 " TODO contextual tab width - 4 at work, 2 at home.
-" TODO dropdowns fo useful files - eg etc zsh, edit contextual files etc - see 'ListThings() below
+
 " TODO onwrite for .vimrc, write the relevant files to here - ie, " .vim_my_settings, Snippets, ftplugin
 " TODO :vert diffsplit filename - could do with a shortcut, eg :diff filename,
 " ideally with autocomit
