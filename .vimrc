@@ -1,35 +1,14 @@
-" NOTE: This file is mostly to-dos
-" NOTE: Language-specific locations:
-" ~/.vim/ftplugin/haml.vim
-" ~/.vim/ftplugin/html.haml.vim
-" ~/.vim/ftplugin/javascript.vim
-" ~/.vim/ftplugin/python.vim
-" ~/.vim/ftplugin/ruby.vim
+" NOTE: This file is mostly to-dos. Access config files with ctrl+a
 
-" add file-specific dictionaries, eg:
-" set complete+=k~/.vim/dictionaries/.javascriptDictionary
-
-" Default to most recent folder
+" Vim folder to match shell folder on open
 exec "cd" . system("cat ~/.last_dir")
 
-"leader key; needs to be set firstwise
+" leader key; needs to be set firstwise
 let mapleader = ","
-
-" Separating concerns for ease of use...
-source ~/.vim_my_settings/.spellings
-source ~/.vim_my_settings/.plugins
-source ~/.vim_my_settings/.settings
-source ~/.vim_my_settings/.functions-and-commands
-source ~/.vim_my_settings/.normal-mode-remaps
-source ~/.vim_my_settings/.visual-mode-remaps
-source ~/.vim_my_settings/.insert-mode-remaps
-source ~/.vim_my_settings/.modal-colours
-source ~/.vim_my_settings/.syntax-highlighting-config
 
 " TODO functions -----------------------
 
-" TODO go back to visual mode find and replace
-" TODO dropdowns for useful files - eg etc zsh, edit contextual files etc - see 'ListThings() below
+" TODO visual mode find and replace
 " TODO ,b type behaviour - search for current word in open buffers
 " TODO ,b type behaviour - search for current word in project
 
@@ -41,7 +20,6 @@ source ~/.vim_my_settings/.syntax-highlighting-config
 " TODO contextual tab width - 4 at work, 2 at home?
 
 " TODO gf Whoop_there_it_is - arguably it should always find / open a file so can probably do without all the checks and just open if exists / create here if it doesn't.
-" TODO Whoop_there_it_is -> function is a mess
 
 " TODO go to tags - find out how to use these
 command! MakeTags !ctags -R .
@@ -51,5 +29,4 @@ command! MakeTags !ctags -R .
 " TODO some normal mode remaps probably could do with being functions
 " TODO might be tidier to have [array, of, functions] and a for x in array do nnoremap function
 " TODO look into customising the status line (airline, maybs?)
-
-" https://unix.stackexchange.com/questions/39111/vim-custom-pop-up-menu/39125
+" TODO Whoop_there_it_is -> function is a mess
