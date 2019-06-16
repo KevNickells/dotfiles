@@ -1,0 +1,6 @@
+" Syntax highlighting for config files
+autocmd BufNewFile,BufRead ~/.vim_my_settings/* set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim/ftplugin/* set syntax=vim
+autocmd BufNewFile,BufRead ~/.vim/Snippets/*Javascript set syntax=javascript
+
+"

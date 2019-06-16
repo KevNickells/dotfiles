@@ -1,8 +1,7 @@
 " escape twice to save; strip whitespace from end of line; remove 2 consecutive newlines; displays current filepath (see vim_my_settings/.functions-and-commands
 nnoremap <silent> <Esc><Esc> :exec OnSaveCommands()<cr>``zz<bar>:echom expand("%") . '    saved'<cr>
 
-" Soon enough I'll probably want to think a bit more about the statusline. For
-" now this will let me know what the time is
+" Soon enough I'll probably want to think a bit more about the statusline. For now this will let me know what the time is
 nnoremap tm :echom strftime("%H:%M")<CR>
 
 "upper-case current word with ctr
@@ -172,4 +171,5 @@ nnoremap gf :call Whoop_there_it_is()<cr>
 nnoremap <C-o> <C-o>zz
 nnoremap <C-i> <C-i>zz
 
-
+" bring up the config dropdown
+nnoremap <C-a> i<C-a>

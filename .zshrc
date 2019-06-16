@@ -18,6 +18,9 @@ do
   source $source_file
 done
 
+# TODO this should probably be dynamic. It is not dynamic
+# ls -A ~/.vim_my_settings ~/.vim/ftplugin ~/.zsh_my_settings > ~/.config_file_list
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

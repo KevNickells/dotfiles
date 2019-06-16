@@ -5,5 +5,28 @@ inoremap <C-l> <esc><C-w>l
 " semi-colon at the end of the current line in insert mode
 inoremap ;; <esc>A;<esc>
 
-" drop down for vim stuff
-nnoremap <leader>v :call VimConfigDropdown()<cr>
+" drop down for config things.
+inoremap <C-a> <C-R>=ConfigDropdown()<CR>
+
+source ~/.config_file_list
+
+func! ConfigDropdown()
+    call complete(col('.'), g:config_file_list)
+    let g:config_dropdown = 1
+    return ''
+endfunc
+
+augroup configDropdown
+    autocmd!
+    autocmd CompleteDone * call DoConfigDropdown(v:completed_item)
+augroup END
+
+function! DoConfigDropdown(value)
+    if g:config_dropdown == 1
+        normal ux
+        execute(":e " . a:value.info)
+        execute(":pclose")
+    endif
+
+    let g:config_dropdown = 0
+endfunction

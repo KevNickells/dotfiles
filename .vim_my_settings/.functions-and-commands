@@ -43,6 +43,16 @@ augroup remember_folds
   autocmd BufWinEnter * silent! loadview
 augroup END
 
+function! ChangeDirectoryInAllBuffers()
+  let @r = execute("pwd")
+  execute "bufdo cd " . trim(@r)
+endfunction
+
+aug directoryChanged
+  au!
+  au DirChanged * call ChangeDirectoryInAllBuffers()
+aug END
+
 aug AutoSourceZshrc
   au!
   au BufWritePost .zshrc !source ~/.zshrc
@@ -88,11 +98,6 @@ function! Cd_and_chill()
   let dir = execute(":r ~/.last_dir")
   echo dir
 endfunction
-
-function! VimConfigDropdown()
-  call complete(col('.'), ['asdf', 'asdfasdf'])
-  return ''
-endfunc
 
 command! FZFLines call fzf#run({
       \   'source':  <sid>buffer_lines(),
