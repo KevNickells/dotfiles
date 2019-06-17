@@ -20,7 +20,7 @@ source ~/.vim_my_settings/.syntax-highlighting-config
 " TODO functions -----------------------
 
 " TODO need to update to vim 8.1 in order to allow the changeDir function
-" (functions and commands) to work
+" (functions and commands) to work. Would be nice to do that soon
 
 " TODO config_file_list in .insert-mode-remaps variable could be dynamically created.
 " TODO something saucy like sorting config_file_list bits by most-accessed file?
