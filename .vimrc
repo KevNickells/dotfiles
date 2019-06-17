@@ -6,7 +6,24 @@ exec "cd" . system("cat ~/.last_dir")
 " leader key; needs to be set firstwise
 let mapleader = ","
 
+" TODO this should just be source folder
+source ~/.vim_my_settings/.spellings
+source ~/.vim_my_settings/.plugins
+source ~/.vim_my_settings/.settings
+source ~/.vim_my_settings/.functions-and-commands
+source ~/.vim_my_settings/.normal-mode-remaps
+source ~/.vim_my_settings/.visual-mode-remaps
+source ~/.vim_my_settings/.insert-mode-remaps
+source ~/.vim_my_settings/.modal-colours
+source ~/.vim_my_settings/.syntax-highlighting-config
+
 " TODO functions -----------------------
+
+" TODO need to update to vim 8.1 in order to allow the changeDir function
+" (functions and commands) to work
+
+" TODO config_file_list in .insert-mode-remaps variable could be dynamically created.
+" TODO something saucy like sorting config_file_list bits by most-accessed file?
 
 " TODO visual mode find and replace
 " TODO ,b type behaviour - search for current word in open buffers

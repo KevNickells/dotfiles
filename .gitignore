@@ -1,7 +1,7 @@
 /*
 !.gitignore
 !.vimrc
-!.vim-*
+.vim-*
 !.tmux*
 !/Snippets/
 !/.vim/
@@ -17,3 +17,4 @@
 !/.zsh_my_settings/
 
 !.gitconfig
+!.config_file_list

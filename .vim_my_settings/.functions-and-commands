@@ -43,15 +43,15 @@ augroup remember_folds
   autocmd BufWinEnter * silent! loadview
 augroup END
 
-function! ChangeDirectoryInAllBuffers()
-  let @r = execute("pwd")
-  execute "bufdo cd " . trim(@r)
-endfunction
-
-aug directoryChanged
-  au!
-  au DirChanged * call ChangeDirectoryInAllBuffers()
-aug END
+"function! ChangeDirectoryInAllBuffers()
+"  let @r = execute("pwd")
+"  execute "bufdo cd " . trim(@r)
+"endfunction
+"
+"aug directoryChanged
+"  au!
+"  au DirChanged * call ChangeDirectoryInAllBuffers()
+"aug END
 
 aug AutoSourceZshrc
   au!
