@@ -11,6 +11,7 @@ inoremap <C-a> <C-R>=ConfigDropdown()<CR>
 " variable with config files as a list - could do with being dynamic
 source ~/.config_file_list
 
+let g:config_dropdown = 0
 " Called in the insert remap above which creates the dropdown using complete; sets a global boolean variable so we know what sort of complete it is
 func! ConfigDropdown()
     call complete(col('.'), g:config_file_list)

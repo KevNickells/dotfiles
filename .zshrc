@@ -18,7 +18,7 @@ do
   source $source_file
 done
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+ource ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

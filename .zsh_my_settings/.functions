@@ -33,12 +33,14 @@ function open_last_git_commits_and_most_recent_directory {
 }
 
 function git_options {
-  while getopts "s:a:" opt
+  while getopts "s:a:h:" opt
   do
     case $opt in
-      s) git_add_commit_push $OPTARG"[ci skip]"
+      s) git_add_commit_push $OPTARG" [ci skip]"
         ;;
       a) git_commit_push $OPTARG
+        ;;
+      h) echo 'options are:\n-a -> no add\n-s -> [ci skip]'
         ;;
     esac
   done

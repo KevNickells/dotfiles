@@ -16,8 +16,10 @@ source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 source ~/.vim_my_settings/.modal-colours
 source ~/.vim_my_settings/.syntax-highlighting-config
-
+"
 " TODO functions -----------------------
+
+" TODO vimdiff could probably use a few shortcuts and that.
 
 " TODO need to update to vim 8.1 in order to allow the changeDir function
 " (functions and commands) to work. Would be nice to do that soon
