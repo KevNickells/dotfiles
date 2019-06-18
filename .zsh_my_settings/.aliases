@@ -24,7 +24,7 @@ alias cath="head -10"
 alias ga="git add"
 alias gb="git_brancher"
 alias gc="git_options"
-alias gdf="git difftool"
+# alias gdf="git difftool"
 alias gpsh="git push"
 alias gp="git pull --recurse-submodules"
 alias grf="git show --pretty='' --name-only HEAD" # git last files amended
