@@ -19,6 +19,8 @@ source ~/.vim_my_settings/.syntax-highlighting-config
 "
 " TODO functions -----------------------
 
+" TODO seems that using vimdiff adds settings to a given file that persist next
+" time you open it - see BufNew in settings
 " TODO vimdiff could probably use a few shortcuts and that.
 " TODO Probably time to abandon nerdTree and learn netrw
 
