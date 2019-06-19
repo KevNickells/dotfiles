@@ -9,7 +9,6 @@ function! OnSaveCommands()
 endfunction
 
 " Expanding the gf function - open file or look for first occurence of filename or return to current position
-
 function! Whoop_there_it_is()
   mark `
   let word = expand('<cfile>')

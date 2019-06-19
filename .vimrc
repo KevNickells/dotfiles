@@ -7,6 +7,7 @@ exec "cd" . system("cat ~/.last_dir")
 let mapleader = ","
 
 " TODO this should just be source folder
+source ~/.vim_my_settings/.syntax-highlighting-config
 source ~/.vim_my_settings/.spellings
 source ~/.vim_my_settings/.plugins
 source ~/.vim_my_settings/.settings
@@ -15,12 +16,10 @@ source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 source ~/.vim_my_settings/.modal-colours
-source ~/.vim_my_settings/.syntax-highlighting-config
-"
+
 " TODO functions -----------------------
 
-" TODO seems that using vimdiff adds settings to a given file that persist next
-" time you open it - see BufNew in settings
+" TODO this cursorbind business is going to fuck me off
 " TODO vimdiff could probably use a few shortcuts and that.
 " TODO Probably time to abandon nerdTree and learn netrw
 

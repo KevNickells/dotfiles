@@ -75,8 +75,12 @@ set rtp+=/usr/local/opt/fzf
 "Relative number when in normal mode, not relative otherwise
 set number relativenumber
 
-autocmd BufNew * diffoff
-autocmd BufNew * set noscrollbind
+augroup newFileStuff
+    autocmd!
+    au BufNewFile,BufRead * set noscrollbind
+    au BufNewFile,BufRead * set nocursorbind
+    au BufNewFile,BufRead * diffoff
+augroup END
 
 augroup numbertoggle
     autocmd!
