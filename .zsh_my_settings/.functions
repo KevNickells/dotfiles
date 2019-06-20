@@ -2,12 +2,12 @@
 COMPUTER_NAME=$(uname -n)
 
 function open_this_folder {
-  if [ "$COMPUTER_NAME" = "horsey-horserson" ]; then
-    dolphin $1 &
-    # elif windows /mnt/c/Windows/explorer.exe FOLDER
-    else
-      echo "check open_this_folder() in .zshrc; $COMPUTER_NAME is not recognised"
-  fi
+    if [ "$COMPUTER_NAME" = "horsey-horserson" ]; then
+        dolphin $1 &
+        # elif windows /mnt/c/Windows/explorer.exe FOLDER
+        else
+            echo "check open_this_folder() in .zshrc; $COMPUTER_NAME is not recognised"
+    fi
 }
 
 # x="c:\Users\Kevin\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home"
@@ -15,7 +15,7 @@ function open_this_folder {
 
 # Just so tired of that extra keypress
 function exiter {
-  exit echo
+    exit echo
 }
 
 # function open_in_windows {
@@ -28,137 +28,143 @@ function exiter {
 
 # open recent files
 function open_last_git_commits_and_most_recent_directory {
-  cd $(git rev-parse --show-toplevel)
-  vim $(grf)
+    cd $(git rev-parse --show-toplevel)
+    vim $(grf)
 }
 
-function git_options {
-  while getopts "s:a:h:" opt
-  do
-    case $opt in
-      s) git_add_commit_push $OPTARG" [ci skip]"
-        ;;
-      a) git_commit_push $OPTARG
-        ;;
-      h) echo 'options are:\n-a -> no add\n-s -> [ci skip]'
-        ;;
-    esac
-  done
-  if (( $OPTIND == 1 ))
-  then
-    git_add_commit_push $1
-  fi
-}
+    function git_options {
+        while getopts "a:h:n:s:" opt
+        do
+            case $opt in
+                a) git_commit_push $OPTARG
+                    ;;
+                h) echo  "options are:
+                    -a -> Do not add all
+                    -s -> Append [ci skip]
+                    -n -> note to self or plugins "
+                    ;;
+                n) git_add_commit_push "Note to self / plugins"
+                    ;;
+                s) git_add_commit_push $OPTARG" [ci skip]"
+                    ;;
+
+                esac
+            done
+            if (( $OPTIND == 1 ))
+            then
+                git_add_commit_push $1
+            fi
+        }
 
 # TODO definitely needs a bit of DRY and to figure out using both things
 function git_commit_push {
-  INPUT=$1
+    INPUT=$1
 
-  while true
-  do
-    case $INPUT in
-      "") echo ${red_with_blue}Needs a commit message, exiting${default}; break;;
+    while true
+    do
+        case $INPUT in
+            "") echo ${red_with_blue}Needs a commit message, exiting${default}; break;;
+        esac
+
+        echo ${magenta_with_yellow}These files were affected: ${default}:
+
+        echo $(git diff --cached --name-only)
+
+        read yesno"?Is that ok? Yes or no?"
+        case "$yesno" in
+            [Yy]* ) cd $(git rev-parse --show-toplevel) &&
+                git commit -m \"$1\" &&
+                git push &&
+                cd -; break;;
+
+        [Nn]* ) break;;
+        * ) echo "The question was yes or no, dickface"
     esac
-
-    echo ${magenta_with_yellow}These files were affected: ${default}:
-
-    echo $(git diff --cached --name-only)
-
-    read yesno"?Is that ok? Yes or no?"
-    case "$yesno" in
-      [Yy]* ) cd $(git rev-parse --show-toplevel) &&
-        git commit -m \"$1\" &&
-        git push &&
-        cd -; break;;
-
-    [Nn]* ) break;;
-    * ) echo "The question was yes or no, dickface"
-  esac
 done
 }
 
 function git_add_commit_push {
-  INPUT=$1
+    INPUT=$1
 
-  while true
-  do
-    case $INPUT in
-      "") echo ${red_with_blue}Needs a commit message, exiting${default}; break;;
+    while true
+    do
+        case $INPUT in
+            "") echo ${red_with_blue}Needs a commit message, exiting${default}; break;;
+        esac
+
+        echo ${magenta_with_yellow}These files were affected: ${default}:
+
+        echo $(git status -s)
+
+        read yesno"?Is that ok? Yes or no?"
+        case "$yesno" in
+            [Yy]* ) cd $(git rev-parse --show-toplevel) &&
+                git add . &&
+                git commit -m \"$1\" &&
+                git push &&
+                cd -; break;;
+
+        [Nn]* ) break;;
+        * ) echo "The question was yes or no, dickface"
     esac
-
-    echo ${magenta_with_yellow}These files were affected: ${default}:
-
-    echo $(git status -s)
-
-    read yesno"?Is that ok? Yes or no?"
-    case "$yesno" in
-      [Yy]* ) cd $(git rev-parse --show-toplevel) &&
-        git add . &&
-        git commit -m \"$1\" &&
-        git push &&
-        cd -; break;;
-
-    [Nn]* ) break;;
-    * ) echo "The question was yes or no, dickface"
-  esac
 done
 }
 
 # TODO - need to figure out traps for both of these
-  # run server as background process and ignore output from both
-  function run_hoglet {
-    cd ~/hoglet
-    setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
-    sh scripts/start-server.sh &
-    cd ~/hoglet/hoglet-client
-    npm start &
-    echo 'hoglet - client / backend servers started'
-    cd ~/hoglet/hoglet-client/src
-  }
+    # run server as background process and ignore output from both
+    function run_hoglet {
+        cd ~/hoglet
+        setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
+        sh scripts/start-server.sh &
+        cd ~/hoglet/hoglet-client
+        npm start &
+        echo 'hoglet - client / backend servers started'
+        cd ~/hoglet/hoglet-client/src
+    }
 
 # self explanatory name
 function mkdir_and_cd {
-  INPUT=$1
-  mkdir $1 && cd $1
+    INPUT=$1
+    mkdir $1 && cd $1
 }
 
 # go down n folders; go down one if noe value given
-  function down_n_folder {
-    if [ -n "$1" ]; then
-      for n in {1..$1}
-      do
-        cd ../
-      done
-    else
-      cd ../
-    fi
-  }
+    function down_n_folder {
+        if [ -n "$1" ]; then
+            for n in {1..$1}
+            do
+                cd ../
+            done
+        else
+            cd ../
+        fi
+    }
 
 # git branch as inline text
 function git_brancher {
-  echo $(git branch) | tr " " \\n
+    echo $(git branch) | tr " " \\n
 }
 
 # change directory / store last directory
 function cd_and_chill {
-  \cd $1
-  echo $(pwd) > ~/.last_dir
+    \cd $1
+    echo $(pwd) > ~/.last_dir
 }
 
 # powerline bits...
 function powerline_precmd() {
-  PS1="$(powerline-shell --shell zsh $?)"
+    PS1="$(powerline-shell --shell zsh $?)"
 }
 
 function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
+    for s in "${precmd_functions[@]}"; do
+        if [ "$s" = "powerline_precmd" ]; then
+            return
+        fi
+    done
+    precmd_functions+=(powerline_precmd)
 }
 
 if [ "$TERM" != "linux" ]; then
-  install_powerline_precmd
+    install_powerline_precmd
 fi
