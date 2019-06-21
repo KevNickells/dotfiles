@@ -1,3 +1,4 @@
-const thing = params => {
-  return something
+method(param) {
+    return something
 }
+

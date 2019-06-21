@@ -22,6 +22,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# TODO run -h --hoglet -w --wombat? Use the gc function
 # TODO gc (in zsh functions) - needs to include a no string option for -n and -h
 
 # TODO look into ZSH traps - allows for contingent arguments on background jobs

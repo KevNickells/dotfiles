@@ -3,6 +3,7 @@ set complete+=k~/.vim/dictionaries/.javascriptReactDictionary
 
 " Snippets for common javascript things
 nnoremap <leader>c :r<space>~/Snippets/classJavascript.js<cr>
+nnoremap <leader>f :r<space>~/Snippets/functionJavascript.js<cr>
 nnoremap <leader>m :r<space>~/Snippets/methodJavascript.js<cr>
 nnoremap <leader>t :r<space>~/Snippets/testJavascript.js<cr>
 nnoremap <leader>rc :r<space>~/Snippets/reactClassJavascript.js<cr>
