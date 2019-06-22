@@ -48,4 +48,3 @@ alias grep='grep --color=auto'
 
 # nice colours for git log
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
-

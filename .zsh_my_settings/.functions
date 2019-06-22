@@ -32,14 +32,14 @@ function open_last_git_commits_and_most_recent_directory {
     vim $(grf)
 }
 
-    function git_options {
-        while getopts "a:h:n:s:" opt
-        do
-            case $opt in
-                a) git_commit_push $OPTARG
-                    ;;
-                h) echo  "options are:
-                    -a -> Do not add all
+function git_options {
+    while getopts "a:h:n:s:" opt
+    do
+        case $opt in
+            a) git_commit_push $OPTARG
+                ;;
+            h) echo  "options are:
+                -a -> Do not add all
                     -s -> Append [ci skip]
                     -n -> note to self or plugins "
                     ;;
@@ -53,8 +53,8 @@ function open_last_git_commits_and_most_recent_directory {
             if (( $OPTIND == 1 ))
             then
                 git_add_commit_push $1
-            fi
-        }
+    fi
+}
 
 # TODO definitely needs a bit of DRY and to figure out using both things
 function git_commit_push {
@@ -110,17 +110,37 @@ function git_add_commit_push {
 done
 }
 
-# TODO - need to figure out traps for both of these
-    # run server as background process and ignore output from both
-    function run_hoglet {
-        cd ~/hoglet
-        setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
-        sh scripts/start-server.sh &
-        cd ~/hoglet/hoglet-client
-        npm start &
-        echo 'hoglet - client / backend servers started'
-        cd ~/hoglet/hoglet-client/src
-    }
+function run_hoglet {
+    cd ~/hoglet
+    setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
+    sh scripts/start-server.sh &
+    cd ~/hoglet/hoglet-client
+    npm start &
+    echo 'hoglet - client / backend servers started'
+    cd ~/hoglet/hoglet-client/src
+}
+
+function run_wombat {
+    cd ~/wombat
+    setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
+    npm start
+}
+
+function run {
+    while getopts "w:h:" opt
+    do
+        case $opt in
+            w) run_wombat
+                ;;
+            h) run_hoglet
+                ;;
+        esac
+    done
+    if (( $OPTIND == 1 ))
+    then
+        echo "-w -> wombat\n-h -> hoglet"
+    fi
+}
 
 # self explanatory name
 function mkdir_and_cd {

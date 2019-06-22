@@ -1,0 +1,18 @@
+" Syntax highlighting for config files
+autocmd BufWritePre,BufNewFile,BufRead ~/.vim_my_settings/* set syntax=vim
+autocmd BufWritePre,BufNewFile,BufRead ~/.vim_my_settings/* set filetype=vim
+autocmd BufWritePre,BufNewFile,BufRead ~/.vim/ftplugin/* set syntax=vim
+autocmd BufWritePre,BufNewFile,BufRead ~/.vim/ftplugin/* set filetype=vim
+autocmd BufWritePre,BufNewFile,BufRead ~/.config_file_list set filetype=vim
+autocmd BufWritePre,BufNewFile,BufRead ~/.zsh_my_settings/* set syntax=zsh
+autocmd BufWritePre,BufNewFile,BufRead ~/.zsh_my_settings/* set filetype=zsh
+autocmd BufWritePre,BufNewFile,BufRead ~/.zshrc set filetype=zsh
+autocmd BufWritePre,BufNewFile,BufRead ~/.vim/Snippets/*Javascript set syntax=javascript
+autocmd BufWritePre,BufNewFile,BufRead ~/.vim/Snippets/*Javascript set filetype=javascript
+
+"autocmd BufWritePost ~/.vim_my_settings/* source ~/.vimrc
+"autocmd BufWritePost ~/.zsh_my_settings/* source ~/.zshrc
+"autocmd BufWritePost ~/.zshrc source ~/.zshrc
+"autocmd BufWritePost ~/.vimrc source ~/.vimrc
+
+autocmd BufRead *.md execute(':Goyo')

@@ -7,7 +7,7 @@ exec "cd" . system("cat ~/.last_dir")
 let mapleader = ","
 
 " TODO this should just be source folder
-source ~/.vim_my_settings/.syntax-highlighting-config
+source ~/.vim_my_settings/.autocommands
 source ~/.vim_my_settings/.spellings
 source ~/.vim_my_settings/.plugins
 source ~/.vim_my_settings/.settings
@@ -19,14 +19,10 @@ source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
 
-" TODO this cursorbind business is going to fuck me off
-" TODO vimdiff could probably use a few shortcuts and that.
 " TODO Probably time to abandon nerdTree and learn netrw
 
 " TODO need to update to vim 8.1 in order to allow the changeDir function
 " (functions and commands) to work. Would be nice to do that soon
-
-" TODO gc flag to just say 'note to self'
 
 " TODO config_file_list in .insert-mode-remaps variable could be dynamically created.
 " TODO something saucy like sorting config_file_list bits by most-accessed file?
