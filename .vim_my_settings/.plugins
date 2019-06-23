@@ -4,9 +4,10 @@ Plug 'scrooloose/nerdtree'              "File browser
 Plug 'scheakur/vim-scheakur'            " syntax highlighting
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                 "Fuzzy finder
+Plug 'junegunn/goyo.vim'                " Writing aid
 Plug 'altercation/vim-colors-solarized' " More colour schemes
 Plug 'pangloss/vim-javascript'          " javscript ting
 Plug 'mxw/vim-jsx'                      " jsx syntax highlighting
 Plug 'gabrielelana/vim-markdown'        " markdown
-Plug 'tpope/vim-fugitive'                " git an ting
+Plug 'tpope/vim-fugitive'               " git an ting
 call plug#end()
