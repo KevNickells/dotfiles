@@ -19,6 +19,14 @@ source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
 
+" TODO :h syn-conceal - possible to change displayed character
+
+" TODO in the context of vimdiff, perhaps hjkl could just mean 'move left /
+" right' and 'next conflict'?
+" TODO vimdiff - see :h diffopt, maybe ignore all whitespace differences?
+
+" TODO apparently v open previous is being a dick and opening in vimdiff
+
 " TODO Probably time to abandon nerdTree and learn netrw
 
 " TODO need to update to vim 8.1 in order to allow the changeDir function
