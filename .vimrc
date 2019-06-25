@@ -19,6 +19,9 @@ source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
 
+" TODO hey why am I even listing things as TODOs rather than raising them as
+" issues? Commit messages probably look all shitty because of this.
+
 " TODO :h syn-conceal - possible to change displayed character
 
 " TODO in the context of vimdiff, perhaps hjkl could just mean 'move left /
