@@ -77,9 +77,9 @@ set number relativenumber
 
 augroup newFileStuff
     autocmd!
-    au BufNewFile,BufRead * set noscrollbind
-    au BufNewFile,BufRead * set nocursorbind
-    au BufNewFile,BufRead * diffoff
+    au BufNewFile,BufRead,BufReadPost * set noscrollbind
+    au BufNewFile,BufRead,BufReadPost * set nocursorbind
+    au BufNewFile,BufRead,BufReadPost * diffoff
 augroup END
 
 augroup numbertoggle
