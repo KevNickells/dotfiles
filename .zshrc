@@ -23,6 +23,16 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # TODO gc (in zsh functions) - needs to include a no string option for -n and -h
+# ^ which can be done with something like this:
+# while getopts ":h" opt
+# do
+#     case ${opt} in
+#         h )
+#             echo "thing"
+#             ;;
+#     esac
+# done
+# shift $((OPTIND -1 ))
 
 # TODO look into ZSH traps - allows for contingent arguments on background jobs
   # ... presumably can background jobs entirely (ie all output to /dev/null)
