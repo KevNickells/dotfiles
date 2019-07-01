@@ -22,6 +22,8 @@ source ~/.vim_my_settings/.modal-colours
 " TODO hey why am I even listing things as TODOs rather than raising them as
 " issues? Commit messages probably look all shitty because of this.
 
+" TODO == if filetype = json, run :%!python -m json.tool to pretty print
+
 " TODO Explor rather than Nerdtree in scratch-type drawer?
 
 " TODO :h syn-conceal - possible to change displayed character

@@ -103,7 +103,7 @@ endfunction
 " show current folder & copy to clipboard
 nnoremap <leader>sp :call CurrentFolder()<bar>:echo @*<cr>
 
-" Open new file in the current folder [needs to work with windows...]
+" Open new file in the current folder
 nnoremap <leader>ee :call CurrentFolder()<cr><bar>:<c-f>ie<space><esc>pA/<c-c>
 
 " Edit a file
@@ -171,5 +171,5 @@ nnoremap gf :call Whoop_there_it_is()<cr>
 nnoremap <C-o> <C-o>zz
 nnoremap <C-i> <C-i>zz
 
-" bring up the config dropdown
+" bring up the config dropdown (which currently doesn't work)
 nnoremap <C-a> i<C-a>
