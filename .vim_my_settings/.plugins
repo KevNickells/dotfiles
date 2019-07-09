@@ -10,4 +10,5 @@ Plug 'pangloss/vim-javascript'          " javscript ting
 Plug 'mxw/vim-jsx'                      " jsx syntax highlighting
 Plug 'gabrielelana/vim-markdown'        " markdown
 Plug 'tpope/vim-fugitive'               " git an ting
+Plug 'kylef/apiblueprint.vim'           " apib filetype
 call plug#end()

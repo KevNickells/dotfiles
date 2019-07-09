@@ -7,7 +7,7 @@ nnoremap <leader>f :r<space>~/Snippets/functionJavascript.js<cr>
 nnoremap <leader>m :r<space>~/Snippets/methodJavascript.js<cr>
 nnoremap <leader>t :r<space>~/Snippets/testJavascript.js<cr>
 nnoremap <leader>rc :r<space>~/Snippets/reactClassJavascript.js<cr>
-
+nnoremap <leader>r :r<space>~/Snippets/reduceJavaScript.js<cr>
 " debugger shortcut
 nnoremap db Odebugger;<esc>
 inoremap db debugger;<space><esc>
@@ -40,3 +40,4 @@ inoremap cc const<space>
 
 nnoremap succ isuccesful<space>
 inoremap succ succesful<space>
+
