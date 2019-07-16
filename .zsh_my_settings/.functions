@@ -41,9 +41,9 @@ function git_options {
             h) echo  "options are:
                 -a -> Do not add all
                     -s -> Append [ci skip]
-                    -n -> note to self or plugins "
+                    -n -> note to self, plugins, or vim spellings"
                     ;;
-                n) git_add_commit_push "Note to self / plugins"
+                n) git_add_commit_push "Note to self / plugins / vim spellings"
                     ;;
                 s) git_add_commit_push $OPTARG" [ci skip]"
                     ;;
