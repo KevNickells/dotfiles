@@ -21,17 +21,20 @@ alias o="open_this_folder"
 alias b="xdg-open"
 alias c="clear"
 alias cath="head -10"
+# alias co="checker_outer"
+alias cd="cd_and_chill" # allows for opening most recent folder with  each new instance
 alias ga="git add"
 alias gb="git_brancher"
 alias gc="git_options"
 # alias gdf="git difftool"
-alias gpsh="git push"
 alias gp="git pull --recurse-submodules"
+alias gpsh="git push"
 alias grf="git show --pretty='' --name-only HEAD" # git last files amended
 alias gst="git status"
 alias hsk='stack ghci'
 alias lg="ls --color=auto && gst"
 alias ll="ls -lhA"
+alias killjobs="kill ${${(v)jobstates##*:*:}%=*}"
 alias mkdircd="mkdir_and_cd"
 alias py="python3"
 alias pytest="pytest -rs"
@@ -40,8 +43,6 @@ alias rf="rm -rf"
 alias v="open_last_git_commits_and_most_recent_directory"
 alias ..='down_n_folder'
 alias ...='cd'
-alias cd="cd_and_chill" # allows for opening most recent folder with  each new instance
-alias killjobs="kill ${${(v)jobstates##*:*:}%=*}"
 
 # Nice colours for grep
 alias grep='grep --color=auto'
