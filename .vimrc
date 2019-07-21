@@ -19,6 +19,7 @@ source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
 
+" TODO wc word count
 " TODO hey why am I even listing things as TODOs rather than raising them as
 " issues? Commit messages probably look all shitty because of this.
 
