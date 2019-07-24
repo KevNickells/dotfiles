@@ -17,8 +17,7 @@ for source_file in $zsh_source_files
 do
   source $source_file
 done
-
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -46,4 +45,22 @@ source $ZSH/oh-my-zsh.sh
 # TODO or have a re-think of how to manage all of this lot.
 # antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
 # antibody update
+#
 # source ~/.zsh_plugins.sh
+#
+function powerline_precmd() {
+    PS1="$(powerline-shell --shell zsh $?)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi

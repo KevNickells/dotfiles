@@ -1,5 +1,12 @@
 " NOTE: This file is mostly to-dos. Access config files with ctrl+a
 
+" This should do all the installation if I'm on a new system
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Vim folder to match shell folder on open
 exec "cd" . system("cat ~/.last_dir")
 
