@@ -16,6 +16,8 @@ set noswapfile
 
 " Set clipboard as global register for vim
 set clipboard=unnamedplus
+set paste
+set go+=a
 
 "Let's be honest, no-one really cares about case when searching.
 set ignorecase
