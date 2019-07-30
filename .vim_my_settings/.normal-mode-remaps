@@ -173,3 +173,5 @@ nnoremap <C-i> <C-i>zz
 
 " bring up the config dropdown (which currently doesn't work)
 nnoremap <C-a> i<C-a>
+
+

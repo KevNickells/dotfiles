@@ -2,7 +2,7 @@
 # NOTE .git/hooks/... is where post commit hooks live
 # NOTE show running background tasks with jobs, fg % [task no]
 
-DISPLAY=localhost:0.0
+DISPLAY=:0
 
 # see "cd_and_chill" in functions - writes last directory
 cd $(cat ~/.last_dir)
@@ -21,6 +21,7 @@ source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# TODO figure out what's keeping a hold of the $PS1 variable
 # TODO up-to-date-with-lead-branch.sh - check on commit for updates to 'master' or whatever the lead branch is
 # TODO git checkout -b thing could do with quietly setting upstream
 # TODO gc (in zsh functions) - needs to include a no string option for -n and -h
@@ -48,19 +49,19 @@ source $ZSH/oh-my-zsh.sh
 #
 # source ~/.zsh_plugins.sh
 #
-function powerline_precmd() {
-    PS1="$(powerline-shell --shell zsh $?)"
-}
-
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
-fi
+#function powerline_precmd() {
+#    PS1="$(powerline-shell --shell zsh $?)"
+#}
+#
+#function install_powerline_precmd() {
+#  for s in "${precmd_functions[@]}"; do
+#    if [ "$s" = "powerline_precmd" ]; then
+#      return
+#    fi
+#  done
+#  precmd_functions+=(powerline_precmd)
+#}
+#
+#if [ "$TERM" != "linux" ]; then
+#    install_powerline_precmd
+#fi
