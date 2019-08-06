@@ -8,6 +8,11 @@ DISPLAY=:0
 cd $(cat ~/.last_dir)
 alias ld="cd $(cat ~/.last_dir)"
 
+# Local convenience file so I don't have to think about server addresses
+if [[ -a ~/.ip_aliases ]]; then
+    source ~/.ip_aliases
+fi
+
 # Tells me whether I need to pull
 git status -uno
 
