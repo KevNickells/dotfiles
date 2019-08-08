@@ -8,6 +8,11 @@ DISPLAY=:0
 cd $(cat ~/.last_dir)
 alias ld="cd $(cat ~/.last_dir)"
 
+# Local convenience file so I don't have to think about server addresses
+if [[ -a ~/.ip_aliases ]]; then
+    source ~/.ip_aliases
+fi
+
 # Tells me whether I need to pull
 git status -uno
 
@@ -21,6 +26,7 @@ source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# TODO create a function which'll allow me to ssh from the ip_aliases file, eg connect hoglet
 # TODO figure out what's keeping a hold of the $PS1 variable
 # TODO up-to-date-with-lead-branch.sh - check on commit for updates to 'master' or whatever the lead branch is
 # TODO git checkout -b thing could do with quietly setting upstream
