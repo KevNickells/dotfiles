@@ -1,0 +1,24 @@
+Manjaro - setup notes
+
+sudo pacman -Syyu # update system
+git clone aur.archlinux.org/yay.git # another package manager
+
+# Install slack
+sudo pacman -S snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -S /var/lib/snapd/snap
+[reboot]
+sudo snap install slack --classic
+
+# programs to install
+# Vim, Git, Python, NPM, hub, zsh, terminator
+# Shortcuts:
+# meta + up for maximaise
+# meta + direction to re-size window
+
+# oh my zsh > zsh autosuggestions
+# My dotfiles
+# vim plug
+wiki.archlinux.org/index.php/X_keyboard_extension  # remap caps lock
+store git > git config credential.helper # store git credentials
+#
