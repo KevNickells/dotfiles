@@ -6,8 +6,9 @@ nnoremap <leader>c :r<space>~/Snippets/classJavascript.js<cr>
 nnoremap <leader>f :r<space>~/Snippets/functionJavascript.js<cr>
 nnoremap <leader>m :r<space>~/Snippets/methodJavascript.js<cr>
 nnoremap <leader>t :r<space>~/Snippets/testJavascript.js<cr>
-nnoremap <leader>rc :r<space>~/Snippets/reactClassJavascript.js<cr>
+nnoremap <leader>cr :r<space>~/Snippets/reactClassJavascript.js<cr>
 nnoremap <leader>r :r<space>~/Snippets/reduceJavaScript.js<cr>
+
 " debugger shortcut
 nnoremap db Odebugger;<esc>
 inoremap db debugger;<space><esc>
@@ -34,7 +35,7 @@ nnoremap tu :term npm test -- -u<cr>
 " tidy up - ' to ", remove ending ;, respace
 nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==
 
-" self-explanatory probably. Possible that it'll get on my tits if too many cc words appear
+" Shortcut for const. Possible that it'll get on my tits if too many cc words appear
 nnoremap cc iconst<space>
 inoremap cc const<space>
 
