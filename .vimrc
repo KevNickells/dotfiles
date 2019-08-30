@@ -26,6 +26,8 @@ source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
 
+" TODO cycle words /word cgn [new word] esc . [repeat] n [next]
+" https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
 " TODO wc word count
 " TODO hey why am I even listing things as TODOs rather than raising them as
 " issues? Commit messages probably look all shitty because of this.
