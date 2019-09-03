@@ -70,7 +70,7 @@ function git_commit_push {
 
         echo $(git diff --cached --name-only)
 
-        read yesno"?Is that ok? Yes or no?"
+        read yesno"?Is that ok? Yes or no? "
         case "$yesno" in
             [Yy]* ) cd $(git rev-parse --show-toplevel) &&
                 git commit -m \"$1\" &&
