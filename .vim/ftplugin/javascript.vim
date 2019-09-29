@@ -8,6 +8,10 @@ nnoremap <leader>m :r<space>~/Snippets/methodJavascript.js<cr>
 nnoremap <leader>t :r<space>~/Snippets/testJavascript.js<cr>
 nnoremap <leader>cr :r<space>~/Snippets/reactClassJavascript.js<cr>
 nnoremap <leader>r :r<space>~/Snippets/reduceJavaScript.js<cr>
+nnoremap <leader>re :r<space>~/Snippets/reducerJavaScript.js<cr>
+nnoremap <leader>ac :r<space>~/Snippets/actionJavaScript.js<cr>
+nnoremap <leader>ms :r<space>~/Snippets/mapStateToPropsJavaScript.js<cr>
+nnoremap <leader>md :r<space>~/Snippets/mapDispatchToPropsJavaScript.js<cr>
 
 " debugger shortcut
 nnoremap db Odebugger;<esc>
