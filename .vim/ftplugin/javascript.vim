@@ -43,6 +43,9 @@ nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==
 nnoremap cc iconst<space>
 inoremap cc const<space>
 
+nnoremap acc iacc<space>
+inoremap acc acc<space>
+
 nnoremap succ isuccesful<space>
 inoremap succ succesful<space>
 
