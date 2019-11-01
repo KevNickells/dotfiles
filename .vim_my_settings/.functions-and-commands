@@ -103,6 +103,12 @@ function! Cycle_replace ()
     echo 'I haven\'t  written this function yet'
 endfunction
 
+function! Run_here()
+    let dir = expand('%:t')
+    echo dir
+    exec ':term sh' . dir
+endfunction
+
 command! FZFLines call fzf#run({
       \   'source':  <sid>buffer_lines(),
       \   'sink':    function('<sid>line_handler'),
@@ -132,5 +138,5 @@ nnoremap <silent> <Leader><Leader> :call fzf#run({
       \   'sink':    function('<sid>bufopen'),
       \   'options': '+m',
       \   'down':    len(<sid>buflist()) + 2
-      \ })<CR>
+     \ })<CR>
 

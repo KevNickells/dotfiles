@@ -177,3 +177,6 @@ nnoremap <C-a> i<C-a>
 " Cycle replacing instances of this word
 nnoremap rw :call Cycle_replace()<cr>
 
+" Execute here (presupposes executable as sh)
+nnoremap rh :call Run_here()<cr>
+

@@ -26,6 +26,7 @@ source ~/.vim_my_settings/.modal-colours
 
 " TODO functions -----------------------
 
+" TODO run here (function started butnot quite working
 " TODO cycle words /word cgn [new word] esc . [repeat] n [next]
 " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
 " TODO wc word count
@@ -55,9 +56,6 @@ source ~/.vim_my_settings/.modal-colours
 " TODO visual mode find and replace
 " TODO ,b type behaviour - search for current word in open buffers
 " TODO ,b type behaviour - search for current word in project
-
-" TODO fh = find here -> search in current and subfolder rather than root
-" echo expand('%:p:h')
 
 " TODO onwrite for .vimrc, write the relevant files to here - ie, " .vim_my_settings, Snippets, ftplugin
 " TODO Change background based on mode - see modal-colours; needs some work
