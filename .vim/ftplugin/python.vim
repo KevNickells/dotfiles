@@ -10,4 +10,4 @@ nnoremap csl Oprint()<esc>i
 inoremap csl print()<esc>i
 
 nnoremap zs :term python3<cr>
-nnoremap tst :term pytest -rs<cr>
+nnoremap tst :term pytest -s<cr>
