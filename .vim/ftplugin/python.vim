@@ -1,6 +1,5 @@
 nnoremap <leader>c  :r<space>~/Snippets/classPython.py<cr>
-
-nnoremap <leader>te :r<space>~/Snippets/test.py<cr>
+nnoremap <leader>t :r<space>~/Snippets/testPython.py<cr>
 
 "Debugger TODO DRY
 "nnoremap db :r<space>~/Snippets/debuggerPython.py<cr>
@@ -11,3 +10,5 @@ inoremap csl print()<esc>i
 
 nnoremap zs :term python3<cr>
 nnoremap tst :term pytest -s<cr>
+
+
