@@ -10,21 +10,10 @@ function open_this_folder {
     fi
 }
 
-# x="c:\Users\Kevin\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home"
-# explorer.exe $x
-
 # Just so tired of that extra keypress
 function exiter {
     exit echo
 }
-
-# function open_in_windows {
-#   MY_UBUNTU_FS="C:\Users\kevin\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79r hkp1fndgsc\LocalState\rootfs"
-#   THIS_DIRECTORY=$(pwd) | sed 's/\//\\/g'
-#   explorer.exe $MY_UBUNTU_FS\$THIS_DIRECTORY
-# }
-# # explorer.exe "C:\Users\kevin\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79r hkp1fndgsc\LocalState\rootfs\home"
-# echo $(pwd) | sed 's/\//\\/g'
 
 # open recent files
 function open_last_git_commits_and_most_recent_directory {
@@ -111,7 +100,11 @@ done
 }
 
 function run_hoglet {
-    cd ~/hoglet
+    cd ~/hoglet_server
+    #cd ~/hoglet
+    # python -m venv env
+    # source ./env/bin/activate
+    # pip install -r requirements.txt
     setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
     sh scripts/start-server.sh &
     cd ~/hoglet/hoglet-client
