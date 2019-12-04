@@ -107,7 +107,7 @@ function run_hoglet {
     # pip install -r requirements.txt
     setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
     sh scripts/start-server.sh &
-    cd ~/hoglet/hoglet-client
+    cd ~/hoglet
     npm start &
     echo 'hoglet - client / backend servers started'
     cd ~/hoglet/hoglet-client/src
