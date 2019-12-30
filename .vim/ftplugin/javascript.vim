@@ -43,6 +43,9 @@ nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==
 nnoremap cc iconst<space>
 inoremap cc const<space>
 
+nnoremap arr iarray<space>
+inoremap arr array<space>
+
 nnoremap rr ireturn<space>
 inoremap rr return<space>
 

@@ -1,4 +1,4 @@
-" Syntax highlighting for config files
+"Syntax highlighting for config files
 autocmd BufWritePre,BufNewFile,BufRead ~/.vim_my_settings/* set syntax=vim
 autocmd BufWritePre,BufNewFile,BufRead ~/.vim_my_settings/* set filetype=vim
 autocmd BufWritePre,BufNewFile,BufRead ~/.vim/ftplugin/* set syntax=vim

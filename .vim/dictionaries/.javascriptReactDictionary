@@ -6,3 +6,6 @@ componentWillUnmount
 componentWillUpdate
 render
 shouldComponentUpdate
+mapStateToProps = state => ({ })
+mapDispatchToProps  = { }
+
