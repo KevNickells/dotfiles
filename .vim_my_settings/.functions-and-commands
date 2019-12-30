@@ -103,10 +103,18 @@ function! Cycle_replace ()
     echo 'I haven\'t  written this function yet'
 endfunction
 
+" Don't think this works
 function! Run_here()
     let dir = expand('%:t')
     echo dir
     exec ':term sh' . dir
+endfunction
+
+function! LaTeX_compile_and_open()
+    let current_file = expand('%:r')
+    let compile = ':term latex ' . current_file . '.tex'
+    exec compile
+    let convert_to_pdf = ':term dvipdfm' . current_file . '.div'
 endfunction
 
 command! FZFLines call fzf#run({

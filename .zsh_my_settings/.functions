@@ -1,4 +1,4 @@
-# at work or at home, change file opening program
+ at work or at home, change file opening program
 COMPUTER_NAME=$(uname -n)
 
 function open_this_folder {
