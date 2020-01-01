@@ -1,3 +1,13 @@
+function! LaTeX_compile_and_open()
+    let current_file = expand('%:r')
+    let compile = '!latex ' . current_file . '.tex'
+    let convert_to_pdf = '!dvipdfm ' . current_file
+    silent exec compile
+    silent exec convert_to_pdf
+    exec ':e!'
+    echo 'pdf compiled'
+endfunction
+
 function! OnSaveCommands()
   mark `
   exec '%s/\s\+$//ge'
@@ -108,13 +118,6 @@ function! Run_here()
     let dir = expand('%:t')
     echo dir
     exec ':term sh' . dir
-endfunction
-
-function! LaTeX_compile_and_open()
-    let current_file = expand('%:r')
-    let compile = ':term latex ' . current_file . '.tex'
-    exec compile
-    let convert_to_pdf = ':term dvipdfm' . current_file . '.div'
 endfunction
 
 command! FZFLines call fzf#run({

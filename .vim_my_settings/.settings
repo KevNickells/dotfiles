@@ -47,7 +47,6 @@ set statusline=%F
 set statusline+=\ \ \ \ \ \
 set statusline+=%l/%L
 
-" TODO Does this even work?
 "  Enable folding
 augroup filetype_vim
     autocmd!
