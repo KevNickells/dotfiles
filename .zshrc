@@ -26,6 +26,8 @@ source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export TEXMFCNF='~/.latex_config:'
+
 # TODO mapDispatch / mapState as shortcuts
 # TODO create a function which'll allow me to ssh from the ip_aliases file, eg connect hoglet
 # TODO figure out what's keeping a hold of the $PS1 variable

@@ -1,3 +1,11 @@
+function! LaTeX_compile_and_open()
+    let current_file = expand('%:r')
+    let compile = '!xelatex ' . current_file . '.tex'
+    silent exec compile
+    exec ':e!'
+    echo 'pdf compiled'
+endfunction
+
 function! OnSaveCommands()
   mark `
   exec '%s/\s\+$//ge'
@@ -103,6 +111,7 @@ function! Cycle_replace ()
     echo 'I haven\'t  written this function yet'
 endfunction
 
+" Don't think this works
 function! Run_here()
     let dir = expand('%:t')
     echo dir
