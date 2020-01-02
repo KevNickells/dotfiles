@@ -21,6 +21,12 @@ function open_last_git_commits_and_most_recent_directory {
     vim $(grf)
 }
 
+function docker_clean {
+  docker stop $(docker ps -a -q)
+  docker rm $(docker ps -a -q)
+  docker rmi $(docker images -q)
+}
+
 function git_options {
     while getopts "a:h:n:s:" opt
     do
@@ -181,3 +187,5 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
+
+

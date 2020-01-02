@@ -43,6 +43,7 @@ alias rf="rm -rf"
 alias v="open_last_git_commits_and_most_recent_directory"
 alias ..='down_n_folder'
 alias ...='cd'
+alias dockercl="docker_clean"
 
 # Nice colours for grep
 alias grep='grep --color=auto'
