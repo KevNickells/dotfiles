@@ -4,6 +4,9 @@
 
 DISPLAY=:0
 
+# Don't save certain commands to history.
+HISTIGNORE="history:ls*:sz:zs:*test:cat*"
+
 # see "cd_and_chill" in functions - writes last directory
 cd $(cat ~/.last_dir)
 alias ld="cd $(cat ~/.last_dir)"
