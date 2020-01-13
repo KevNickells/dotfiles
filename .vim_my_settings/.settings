@@ -2,6 +2,9 @@
 "Tab as two spaces
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
+" Should allow me to notice Windows files easilyer
+set ffs=unix
+
 "Turns off compatibility with vi
 set nocompatible
 
