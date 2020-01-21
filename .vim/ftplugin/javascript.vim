@@ -20,6 +20,8 @@ inoremap db debugger;<space><esc>
 " console.log
 nnoremap csl Oconsole.log()<esc>i
 inoremap csl console.log()<esc>i
+nnoremap pri Oconsole.log()<esc>i
+inoremap pri console.log()<esc>i
 
 " console.table
 nnoremap cst Oconsole.table()<esc>i
