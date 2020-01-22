@@ -197,10 +197,6 @@ function tree() {
   rm .tree
 }
 
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
-fi
-
 function pip_install_save {
     sudo pip install $1 && pip freeze | grep $1 >> requirements.txt
 }
@@ -225,3 +221,9 @@ function find_and_kill_port {
     echo "nothing found on port $1"
   fi
 }
+
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi
+
+
