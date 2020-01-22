@@ -5,7 +5,7 @@
 DISPLAY=:0
 
 # Don't save certain commands to history.
-HISTIGNORE="history:ls*:sz:zs:*test:cat*"
+HISTORY_IGNORE="(history|ls*|sz|zs|*test|cat*|Z"
 
 # see "cd_and_chill" in functions - writes last directory
 cd $(cat ~/.last_dir)

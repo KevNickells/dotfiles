@@ -201,4 +201,27 @@ if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
 
+function pip_install_save {
+    sudo pip install $1 && pip freeze | grep $1 >> requirements.txt
+}
 
+function find_by_port_no {
+  sudo netstat -tulpn | grep -w $1
+}
+
+function find_and_kill_port {
+  port_details=$(find_by_port_no $1)
+  echo $port_details
+
+  if [ -n "$port_details" ]; then
+    process_no=$(echo $port_details \
+      | sed 's/\/.\+$//g' \
+      | sed 's/.\+[[:space:]]//g')
+
+    sudo kill $process_no
+    echo "killed port $1, process no: $process_no"
+    echo "Port details were: $port_details"
+  else
+    echo "nothing found on port $1"
+  fi
+}
