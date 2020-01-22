@@ -183,6 +183,20 @@ function install_powerline_precmd() {
     precmd_functions+=(powerline_precmd)
 }
 
+function tree() {
+  folders=$(find .)
+
+  echo $folders | sed -e 's/\s/\n/g' > .tree
+
+  while read line; do
+    nested_folder_count=$(echo $line | tr -cd '/' | wc -c)
+    indents=$(seq -s "\t" $nested_folder_count | sed 's/[0-9]//g')
+    tabs 2
+    echo -e $indents$line
+  done < .tree
+  rm .tree
+}
+
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
