@@ -160,7 +160,7 @@ function mkdir_and_cd {
 
 # git branch as inline text
 function git_brancher {
-    echo $(git branch) | tr " " \\n
+    echo $(git branch -a) | tr " " \\n
 }
 
 # change directory / store last directory
