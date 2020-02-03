@@ -21,6 +21,9 @@ alias o="open_this_folder"
 alias b="xdg-open"
 alias c="clear"
 alias cath="head -10"
+# shortcut for history | grep 'string'
+alias f="find_in_history"
+alias h="find_in_history"
 
 # alias co="checker_outer"
 alias cd="cd_and_chill" # allows for opening most recent folder with  each new instance

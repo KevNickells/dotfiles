@@ -211,3 +211,7 @@ function find_and_kill_port {
     echo "nothing found on port $1"
   fi
 }
+
+function find_in_history {
+  history | grep $1
+}
