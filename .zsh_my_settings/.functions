@@ -160,7 +160,7 @@ function mkdir_and_cd {
 
 # git branch as inline text
 function git_brancher {
-    echo $(git branch) | tr " " \\n
+    echo $(git branch -a) | tr " " \\n
 }
 
 # change directory / store last directory
@@ -183,9 +183,19 @@ function install_powerline_precmd() {
     precmd_functions+=(powerline_precmd)
 }
 
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
-fi
+function tree() {
+  folders=$(find .)
+
+  echo $folders | sed -e 's/\s/\n/g' > .tree
+
+  while read line; do
+    nested_folder_count=$(echo $line | tr -cd '/' | wc -c)
+    indents=$(seq -s "\t" $nested_folder_count | sed 's/[0-9]//g')
+    tabs 2
+    echo -e $indents$line
+  done < .tree
+  rm .tree
+}
 
 function pip_install_save {
     sudo pip install $1 && pip freeze | grep $1 >> requirements.txt
@@ -215,3 +225,6 @@ function find_and_kill_port {
 function find_in_history {
   history | grep $1
 }
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi

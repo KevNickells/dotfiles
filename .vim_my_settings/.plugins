@@ -11,5 +11,6 @@ Plug 'mxw/vim-jsx'                      " jsx syntax highlighting
 Plug 'gabrielelana/vim-markdown'        " markdown
 Plug 'tpope/vim-fugitive'               " git an ting
 Plug 'kylef/apiblueprint.vim'           " apib filetype
+Plug 'elmcast/elm-vim'              " elm and that'
 call plug#end()
 
