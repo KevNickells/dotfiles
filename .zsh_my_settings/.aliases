@@ -21,6 +21,7 @@ alias o="open_this_folder"
 alias b="xdg-open"
 alias c="clear"
 alias cath="head -10"
+alias dcu="docker-compose up"
 # shortcut for history | grep 'string'
 alias f="find_in_history"
 alias h="find_in_history"

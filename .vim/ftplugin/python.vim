@@ -1,5 +1,6 @@
 nnoremap <leader>c :r<space>~/Snippets/classPython.py<cr>
 nnoremap <leader>t :r<space>~/Snippets/testPython.py<cr>
+nnoremap <leader>f :r<space>~/Snippets/functionPython.py<cr>
 
 "Debugger TODO DRY
 "nnoremap db :r<space>~/Snippets/debuggerPython.py<cr>
@@ -10,6 +11,8 @@ nnoremap csl Oprint()<esc>i
 inoremap csl print()<esc>i
 nnoremap pri Oprint()<esc>i
 inoremap pri print()<esc>i
+nnoremap db Obreakpoint()<esc>i
+inoremap db breakpoint()<esc>i
 
 nnoremap zs :term python3<cr>
 nnoremap tst :term pytest -x --disable-warnings<cr>

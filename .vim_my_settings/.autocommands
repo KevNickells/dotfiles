@@ -15,4 +15,4 @@ autocmd BufWritePre,BufNewFile,BufRead ~/.vim/Snippets/*Javascript set filetype=
 "autocmd BufWritePost ~/.zshrc source ~/.zshrc
 "autocmd BufWritePost ~/.vimrc source ~/.vimrc
 
-autocmd BufRead *.md execute(':Goyo')
+"autocmd BufRead *.md execute(':Goyo')

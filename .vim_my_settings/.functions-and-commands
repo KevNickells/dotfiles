@@ -10,7 +10,7 @@ function! OnSaveCommands()
   mark `
   exec '%s/\s\+$//ge'
   call histdel("search" -1)
-  exec '%s/^\n\n\+/\r/ge'
+  exec '%s/^\n\n\n\+/\r/ge'
   call histdel("search" -1)
   silent exec 'write'
   normal ``
@@ -66,7 +66,7 @@ aug AutoSourceZshrc
   au BufWritePost .zshrc !source ~/.zshrc
 aug END
 
-" Note that the below depends upon ripgrep
+" Note that the below depends upon ripgre
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --follow --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
 " Search in open buffers
