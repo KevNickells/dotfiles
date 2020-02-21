@@ -183,3 +183,5 @@ nnoremap rh :call Run_here()<cr>
 "Set shiftwidth to two - probably should be based on filetypes but codebase isn't homogenous
 nnoremap <leader>2 :set shiftwidth=2
 
+" Although I should probably stop using NERDTree...
+nnoremap <leader>z :NERDTree<cr>

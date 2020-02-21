@@ -10,6 +10,10 @@ autocmd BufWritePre,BufNewFile,BufRead ~/.zshrc set filetype=zsh
 autocmd BufWritePre,BufNewFile,BufRead ~/.vim/Snippets/*Javascript set syntax=javascript
 autocmd BufWritePre,BufNewFile,BufRead ~/.vim/Snippets/*Javascript set filetype=javascript
 
+
+autocmd BufWritePre,BufNewFile,BufRead *.json :%!python -m json.tool
+
+
 "autocmd BufWritePost ~/.vim_my_settings/* source ~/.vimrc
 "autocmd BufWritePost ~/.zsh_my_settings/* source ~/.zshrc
 "autocmd BufWritePost ~/.zshrc source ~/.zshrc
