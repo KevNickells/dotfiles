@@ -83,6 +83,3 @@ if [ -f '/home/kev/google-cloud-sdk/path.zsh.inc' ]; then . '/home/kev/google-cl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/kev/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/kev/google-cloud-sdk/completion.zsh.inc'; fi
-
-echo "Killing off port 5432 because docker"
-killport 5432 # for whatever reason docker hogs this port, which I need for postgres
