@@ -53,9 +53,13 @@ alias dockercl="docker_clean"
 alias pips="pip_install_save"
 alias ports="find_by_port_no"
 alias killport="find_and_kill_port"
+alias dup="docker-compose up"
+
 
 # Nice colours for grep
 alias grep='grep --color=auto'
 
 # nice colours for git log
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
+
