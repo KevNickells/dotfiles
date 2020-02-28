@@ -2,12 +2,7 @@
 COMPUTER_NAME=$(uname -n)
 
 function open_this_folder {
-    if [ "$COMPUTER_NAME" = "horsey-horserson" ]; then
-        dolphin $1 &
-        # elif windows /mnt/c/Windows/explorer.exe FOLDER
-        else
-            echo "check open_this_folder() in .zshrc; $COMPUTER_NAME is not recognised"
-    fi
+    dolphin $1 &
 }
 
 # Just so tired of that extra keypress
