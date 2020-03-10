@@ -83,3 +83,6 @@ if [ -f '/home/kev/google-cloud-sdk/path.zsh.inc' ]; then . '/home/kev/google-cl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/kev/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/kev/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Include time of execution within history
+export HISTTIMEFORMAT="%d/%m/%y %T "
