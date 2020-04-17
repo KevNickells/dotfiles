@@ -223,3 +223,11 @@ function find_in_history {
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
+
+function git_checkout_and_switch_to_branch {
+  git pull
+  git checkout -b $1
+  git push --set-upstream origin $1
+}
+
+alias gcb="git_checkout_and_switch_to_branch"

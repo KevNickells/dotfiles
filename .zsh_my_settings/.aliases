@@ -55,6 +55,7 @@ alias ports="find_by_port_no"
 alias killport="find_and_kill_port"
 alias dup="docker-compose up"
 alias prs="python ~/PR-selector/update_PR.py"
+alias gcb="git_checkout_and_switch_to_branch"
 
 
 # Nice colours for grep
