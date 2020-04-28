@@ -16,3 +16,12 @@ inoremap db breakpoint()<esc>i
 
 nnoremap zs :term python3<cr>
 nnoremap tst :term pytest -x --disable-warnings<cr>
+
+function! Test_current_file()
+  let path_to_file = expand('%:p')
+  let test = ':term pytest ' . path_to_file
+  exec test
+endfunction
+
+nnoremap th :exec Test_current_file()<cr>
+

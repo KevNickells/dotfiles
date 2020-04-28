@@ -67,7 +67,7 @@ aug AutoSourceZshrc
 aug END
 
 " Note that the below depends upon ripgre
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --follow --color "always" '.shellescape(<q-args>), 1, <bang>0)
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --follow --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
 " Search in open buffers
 function! s:line_handler(l)
@@ -107,10 +107,6 @@ function! Cd_and_chill()
   echo dir
 endfunction
 
-function! Cycle_replace ()
-    echo 'I haven\'t  written this function yet'
-endfunction
-
 " Don't think this works
 function! Run_here()
     let dir = expand('%:t')
@@ -118,6 +114,8 @@ function! Run_here()
     exec ':term sh' . dir
 endfunction
 
+
+" functions from elsewhere (ie, I don't kknow what they do
 command! FZFLines call fzf#run({
       \   'source':  <sid>buffer_lines(),
       \   'sink':    function('<sid>line_handler'),
@@ -129,6 +127,7 @@ command! FZFLines call fzf#run({
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
 
 " <leader><Enter> - fuzzy search in current buffers
 function! s:buflist()
