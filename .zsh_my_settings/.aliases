@@ -22,12 +22,14 @@ alias b="xdg-open"
 alias c="clear"
 alias cath="head -10"
 alias dcu="docker-compose up"
+
 # shortcut for history | grep 'string'
 alias f="find_in_history"
 alias h="find_in_history"
 
 # alias co="checker_outer"
 alias cd="cd_and_chill" # allows for opening most recent folder with  each new instance
+
 alias ga="git add"
 alias gb="git_brancher"
 alias gc="git_options"
@@ -56,6 +58,7 @@ alias killport="find_and_kill_port"
 alias dup="docker-compose up"
 alias prs="python ~/PR-selector/update_PR.py"
 alias gcb="git_checkout_and_switch_to_branch"
+alias gcl="git_clean_branches"
 
 
 # Nice colours for grep
