@@ -13,5 +13,6 @@ Plug 'tpope/vim-fugitive'               " git an ting
 Plug 'kylef/apiblueprint.vim'           " apib filetype
 Plug 'elmcast/elm-vim'                  " elm and that'
 Plug 'chrisbra/csv.vim'                 " CSV reader
+Plug 'posva/vim-vue'                    " vue syntax highlighter
 call plug#end()
 
