@@ -23,17 +23,15 @@ source ~/.vim_my_settings/.normal-mode-remaps
 source ~/.vim_my_settings/.visual-mode-remaps
 source ~/.vim_my_settings/.insert-mode-remaps
 source ~/.vim_my_settings/.modal-colours
+"source ~/.vim_my_settings/.file-specific-commands
 
 " TODO functions -----------------------
 
-" TODO run here (function started butnot quite working
 " TODO cycle words /word cgn [new word] esc . [repeat] n [next]
 " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
 " TODO wc word count
 " TODO hey why am I even listing things as TODOs rather than raising them as
 " issues? Commit messages probably look all shitty because of this.
-
-" TODO == if filetype = json, run :%!python -m json.tool to pretty print
 
 " TODO Explor rather than Nerdtree in scratch-type drawer?
 
@@ -41,27 +39,19 @@ source ~/.vim_my_settings/.modal-colours
 
 " TODO in the context of vimdiff, perhaps hjkl could just mean 'move left /
 " right' and 'next conflict'?
-" TODO vimdiff - see :h diffopt, maybe ignore all whitespace differences?
 
-" TODO apparently v open previous is being a dick and opening in vimdiff
+" TODO vimdiff - see :h diffopt, maybe ignore all whitespace differences?
 
 " TODO Probably time to abandon nerdTree and learn netrw
 
-" TODO need to update to vim 8.1 in order to allow the changeDir function
-" (functions and commands) to work. Would be nice to do that soon
-
 " TODO config_file_list in .insert-mode-remaps variable could be dynamically created.
-" TODO something saucy like sorting config_file_list bits by most-accessed file?
-
 " TODO visual mode find and replace
 " TODO ,b type behaviour - search for current word in open buffers
 " TODO ,b type behaviour - search for current word in project
 
 " TODO onwrite for .vimrc, write the relevant files to here - ie, " .vim_my_settings, Snippets, ftplugin
-" TODO Change background based on mode - see modal-colours; needs some work
-" TODO contextual tab width - 4 at work, 2 at home?
 
-" TODO gf Whoop_there_it_is - arguably it should always find / open a file so can probably do without all the checks and just open if exists / create here if it doesn't.
+" TODO Change background based on mode - see modal-colours; needs some work
 
 " TODO go to tags - find out how to use these
 command! MakeTags !ctags -R .
