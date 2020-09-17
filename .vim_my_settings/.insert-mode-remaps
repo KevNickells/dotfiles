@@ -2,6 +2,10 @@
 inoremap <C-h> <esc><C-w>h
 inoremap <C-l> <esc><C-w>l
 
+"for the keyboardio which annoying doesn't have the escape where my muscle
+"memory wants it.
+inoremap <PageUp><PageUp> <esc>:exec OnSaveCommands()<cr>``zz<bar>:echom expand("%") . '    saved'<cr>
+
 " semi-colon at the end of the current line in insert mode
 inoremap ;; <esc>A;<esc>
 
