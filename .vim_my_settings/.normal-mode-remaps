@@ -3,6 +3,7 @@ nnoremap <silent> <Esc><Esc> :exec OnSaveCommands()<cr>``zz<bar>:echom expand("%
 
 "as above
 nnoremap <PageUp> :exec OnSaveCommands()<cr>``zz<bar>:echom expand("%") . '    saved'<cr>
+nnoremap <PageDown> :exec OnSaveCommands()<cr>``zz<bar>:echom expand("%") . '    saved'<cr>
 
 " Soon enough I'll probably want to think a bit more about the statusline. For now this will let me know what the time is
 nnoremap tm :echom strftime("%H:%M")<CR>

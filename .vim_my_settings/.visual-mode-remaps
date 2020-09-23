@@ -1,6 +1,7 @@
 "for the keyboardio which annoying doesn't have the escape where my muscle
 "memory wants it.
 inoremap <PageUp> <esc>:exec OnSaveCommands()<cr>``zz<bar>:echom expand("%") . '    saved'<cr>
+inoremap <PageDown> <esc>:exec OnSaveCommands()<cr>``zz<bar>:echom expand("%") . '    saved'<cr>
 
 
 "Wrap current word
