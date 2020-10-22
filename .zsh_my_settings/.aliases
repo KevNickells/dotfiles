@@ -1,4 +1,4 @@
-# Because who needs to type accurately?
+#Because who needs to type accurately?
 alias cd..='cd ..'
 alias fidd='diff'
 alias insatll=install
