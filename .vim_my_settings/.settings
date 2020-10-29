@@ -31,6 +31,11 @@ set backspace=indent,eol,start
 
 "------------------ End obvious stuff
 
+" vim preferentially creates a new file, rather than updating the existing one.
+" this is normally not a problem but apparently is with Docker bindings. The
+" more you know etc
+set backupcopy=yes
+
 " timeoutlength; dddd interferes a bit with dd....
 set timeout
 set timeoutlen=300 ttimeoutlen=0
