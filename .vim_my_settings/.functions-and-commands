@@ -66,7 +66,7 @@ aug AutoSourceZshrc
   au BufWritePost .zshrc !source ~/.zshrc
 aug END
 
-" Note that the below depends upon ripgre
+" Note that the below depends upon ripgrep
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --follow --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
 " Search in open buffers
@@ -115,7 +115,7 @@ function! Run_here()
 endfunction
 
 
-" functions from elsewhere (ie, I don't kknow what they do
+" functions from elsewhere (ie, I don't know what they do)
 command! FZFLines call fzf#run({
       \   'source':  <sid>buffer_lines(),
       \   'sink':    function('<sid>line_handler'),

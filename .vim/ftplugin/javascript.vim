@@ -20,8 +20,6 @@ inoremap db debugger;<space><esc>
 " console.log
 nnoremap csl Oconsole.log()<esc>i
 inoremap csl console.log()<esc>i
-nnoremap pri Oconsole.log()<esc>i
-inoremap pri console.log()<esc>i
 
 " console.table
 nnoremap cst Oconsole.table()<esc>i
@@ -57,3 +55,10 @@ inoremap acc acc<space>
 nnoremap succ isuccesful<space>
 inoremap succ succesful<space>
 
+function! Test_current_file()
+  let path_to_file = expand('%:p')
+  let test = ':term npm test -- ' . path_to_file
+  exec test
+endfunction
+
+nnoremap th :exec Test_current_file()<cr>
