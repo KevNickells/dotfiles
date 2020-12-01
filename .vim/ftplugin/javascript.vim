@@ -57,7 +57,7 @@ inoremap succ succesful<space>
 
 function! Test_current_file()
   let path_to_file = expand('%:p')
-  let test = ':term jest -- ' . path_to_file
+  let test = ':term jest --coverage=false -- ' . path_to_file
   exec test
 endfunction
 
