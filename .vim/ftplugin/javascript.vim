@@ -39,25 +39,32 @@ nnoremap tu :term npm test -- -u<cr>
 " tidy up - ' to ", remove ending ;, respace
 nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==
 
-" Shortcut for const. Possible that it'll get on my tits if too many cc words appear
 nnoremap cc iconst<space>
 inoremap cc const<space>
 
-nnoremap arr iarray<space>
-inoremap arr array<space>
 
-nnoremap rr ireturn<space>
-inoremap rr return<space>
-
-nnoremap acc iacc<space>
+" shortcuts because cc = const
+noremap acc iacc<space>
 inoremap acc acc<space>
 
 nnoremap succ isuccesful<space>
 inoremap succ succesful<space>
 
+
+" shortcuts because rr = return
+nnoremap rr ireturn<space>
+inoremap rr return<space>
+
+nnoremap arr iarray<space>
+inoremap arr array<space>
+
+nnoremap err ierror<space>
+inoremap err error<space>
+
+
 function! Test_current_file()
-  let path_to_file = expand('%:p')
-  let test = ':term jest --coverage=false -- ' . path_to_file
+  let path_to_file = expand('%')
+  let test = ':term npm test -- ' . path_to_file . ' --coverage=false'
   exec test
 endfunction
 
