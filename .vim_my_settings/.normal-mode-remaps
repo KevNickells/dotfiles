@@ -93,8 +93,10 @@ function! FullFilePath()
   let @*=expand("%")
 endfunction
 
+
 "Copy full filepath to clipboard & display
 nnoremap <silent> <leader>cp :call FullFilePath()<bar>:echo@*<cr>
+
 
 "Copy filename only to clipboard & display
 nnoremap <silent> <leader>cf :let @*=expand("%:t")<cr>:echo @*<cr>

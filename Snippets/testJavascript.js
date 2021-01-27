@@ -1,10 +1,6 @@
-describe("", () => {
-  test("", () => {
+describe('', () => {
+  test('', () => {
+    expect(5).toBe(5);
 
-    expect(doThing(thing))
-      .toEqual(something)
-    expect(() => doThing(badThing)).toThrow(error)
-  })
-})
-
-
+  });
+});
