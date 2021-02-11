@@ -29,6 +29,10 @@ inoremap cst console.table()<esc>i
 nnoremap obk OObject.keys()<esc>i
 inoremap obk Object.keys()<esc>i
 
+" Object.getOwnPropertyNames
+nnoremap obp OObject.getOwnPropertyNames()<esc>i
+inoremap obp Object.getOwnPropertyNames()<esc>i
+
 "open js REPL
 nnoremap zs :term node<cr>
 
@@ -37,11 +41,18 @@ nnoremap tst :term npm test<cr>
 nnoremap tu :term npm test -- -u<cr>
 
 " tidy up - ' to ", remove ending ;, respace
-nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==
+"nnoremap td  :%s/'/"/g<cr>:%s/;$//g<cr>==
 
+" variation on tidy up for ts - " to '
+nnoremap td  :%s/"/'/g<cr>==
+
+" import
+nnoremap ii iimport<space>{ }<space>from ''<esc>9h
+inoremap ii import<space>{ }<space>from '';<esc>9h
+
+" const
 nnoremap cc iconst<space>
 inoremap cc const<space>
-
 
 " shortcuts because cc = const
 noremap acc iacc<space>
@@ -50,17 +61,18 @@ inoremap acc acc<space>
 nnoremap succ isuccesful<space>
 inoremap succ succesful<space>
 
-
-" shortcuts because rr = return
+" return
 nnoremap rr ireturn<space>
 inoremap rr return<space>
 
+" shortcuts because rr = return
 nnoremap arr iarray<space>
 inoremap arr array<space>
 
 nnoremap err ierror<space>
 inoremap err error<space>
 
+inoremap curr current<space>
 
 function! Test_current_file()
   let path_to_file = expand('%')

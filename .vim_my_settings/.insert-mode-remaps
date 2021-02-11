@@ -5,6 +5,8 @@ inoremap <C-l> <esc><C-w>l
 "for the keyboardio which annoyingly doesn't have the escape where my muscle
 "memory wants it.
 inoremap <PageUp> <esc>:exec OnSaveCommands()<cr>``zz<bar>:echom expand("%") . '    saved'<cr>
+
+" similarly pagedown is where backslash should be
 inoremap <PageDown> \
 
 " semi-colon at the end of the current line in insert mode
