@@ -47,7 +47,7 @@ nnoremap tu :term npm test -- -u<cr>
 nnoremap td  :%s/"/'/g<cr>==
 
 " import
-nnoremap ii iimport<space>{ }<space>from ''<esc>9h
+nnoremap iii iimport<space>{ }<space>from ''<esc>9h
 inoremap ii import<space>{ }<space>from '';<esc>9h
 
 " const

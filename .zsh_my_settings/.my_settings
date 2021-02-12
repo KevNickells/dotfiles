@@ -1,5 +1,8 @@
+# theme stuff
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+
+# is this working though?
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
   dir
 )
@@ -10,6 +13,23 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
   time
 )
 
+function powerline_precmd() {
+    PS1="$(powerline-shell --shell zsh $?)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi
+
 # hyphen insensitive completion
 HYPHEN_INSENSITIVE="true"
 
@@ -19,7 +39,36 @@ ENABLE_CORRECTION="true"
 # red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
+# HIstory setup
 # time format
 HIST_STAMPS="dd.mm.yyyy"
 
-setopt hist_ignore_all_dups
+setopt HIST_IGNORE_ALL_DUPS
+
+# Don't save certain commands to history.
+HISTORY_IGNORE="(history|ls*|sz|zs|*test|cat*|Z"
+
+# Include time of execution within history
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
+# explicitly set the histfile - zsh might need this
+HISTFILE=~/.zsh_history
+
+# Local convenience file so I don't have to think about server addresses
+if [[ -a ~/.ip_aliases ]]; then
+    source ~/.ip_aliases
+fi
+
+# Tells me whether I need to pull
+git status -uno
+
+# see "cd_and_chill" in functions - writes last directory
+cd $(cat ~/.last_dir)
+alias ld="cd $(cat ~/.last_dir)"
+
+# source $ZSH/oh-my-zsh.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export TEXMFCNF='~/.latex_config:'
+
+
