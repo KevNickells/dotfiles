@@ -19,3 +19,5 @@
 !.gitconfig
 !.config_file_list
 !.linux_setup_notes
+
+!.disable_keyboard

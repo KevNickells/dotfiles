@@ -71,4 +71,5 @@ alias ld="cd $(cat ~/.last_dir)"
 
 export TEXMFCNF='~/.latex_config:'
 
-
+# disable the built-in keyboard when the good keyboard is connected
+sh ~/.disable_keyboard.sh

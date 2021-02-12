@@ -15,6 +15,7 @@ do
 done
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+
 # TODO up-to-date-with-lead-branch.sh - check on commit for updates to 'master' or whatever the lead branch is
 # TODO git checkout -b thing could do with quietly setting upstream
 # TODO gc (in zsh functions) - needs to include a no string option for -n and -h
