@@ -54,6 +54,8 @@ export HISTTIMEFORMAT="%d/%m/%y %T "
 # explicitly set the histfile - zsh might need this
 HISTFILE=~/.zsh_history
 
+SAVEHIST=1000
+
 # Local convenience file so I don't have to think about server addresses
 if [[ -a ~/.ip_aliases ]]; then
     source ~/.ip_aliases
