@@ -3,9 +3,10 @@
 !.vimrc
 .vim-*
 !.tmux*
+!/Snippets/*
 !/Snippets/
 !/.vim/
-/.vim/*
+!/.vim/*
 !/.vim/ftplugin/
 !/.vim/plugged/
 !/.vim/dictionaries/
