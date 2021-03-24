@@ -8,6 +8,7 @@
 !/.vim/
 !/.vim/*
 !/.vim/ftplugin/
+!/.vim/ftplugin/*
 !/.vim/plugged/
 !/.vim/dictionaries/
 !/.vim_my_settings/
