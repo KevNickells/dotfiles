@@ -82,4 +82,4 @@ function! Test_current_file()
   exec test
 endfunction
 
-nnoremap h :exec Test_current_file()<cr>
+nnoremap th :exec Test_current_file()<cr>
