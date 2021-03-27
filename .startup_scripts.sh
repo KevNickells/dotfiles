@@ -1,1 +1,10 @@
-touch this_was_created_on_startup
+terminator
+vivaldi-stable
+
+current_day=$(date +"%a")
+
+if [ "$current_day" != "Sat" ] || [ "current_day" != "Sun" ];
+then
+  teams-insiders
+fi
+
