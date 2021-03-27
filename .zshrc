@@ -36,4 +36,4 @@ source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # antibody update
 #
 # source ~/.zsh_plugins.sh
-
+export EDITOR=vim
