@@ -21,5 +21,6 @@
 !.gitconfig
 !.config_file_list
 !.linux_setup_notes
+!.startup_scripts.sh
 
 !.disable_keyboard.sh
