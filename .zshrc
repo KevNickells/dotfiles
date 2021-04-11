@@ -1,6 +1,7 @@
 # NOTE this file is sourced on closing within .vim_my_functions/.functions-and-commands
 # NOTE .git/hooks/... is where post commit hooks live
 # NOTE show running background tasks with jobs, fg % [task no]
+# NOTE see ~/.xinitrc & ~/.Xmodmap for remapping caps
 #
 # NOTE 'cannot find powerline shell' -> sudo pip install powerline-shell
 
