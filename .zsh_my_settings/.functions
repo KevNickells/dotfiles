@@ -100,41 +100,6 @@ function git_add_commit_push {
 done
 }
 
-function run_hoglet {
-    cd ~/hoglet_server
-    python -m venv env
-    source ./env/bin/activate
-    pip install -r requirements.txt
-    setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
-    sh scripts/start-server.sh &
-    cd ~/hoglet
-    npm start &
-    echo 'hoglet - client / backend servers started'
-    cd ~/hoglet/hoglet-client/src
-}
-
-function run_wombat {
-    cd ~/wombat
-    setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
-    npm start
-}
-
-function run {
-    while getopts "w:h:" opt
-    do
-        case $opt in
-            w) run_wombat
-                ;;
-            h) run_hoglet
-                ;;
-        esac
-    done
-    if (( $OPTIND == 1 ))
-    then
-        echo "-w -> wombat\n-h -> hoglet"
-    fi
-}
-
 # self explanatory name
 function mkdir_and_cd {
     INPUT=$1
@@ -233,7 +198,7 @@ function git_checkout_and_switch_to_branch {
 function git_clean_branches {
   cleanup=$(git branch \
     | grep -v "master" \
-    | grep -v "development" \
+    | grep -v "staging" \
     | xargs git branch -D
   ) 2> /dev/null
 
