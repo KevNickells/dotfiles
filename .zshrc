@@ -5,6 +5,8 @@
 #
 # NOTE 'cannot find powerline shell' -> sudo pip install powerline-shell
 
+xmodmap ~/.xmodmap
+
 # Who knows whwat this does? I certainly can't remember
 DISPLAY=:0
 
