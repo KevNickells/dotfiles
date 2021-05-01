@@ -5,7 +5,8 @@
 #
 # NOTE 'cannot find powerline shell' -> sudo pip install powerline-shell
 
-xmodmap ~/.xmodmap
+# for when caps lock isn't mapped
+# xmodmap ~/.xmodmap
 
 # Who knows whwat this does? I certainly can't remember
 DISPLAY=:0
