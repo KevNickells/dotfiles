@@ -5,6 +5,8 @@ alias insatll=install
 alias isntall=install
 alias mdkir='mkdir'
 alias mdkri='mkdir'
+alias pus='push'
+alias branc='branch'
 
 # Because I won't remember these commands
 alias zs="vim ~/.zshrc"
