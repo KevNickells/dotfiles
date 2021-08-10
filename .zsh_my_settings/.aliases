@@ -68,3 +68,6 @@ alias grep='grep --color=auto'
 
 # nice colours for git log
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
+# displays my ip
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
