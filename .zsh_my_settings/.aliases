@@ -71,3 +71,4 @@ alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 
 # displays my ip
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+

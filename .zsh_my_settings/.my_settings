@@ -47,7 +47,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt INC_APPEND_HISTORY
 
 # Don't save certain commands to history.
-HISTORY_IGNORE="(history|ls*|sz|zs|*test|cat*|Z)"
+#HISTORY_IGNORE="(history|ls*|sz|zs|*test|cat*|Z)"
 
 # Include time of execution within history
 export HISTTIMEFORMAT="%d/%m/%y %T "
@@ -56,6 +56,7 @@ export HISTTIMEFORMAT="%d/%m/%y %T "
 HISTFILE=~/.zsh_history
 
 SAVEHIST=1000
+HISTSIZE=1000
 
 # Local convenience file so I don't have to think about server addresses
 if [[ -a ~/.ip_aliases ]]; then
