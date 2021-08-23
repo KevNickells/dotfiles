@@ -19,7 +19,7 @@ nnoremap tst :term pytest -x --disable-warnings<cr>
 
 function! Test_current_file()
   let path_to_file = expand('%:p')
-  let test = ':term pytest ' . path_to_file
+  let test = ':term pytest ' . path_to_file . ' -v'
   exec test
 endfunction
 
