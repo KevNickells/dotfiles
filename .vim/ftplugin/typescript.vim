@@ -7,3 +7,4 @@ nnoremap zs :term ts-node<cr>
 " class
 nnoremap <leader>c :r<space>~/Snippets/classTypescript.ts<cr>
 
+
