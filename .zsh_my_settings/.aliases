@@ -61,6 +61,7 @@ alias dup="docker-compose up"
 alias prs="python ~/PR-selector/update_PR.py"
 alias gcb="git_checkout_and_switch_to_branch"
 alias gcl="git_clean_branches"
+alias dst="docker_stop_instance"
 
 
 # Nice colours for grep

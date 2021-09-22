@@ -210,4 +210,13 @@ function git_clean_branches {
   fi
 }
 
+function docker_stop_instance {
+  { docker stop $1 &> /dev/null &&
+    docker container rm $1 &> /dev/null &&
+    echo "stopped $1"
+  } || {
+    echo "already stopped $1"
+  }
+}
+
 
