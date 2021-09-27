@@ -1,4 +1,4 @@
-#Because who needs to type accurately?
+# Because who needs to type accurately?
 alias cd..='cd ..'
 alias fidd='diff'
 alias insatll=install
@@ -54,6 +54,8 @@ alias v="open_last_git_commits_and_most_recent_directory"
 alias ..='down_n_folder'
 alias ...='cd'
 alias dockercl="docker_clean"
+alias dcl="docker_clean"
+alias dex="docker_explore_container"
 alias pips="pip_install_save"
 alias ports="find_by_port_no"
 alias killport="find_and_kill_port"
@@ -62,6 +64,8 @@ alias prs="python ~/PR-selector/update_PR.py"
 alias gcb="git_checkout_and_switch_to_branch"
 alias gcl="git_clean_branches"
 alias dst="docker_stop_instance"
+alias dps="docker_names_only"
+alias restart="reboot"
 
 
 # Nice colours for grep

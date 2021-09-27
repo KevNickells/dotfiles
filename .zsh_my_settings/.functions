@@ -1,4 +1,26 @@
+#------------------------------------------------------------------------------
+# python functions
 
+function pip_install_save {
+    sudo pip install $1 && pip freeze | grep $1 >> requirements.txt
+}
+
+#------------------------------------------------------------------------------
+# zsh functions
+
+# powerline bits...
+function powerline_precmd() {
+    PS1="$(powerline-shell --shell zsh $?)"
+}
+
+function install_powerline_precmd() {
+    for s in "${precmd_functions[@]}"; do
+        if [ "$s" = "powerline_precmd" ]; then
+            return
+        fi
+    done
+    precmd_functions+=(powerline_precmd)
+}
 
 #at work or at home, change file opening program
 COMPUTER_NAME=$(uname -n)
@@ -12,16 +34,80 @@ function exiter {
     exit echo
 }
 
+# self explanatory name
+function mkdir_and_cd {
+    INPUT=$1
+    mkdir $1 && cd $1
+}
+
+# go down n folders; go down one if noe value given
+    function down_n_folder {
+        if [ -n "$1" ]; then
+            for n in {1..$1}
+            do
+                cd ../
+            done
+        else
+            cd ../
+        fi
+    }
+
+# change directory / store last directory
+function cd_and_chill {
+    \cd $1
+    echo $(pwd) > ~/.last_dir
+}
+function tree() {
+  folders=$(find .)
+
+  echo $folders | sed -e 's/\s/\n/g' > .tree
+
+  while read line; do
+    nested_folder_count=$(echo $line | tr -cd '/' | wc -c)
+    indents=$(seq -s "\t" $nested_folder_count | sed 's/[0-9]//g')
+    tabs 2
+    echo -e $indents$line
+  done < .tree
+  rm .tree
+}
+
+function find_by_port_no {
+  sudo netstat -tulpn | grep -w $1
+}
+
+function find_and_kill_port {
+  port_details=$(find_by_port_no $1)
+  echo $port_details
+
+  if [ -n "$port_details" ]; then
+    process_no=$(echo $port_details \
+      | sed 's/\/.\+$//g' \
+      | sed 's/.\+[[:space:]]//g')
+
+    sudo kill $process_no
+    echo "killed port $1, process no: $process_no"
+    echo "Port details were: $port_details"
+  else
+    echo "nothing found on port $1"
+  fi
+}
+
+function find_in_history {
+  history | grep $1
+}
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi
+
+
+#------------------------------------------------------------------------------
+# git functions
+
+
 # open recent files
 function open_last_git_commits_and_most_recent_directory {
     cd $(git rev-parse --show-toplevel)
     vim $(grf)
-}
-
-function docker_clean {
-  docker stop $(docker ps -a -q)
-  docker rm $(docker ps -a -q)
-  docker rmi $(docker images -q)
 }
 
 function git_options {
@@ -102,94 +188,10 @@ function git_add_commit_push {
 done
 }
 
-# self explanatory name
-function mkdir_and_cd {
-    INPUT=$1
-    mkdir $1 && cd $1
-}
-
-# go down n folders; go down one if noe value given
-    function down_n_folder {
-        if [ -n "$1" ]; then
-            for n in {1..$1}
-            do
-                cd ../
-            done
-        else
-            cd ../
-        fi
-    }
-
 # git branch as inline text
 function git_brancher {
     echo $(git branch -a) | tr " " \\n
 }
-
-# change directory / store last directory
-function cd_and_chill {
-    \cd $1
-    echo $(pwd) > ~/.last_dir
-}
-
-# powerline bits...
-function powerline_precmd() {
-    PS1="$(powerline-shell --shell zsh $?)"
-}
-
-function install_powerline_precmd() {
-    for s in "${precmd_functions[@]}"; do
-        if [ "$s" = "powerline_precmd" ]; then
-            return
-        fi
-    done
-    precmd_functions+=(powerline_precmd)
-}
-
-function tree() {
-  folders=$(find .)
-
-  echo $folders | sed -e 's/\s/\n/g' > .tree
-
-  while read line; do
-    nested_folder_count=$(echo $line | tr -cd '/' | wc -c)
-    indents=$(seq -s "\t" $nested_folder_count | sed 's/[0-9]//g')
-    tabs 2
-    echo -e $indents$line
-  done < .tree
-  rm .tree
-}
-
-function pip_install_save {
-    sudo pip install $1 && pip freeze | grep $1 >> requirements.txt
-}
-
-function find_by_port_no {
-  sudo netstat -tulpn | grep -w $1
-}
-
-function find_and_kill_port {
-  port_details=$(find_by_port_no $1)
-  echo $port_details
-
-  if [ -n "$port_details" ]; then
-    process_no=$(echo $port_details \
-      | sed 's/\/.\+$//g' \
-      | sed 's/.\+[[:space:]]//g')
-
-    sudo kill $process_no
-    echo "killed port $1, process no: $process_no"
-    echo "Port details were: $port_details"
-  else
-    echo "nothing found on port $1"
-  fi
-}
-
-function find_in_history {
-  history | grep $1
-}
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
-fi
 
 function git_checkout_and_switch_to_branch {
   git pull
@@ -209,6 +211,14 @@ function git_clean_branches {
     echo "nothing to cleanup"
   fi
 }
+#------------------------------------------------------------------------------
+#docker functions
+
+function docker_clean {
+  docker stop $(docker ps -a -q)
+  docker rm $(docker ps -a -q) -f
+  docker rmi $(docker images -q) -f
+}
 
 function docker_stop_instance {
   { docker stop $1 &> /dev/null &&
@@ -219,4 +229,11 @@ function docker_stop_instance {
   }
 }
 
+function docker_names_only {
+  docker ps --format "{{.Names}}\t{{.Status}}"
+}
+
+function docker_explore_container {
+  docker exec -it $1 /bin/bash
+}
 
