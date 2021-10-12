@@ -23,7 +23,6 @@ alias o="open_this_folder"
 alias b="xdg-open"
 alias c="clear"
 alias cath="head -10"
-alias dcu="docker-compose up"
 
 # shortcut for history | grep 'string'
 alias f="find_in_history"
@@ -53,9 +52,6 @@ alias rf="rm -rf"
 alias v="open_last_git_commits_and_most_recent_directory"
 alias ..='down_n_folder'
 alias ...='cd'
-alias dockercl="docker_clean"
-alias dcl="docker_clean"
-alias dex="docker_explore_container"
 alias pips="pip_install_save"
 alias ports="find_by_port_no"
 alias killport="find_and_kill_port"
@@ -67,6 +63,12 @@ alias dst="docker_stop_instance"
 alias dps="docker_names_only"
 alias restart="reboot"
 
+# docker
+alias dockercl="docker_clean"
+alias dcu="docker-compose up"
+alias dcl="docker_clean"
+alias dex="docker_explore_container"
+alias dim='docker images --format "{{.Repository}}"'
 
 # Nice colours for grep
 alias grep='grep --color=auto'
