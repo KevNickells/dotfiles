@@ -213,13 +213,13 @@ function git_clean_branches {
 }
 #------------------------------------------------------------------------------
 #docker functions
-#
+
 
 function docker_clean {
   docker stop $(docker ps -a -q) &> /dev/null || true
   docker rm $(docker ps -a -q) -f &> /dev/null || true
 
-  GENERIC_DOCKER_IMAGES=('ubuntu' 'python' 'node')
+  GENERIC_DOCKER_IMAGES=('ubuntu' 'python' 'node' 'centos')
   TO_IGNORE='IMAGE'$(sed -E 's/^| /|/g' <<< "$GENERIC_DOCKER_IMAGES")
 
   TO_REMOVE=($(docker images | grep -v -E 'ubuntu|python|IMAGE' | awk -F" " '{print $3}'))
