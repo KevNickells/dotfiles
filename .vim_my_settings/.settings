@@ -61,6 +61,9 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
+" bats is a *sh testing framework
+autocmd BufRead, BufNewFile *.bats set filetype=zsh
+
 " keeps buffers open in the background
 set hidden
 
