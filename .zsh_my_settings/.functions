@@ -57,6 +57,7 @@ function cd_and_chill {
     \cd $1
     echo $(pwd) > ~/.last_dir
 }
+
 function tree() {
   folders=$(find .)
 
@@ -95,6 +96,16 @@ function find_and_kill_port {
 function find_in_history {
   history | grep $1
 }
+
+function perl_regex {
+  local stdin
+  read -d '' -u 0 piped;
+
+  regex=$1
+
+  echo $piped | perl -pe $regex
+}
+
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
@@ -113,7 +124,7 @@ function open_last_git_commits_and_most_recent_directory {
 function git_options {
     while getopts "a:h:n:s:" opt
     do
-        case $opt in
+       case $opt in
             a) git_commit_push $OPTARG
                 ;;
             h) echo  "options are:
@@ -212,7 +223,7 @@ function git_clean_branches {
   fi
 }
 #------------------------------------------------------------------------------
-#docker functions
+# docker functions
 
 function docker_clean {
   docker stop $(docker ps -a -q) &> /dev/null || true
@@ -244,5 +255,10 @@ function docker_names_only {
 
 function docker_explore_container {
   docker exec -it $1 /bin/bash
+}
+
+# returns the most recent healthcheck output for input container name
+function healthcheck {
+  docker inspect $1 | jq '.[0].State.Health.Log[0].Output'
 }
 
