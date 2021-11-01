@@ -5,6 +5,10 @@ function pip_install_save {
     sudo pip install $1 && pip freeze | grep $1 >> requirements.txt
 }
 
+function python_generate_coverage {
+  (yes | rm htmlcov/*) && pytest -v --cov=$(pwd) --cov-report html
+}
+
 #------------------------------------------------------------------------------
 # zsh functions
 

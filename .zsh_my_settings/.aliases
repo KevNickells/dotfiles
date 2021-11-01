@@ -48,6 +48,7 @@ alias mkdircd="mkdir_and_cd"
 alias py="python3"
 alias pytest="pytest -rs"
 alias python="python3"
+alias pycov="python_generate_coverage"
 alias rf="rm -rf"
 alias v="open_last_git_commits_and_most_recent_directory"
 alias ..='down_n_folder'
