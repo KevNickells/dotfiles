@@ -6,13 +6,13 @@
 # NOTE 'cannot find powerline shell' -> sudo pip install powerline-shell
 
 # for when caps lock isn't mapped
-if [ -z $(xmodmap -pke | grep 66 | grep Escape) ];
+
+escape_mapped=$(xmodmap -pke | grep 66 | grep Escape)
+
+if [ -z $escape_mapped ];
 then
   xmodmap ~/.xmodmap
 fi
-
-#keycode  66 = Escape NoSymbol Escape
-
 
 # Who knows whwat this does? I certainly can't remember
 DISPLAY=:0
