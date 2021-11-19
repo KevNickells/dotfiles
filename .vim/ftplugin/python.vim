@@ -2,10 +2,6 @@ nnoremap <leader>c :r<space>~/Snippets/classPython.py<cr>
 nnoremap <leader>t :r<space>~/Snippets/testPython.py<cr>
 nnoremap <leader>f :r<space>~/Snippets/functionPython.py<cr>
 
-"Debugger TODO DRY
-"nnoremap db :r<space>~/Snippets/debuggerPython.py<cr>
-"inoremap db :r<space>~/Snippets/debuggerPython.py<cr>
-
 " logging
 nnoremap csl Oprint()<esc>i
 inoremap csl print()<esc>i

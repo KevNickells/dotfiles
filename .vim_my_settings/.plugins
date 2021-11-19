@@ -11,7 +11,8 @@ Plug 'mxw/vim-jsx'                      " jsx syntax highlighting
 Plug 'gabrielelana/vim-markdown'        " markdown
 Plug 'tpope/vim-fugitive'               " git an ting
 Plug 'chrisbra/csv.vim'                 " CSV reader
-Plug 'docker/docker'                 " CSV reader
+Plug 'docker/docker'                    " ...docker?
+Plug 'syntastic/shellcheck'             " sh files
 
 call plug#end()
 

@@ -261,6 +261,10 @@ function docker_explore_container {
   docker exec -it $1 /bin/bash
 }
 
+function docker_network_name {
+  docker inspect $1 | jq '.[0].NetworkSettings.Networks' | jq 'keys[0]'
+}
+
 # returns the most recent healthcheck output for input container name
 function healthcheck {
   docker inspect $1 | jq '.[0].State.Health.Log[0].Output'

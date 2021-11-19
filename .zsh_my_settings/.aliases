@@ -70,6 +70,7 @@ alias dcu="docker-compose up"
 alias dcl="docker_clean"
 alias dex="docker_explore_container"
 alias dim='docker images --format "{{.Repository}}"'
+alias dn='docker_network_name'
 
 # Nice colours for grep
 alias grep='grep --color=auto'
