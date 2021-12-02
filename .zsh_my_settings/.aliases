@@ -84,3 +84,5 @@ alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 # can never remember perl regex syntax
 alias rgx="perl_regex"
 
+# side by side diff
+alias dff="side_by_side_diff"

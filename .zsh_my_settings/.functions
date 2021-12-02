@@ -114,6 +114,9 @@ if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
 
+function side_by_side_diff  {
+  diff $1 $2 -y --width=$COLUMNS --suppress-common-lines
+}
 
 #------------------------------------------------------------------------------
 # git functions
