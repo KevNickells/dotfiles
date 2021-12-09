@@ -191,3 +191,6 @@ nnoremap <leader>2 :set shiftwidth=2
 
 " Although I should probably stop using NERDTree...
 nnoremap <leader>z :NERDTree<cr>
+
+" go to beginning of the line
+nnoremap B 0
