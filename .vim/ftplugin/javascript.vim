@@ -5,11 +5,11 @@ set complete+=k~/.vim/dictionaries/.javascriptReactDictionary
 nnoremap <leader>c :r<space>~/Snippets/classJavascript.js<cr>
 nnoremap <leader>f :r<space>~/Snippets/functionJavascript.js<cr>
 nnoremap <leader>m :r<space>~/Snippets/methodJavascript.js<cr>
+nnoremap <leader>s :r<space>~/Snippets/switchJavaScript.js<cr>
+nnoremap <leader>r :r<space>~/Snippets/reduceJavaScript.js<cr>
 nnoremap <leader>t :r<space>~/Snippets/testJavascript.js<cr>
 nnoremap <leader>tt :r<space>~/Snippets/shortTestJavascript.js<cr>
-nnoremap <leader>t :r<space>~/Snippets/testJavascript.js<cr>
 nnoremap <leader>cr :r<space>~/Snippets/reactClassJavascript.js<cr>
-nnoremap <leader>r :r<space>~/Snippets/reduceJavaScript.js<cr>
 nnoremap <leader>re :r<space>~/Snippets/reducerJavaScript.js<cr>
 nnoremap <leader>ac :r<space>~/Snippets/actionJavaScript.js<cr>
 nnoremap <leader>ms :r<space>~/Snippets/mapStateToPropsJavaScript.js<cr>
