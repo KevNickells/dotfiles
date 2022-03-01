@@ -45,6 +45,7 @@ alias lg="ls --color=auto && gst"
 alias ll="ls -lhA"
 alias killjobs="kill ${${(v)jobstates##*:*:}%=*}"
 alias mkdircd="mkdir_and_cd"
+alias ngs="ng serve"
 alias py="python3"
 alias pytest="pytest -rs"
 alias python="python3"
@@ -86,3 +87,4 @@ alias rgx="perl_regex"
 
 # side by side diff
 alias dff="side_by_side_diff"
+
