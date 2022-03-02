@@ -14,6 +14,13 @@ then
   xmodmap ~/.xmodmap
 fi
 
+
+yellow='\e[0;33m'
+ripgrep &>/dev/null
+
+[ $? = 127 ] && echo -e "${yellow}install ripgrep https://github.com/BurntSushi/ripgrep#installation"
+
+
 # Who knows whwat this does? I certainly can't remember
 DISPLAY=:0
 
