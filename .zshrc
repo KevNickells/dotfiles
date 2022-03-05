@@ -16,7 +16,7 @@ fi
 
 
 yellow='\e[0;33m'
-ripgrep &>/dev/null
+rg &>/dev/null
 
 [ $? = 127 ] && echo -e "${yellow}install ripgrep https://github.com/BurntSushi/ripgrep#installation"
 
