@@ -30,7 +30,7 @@ function install_powerline_precmd() {
 COMPUTER_NAME=$(uname -n)
 
 function open_this_folder {
-    dolphin $1 &
+    xdg-open $1 &
 }
 
 # Just so tired of that extra keypress
