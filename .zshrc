@@ -6,13 +6,7 @@
 # NOTE 'cannot find powerline shell' -> sudo pip install powerline-shell
 
 # for when caps lock isn't mapped
-
-escape_mapped=$(xmodmap -pke | grep 66 | grep Escape)
-
-if [ -z $escape_mapped ];
-then
-  xmodmap ~/.xmodmap
-fi
+xmodmap ~/.xmodmap
 
 
 yellow='\e[0;33m'

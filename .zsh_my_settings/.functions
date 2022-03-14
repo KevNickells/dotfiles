@@ -12,6 +12,12 @@ function python_generate_coverage {
 #------------------------------------------------------------------------------
 # zsh functions
 
+# tunnel to jenkins at work
+function open_jenkins() {
+  ssh -L 8080:localhost:8080 jenkins &
+  xdg-open http://localhost:8080
+}
+
 # powerline bits...
 function powerline_precmd() {
     PS1="$(powerline-shell --shell zsh $?)"

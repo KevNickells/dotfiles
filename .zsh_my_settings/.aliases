@@ -23,7 +23,6 @@ alias o="open_this_folder"
 alias b="xdg-open"
 alias c="clear"
 alias cath="head -10"
-alias work="cd ~/RAP"
 
 # shortcut for history | grep 'string'
 alias f="find_in_history"
@@ -88,4 +87,8 @@ alias rgx="perl_regex"
 
 # side by side diff
 alias dff="side_by_side_diff"
+
+# work specific
+alias work="cd ~/RAP"
+alias jenkins="ssh -L 8080:localhost:8080 jenkins"
 
