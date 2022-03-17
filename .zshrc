@@ -8,6 +8,9 @@
 # for when caps lock isn't mapped
 xmodmap ~/.xmodmap
 
+[ -z "$(vim --version | grep '\+clipboard')" ] && \
+  echo "System clipboard not installed - for Manjaro, install gvim"
+
 
 yellow='\e[0;33m'
 rg &>/dev/null
