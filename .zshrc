@@ -2,8 +2,12 @@
 # NOTE .git/hooks/... is where post commit hooks live
 # NOTE show running background tasks with jobs, fg % [task no]
 # NOTE see ~/.xinitrc & ~/.Xmodmap for remapping caps
-#
 # NOTE 'cannot find powerline shell' -> sudo pip install powerline-shell
+# NOTE - fold all lines
+#   fold including          -> :g/xxx/fo
+#   fold not including      -> :g!/xxx/fo
+#   open fold including     -> :g/xxx/foldo
+#   open fold not including -> :g!/xxx/foldo
 
 # for when caps lock isn't mapped
 xmodmap ~/.xmodmap

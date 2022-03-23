@@ -29,6 +29,7 @@ set smartcase
 " Because apparently by default backspace doesn't do what you'd expect
 set backspace=indent,eol,start
 
+
 "------------------ End obvious stuff
 
 " vim preferentially creates a new file, rather than updating the existing one.
@@ -60,6 +61,9 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
+
+" Dunno why this would be anything other than 0 but it sometimes is apparently
+set foldminlines=0
 
 " bats is a *sh testing framework
 autocmd BufRead, BufNewFile *.bats set filetype=zsh

@@ -1,7 +1,6 @@
 # theme stuff
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-
 # is this working though?
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
   dir
