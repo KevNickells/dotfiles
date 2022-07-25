@@ -8,7 +8,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 " Vim folder to match shell folder on open
-exec "cd" . system("cat ~/.last_dir")
+" exec "cd" . system("cat ~/.last_dir")
 
 " leader key; needs to be set firstwise
 let mapleader = ","

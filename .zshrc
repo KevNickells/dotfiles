@@ -11,10 +11,16 @@
 
 # for when caps lock isn't mapped
 xmodmap ~/.xmodmap
+# also may need to add the following to ~/.xinitrc
+#xmodmap -e "clear lock"
+#xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
+#xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+#
+
+alias az=azure-cli-johanburati
 
 [ -z "$(vim --version | grep '\+clipboard')" ] && \
   echo "System clipboard not installed - for Manjaro, install gvim"
-
 
 yellow='\e[0;33m'
 rg &>/dev/null
@@ -51,3 +57,5 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+[ -f "/home/kev/.ghcup/env" ] && source "/home/kev/.ghcup/env" # ghcup-env

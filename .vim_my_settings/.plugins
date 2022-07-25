@@ -1,19 +1,17 @@
 call plug#begin('~/.vim/plugged')
-Plug 'w0rp/ale'                         " Linter
-Plug 'scrooloose/nerdtree'              "File browser
-Plug 'scheakur/vim-scheakur'            " colour scheme
+Plug 'w0rp/ale'                           " Linter
+Plug 'scrooloose/nerdtree'                "File browser
+Plug 'scheakur/vim-scheakur'              " colour scheme
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'                 "Fuzzy finder
-Plug 'junegunn/goyo.vim'                " Writing aid
-Plug 'altercation/vim-colors-solarized' " More colour schemes
-Plug 'pangloss/vim-javascript'          " javscript ting
-Plug 'mxw/vim-jsx'                      " jsx syntax highlighting
-Plug 'gabrielelana/vim-markdown'        " markdown
-Plug 'tpope/vim-fugitive'               " git an ting
-Plug 'chrisbra/csv.vim'                 " CSV reader
-Plug 'docker/docker'                    " ...docker?
-Plug 'syntastic/shellcheck'             " sh files
-Plug 'Chiel92/vim/autoformat'           " for HTML etc
+Plug 'junegunn/fzf.vim'                   "Fuzzy finder
+Plug 'junegunn/goyo.vim'                  " Writing aid
+Plug 'altercation/vim-colors-solarized'   " More colour schemes
+Plug 'pangloss/vim-javascript'            " javscript ting
+Plug 'mxw/vim-jsx'                        " jsx syntax highlighting
+Plug 'gabrielelana/vim-markdown'          " markdown
+Plug 'tpope/vim-fugitive'                 " git an ting
+Plug 'chrisbra/csv.vim'                   " CSV reader
+Plug 'docker/docker'                      " ...docker?
+Plug 'drgarcia1986/python-compilers.vim'  " linter
 
 call plug#end()
-

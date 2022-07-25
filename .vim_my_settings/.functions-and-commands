@@ -1,7 +1,7 @@
 function! LaTeX_compile_and_open()
-    let current_file = expand('%:r')
+   let current_file = expand('%:r')
     let compile = '!xelatex ' . current_file . '.tex'
-    silent exec compile
+   silent exec compile
     exec ':e!'
     echo 'pdf compiled'
 endfunction

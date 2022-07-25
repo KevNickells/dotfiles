@@ -33,7 +33,7 @@ alias cd="cd_and_chill" # allows for opening most recent folder with  each new i
 
 alias ga="git add"
 alias gb="git_brancher"
-alias gc="git_options"
+alias c="git_options"
 
 # alias gdf="git difftool"
 alias gp="git pull --recurse-submodules"
@@ -45,7 +45,8 @@ alias lg="ls --color=auto && gst"
 alias ll="ls -lhA"
 alias killjobs="kill ${${(v)jobstates##*:*:}%=*}"
 alias mkdircd="mkdir_and_cd"
-alias ngs="npm run optimised_serve"
+#alias ngs="npm run NG_PERSISTENT_BUILD_CACHE=1 && node --max_old_space_size=8096 ./node_modules/@angular/cli/bin/ng serve",
+alias ngs="ng serve"
 alias py="python3"
 alias pytest="pytest -rs"
 alias python="python3"
@@ -63,7 +64,7 @@ alias gcl="git_clean_branches"
 alias restart="reboot"
 alias update="sudo pacman -Syyu"
 
-# docker
+# docke
 alias dst="docker_stop_instance"
 alias dps="docker_names_only"
 alias dup="docker-compose up"

@@ -88,18 +88,12 @@ nnoremap ddd dG
 " quit without saving
 nnoremap qqq :q!<cr>
 
-" DRY for the below
-function! FullFilePath()
-  let @*=expand("%")
-endfunction
-
 
 "Copy full filepath to clipboard & display
-nnoremap <silent> <leader>cp :call FullFilePath()<bar>:echo@*<cr>
-
+nnoremap <silent> <leader>cp :let @+=expand("%")<cr>:echo @+<cr>
 
 "Copy filename only to clipboard & display
-nnoremap <silent> <leader>cf :let @*=expand("%:t")<cr>:echo @*<cr>
+nnoremap <silent> <leader>cf :let @+=expand("%:t")<cr>:echo @+<cr>
 
 " DRY for the below
 function! CurrentFolder()
@@ -147,7 +141,10 @@ nnoremap 000 :set tw=0<cr>
 nnoremap yw yW
 
 " open a shell in-window
-nnoremap ss :term zsh<cr>
+nnoremap ss :term nu<cr>
+
+" open a nushell in-window
+nnoremap ns : term nu<cr>
 
 " I don't remember ever going to the end of the file and not wanting to be at the end end
 nnoremap G G$

@@ -29,8 +29,12 @@ set smartcase
 " Because apparently by default backspace doesn't do what you'd expect
 set backspace=indent,eol,start
 
+" gives a count when searching for a thing in a file
+set shortmess-=S
+
 
 "------------------ End obvious stuff
+"
 
 " vim preferentially creates a new file, rather than updating the existing one.
 " this is normally not a problem but apparently is with Docker bindings. The
@@ -101,3 +105,5 @@ augroup numbertoggle
     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
     autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
+
+let g:tidal_target = "terminal"
