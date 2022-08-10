@@ -54,7 +54,7 @@ nnoremap <leader>}} l0i{<esc>A}<esc>
 nnoremap <leader>{{ l0i{<esc>A}<esc>
 
 " text search in open buffers; defined in .vim-functions-and-commands [probably]
-nnoremap <Leader>b :FZFLines<cr>
+nnoremap <Leader>b FZFLines<cr>
 
 "remap fzf to tt
 nnoremap tt :Find<Space>
