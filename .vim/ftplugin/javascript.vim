@@ -1,5 +1,5 @@
 set complete+=k~/.vim/dictionaries/.javascriptBasicDictionary
-set complete+=k~/.vim/dictionaries/.javascriptReactDictionary
+"set complete+=k~/.vim/dictionaries/.javascriptReactDictionary
 
 " Snippets for common javascript things
 nnoremap <leader>c :r<space>~/Snippets/classJavascript.js<cr>

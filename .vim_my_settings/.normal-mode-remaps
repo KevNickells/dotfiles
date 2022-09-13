@@ -1,4 +1,4 @@
-"escape twice to save; strip whitespace from end of line; remove 2 consecutive newlines; displays current filepath (see vim_my_settings/.functions-and-commands
+
 nnoremap <silent> <Esc><Esc> :exec OnSaveCommands()<cr>``zz<bar>:echom expand("%") . '    saved'<cr>
 
 "as above
@@ -140,11 +140,12 @@ nnoremap 000 :set tw=0<cr>
 " yank whole word rather than to hyphen-y things
 nnoremap yw yW
 
-" open a shell in-window
-nnoremap ss :term nu<cr>
 
 " open a nushell in-window
 nnoremap ns : term nu<cr>
+
+" open shell
+nnoremap ss :term <cr>
 
 " I don't remember ever going to the end of the file and not wanting to be at the end end
 nnoremap G G$
