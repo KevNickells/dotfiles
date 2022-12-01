@@ -88,6 +88,8 @@ nnoremap ddd dG
 " quit without saving
 nnoremap qqq :q!<cr>
 
+"delete character currently under the cursor
+nnoremap dc :call Delete_character_under_cursor()<cr>
 
 "Copy full filepath to clipboard & display
 nnoremap <silent> <leader>cp :let @+=expand("%")<cr>:echo @+<cr>

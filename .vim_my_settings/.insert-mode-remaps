@@ -1,3 +1,4 @@
+
 " move between buffers with ctrl+l/ h
 inoremap <C-h> <esc><C-w>h
 inoremap <C-l> <esc><C-w>l
@@ -10,6 +11,9 @@ inoremap <PageUp> \|
 
 " semi-colon at the end of the current line in insert mode
 inoremap ;; <esc>A;<esc>
+
+" arrow arrow / the containers and the drivers
+inoremap >> --><space>
 
 " drop down for config things.
 inoremap <C-a> <C-R>=ConfigDropdown()<CR>

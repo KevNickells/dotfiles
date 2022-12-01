@@ -114,6 +114,13 @@ function! Run_here()
     exec ':term sh' . dir
 endfunction
 
+" delete all characters under cursor
+function! Delete_character_under_cursor()
+  exec 'normal! "ayl'
+  let current_character = getreg("a")
+  exec '%s/' . current_character . '//g'
+endfunction
+
 
 " functions from elsewhere (ie, I don't know what they do)
 command! FZFLines call fzf#run({
