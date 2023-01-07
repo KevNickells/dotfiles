@@ -83,3 +83,5 @@ function! Test_current_file()
 endfunction
 
 nnoremap th :exec Test_current_file()<cr>
+
+

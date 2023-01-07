@@ -85,6 +85,11 @@ function! s:buffer_lines()
   return res
 endfunction
 
+function! ReplaceFromGeneralRegister()
+  let replace = input('Replace ' . @" . 'with: ')
+  exec '%s/' . @" . '/' . replace . '/g'
+endfunction
+
 function! FindAndReplace()
   let find = input('Find: ')
   let replace = input('Replace: ')

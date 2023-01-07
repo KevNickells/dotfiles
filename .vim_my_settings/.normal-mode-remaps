@@ -32,6 +32,7 @@ nnoremap <leader>sv :w<cr>:source $MYVIMRC<cr><esc>:bdelete<cr>
 nnoremap == ggvG==<esc>2<C-o>
 
 "Surround current word in ...
+" TODO refactor into function that takes a character
 nnoremap <leader>" lbi"<esc>ea"<esc>
 nnoremap <leader>" lb<esc>i"<esc>ea"<esc>v
 nnoremap <leader>' lbi'<esc>ea'<esc>
@@ -91,6 +92,10 @@ nnoremap qqq :q!<cr>
 "delete character currently under the cursor
 nnoremap dc :call Delete_character_under_cursor()<cr>
 
+" replace for item in register - useful for non-printing characters
+" Does nearly the same as the above
+nnoremap rg :exec ReplaceFromGeneralRegister()<cr>
+
 "Copy full filepath to clipboard & display
 nnoremap <silent> <leader>cp :let @+=expand("%")<cr>:echo @+<cr>
 
@@ -142,7 +147,6 @@ nnoremap 000 :set tw=0<cr>
 " yank whole word rather than to hyphen-y things
 nnoremap yw yW
 
-
 " open a nushell in-window
 nnoremap ns : term nu<cr>
 
@@ -177,11 +181,11 @@ nnoremap gf :call Whoop_there_it_is()<cr>
 nnoremap <C-o> <C-o>zz
 nnoremap <C-i> <C-i>zz
 
-" bring up the config dropdown (which currently doesn't work)
+" bring up the config dropdown
 nnoremap <C-a> i<C-a>
 
 " Cycle replacing instances of this word
-nnoremap rw :call Cycle_replace()<cr>
+"nnoremap rw :call Cycle_replace()<cr>
 
 " Execute here (presupposes executable as sh)
 nnoremap rh :call Run_here()<cr>
