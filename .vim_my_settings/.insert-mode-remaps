@@ -3,6 +3,9 @@
 inoremap <C-h> <esc><C-w>h
 inoremap <C-l> <esc><C-w>l
 
+" arrows
+inoremap >> -->
+
 " pagedown is where backslash should be
 inoremap <PageDown> \
 
