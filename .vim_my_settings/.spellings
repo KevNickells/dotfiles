@@ -1,4 +1,3 @@
-
 "words I can't spell. iab == iabbrev
 
 iab aboslute absolute
@@ -28,6 +27,7 @@ iab Ctronoller Controller
 iab DAta data
 iab datsets datasets
 iab darw draw
+iab detial detail
 iab dispathc dispatch
 iab druation duration
 iab dvi div
@@ -35,6 +35,7 @@ iab edn end
 iab experimient experiment
 iab experimetn experiment
 iab epoxrt export
+iab flase false
 iab foudn found
 iab funciton function
 iab fucntion function
@@ -80,7 +81,6 @@ iab reutrn return
 iab rihgt right
 iab rigth right
 iab scael scale
-iab shrug ¯\_(ツ)_/¯
 iab soem some
 iab strign string
 iab stirng string
@@ -100,3 +100,8 @@ iab Wihtin Within
 iab wihtin within
 iab yeild yield
 
+" silly ones
+iab Lwaxana Lwaxana Troi, Daughter of the Fifth House, Holder of the Sacred Chalice of Rixx, Heir to the Holy Rings of Betazed
+iab shrug ¯\_(ツ)_/¯
+iab siddig Siddig El Tahir El Fadil El Siddig Abdurrahman Mohammed Ahmed Abdel Karim El Mahdi
+iab Siddig Siddig El Tahir El Fadil El Siddig Abdurrahman Mohammed Ahmed Abdel Karim El Mahdi
