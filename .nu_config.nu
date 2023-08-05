@@ -30,11 +30,29 @@ alias kub = kubectl
 alias kill = shutdown now
 alias restart = reboot
 
+# ultralist shortcuts
+def add_to_todo [to_add] {
+  ultralist add $to_add
+}
+
+def delete_from_todo [to_del] {
+  ultralist delete $to_del
+}
+
+def complete_todo [to_complete_id] {
+  ultralist complete $to_complete_id
+}
+
+alias td = ultralist list
+alias tda = add_to_todo
+alias tdd = delete_from_todo
+alias tdc = complete_todo
+# alias tdp = list_project
+
 
 def search_history [search_for] {
   history | get 'command' | where ($it | str contains $search_for)
 }
-
 
 def command_complete [] {
   notify-send "Command exited"
