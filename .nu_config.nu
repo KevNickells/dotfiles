@@ -1,3 +1,7 @@
+# show todo on startup
+echo 'Pending bitness...'
+ultralist l
+
 # you know what it is
 alias vim = nvim
 
