@@ -51,6 +51,8 @@ alias td = ultralist list
 alias tda = add_to_todo
 alias tdd = delete_from_todo
 alias tdc = complete_todo
+alias tdo = ultralist up
+alias tdu = ultralist prioritize
 # alias tdp = list_project
 
 
