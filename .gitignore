@@ -13,6 +13,8 @@
 !/.vim/dictionaries/
 !/.vim_my_settings/
 
+!/.nu_config.nu
+
 !.zshrc
 !.zsh_plugins
 !.zsh_plugins.sh
