@@ -42,6 +42,8 @@ def git_add_commit_push [message: string] {
 echo 'Pending bitness...'
 ultralist l
 
+alias pkghelp = show_package_manager_help
+
 # you know what it is
 alias vim = nvim
 
@@ -75,23 +77,66 @@ alias kill = shutdown now
 alias restart = reboot
 
 # ultralist shortcuts
-def add_to_todo [to_add] {
-  ultralist add $to_add
-}
-
-def delete_from_todo [to_del] {
-  ultralist delete $to_del
-}
-
-def complete_todo [to_complete_id] {
-  ultralist complete $to_complete_id
-}
-
 alias td = ultralist list
-alias tda = add_to_todo
-alias tdd = delete_from_todo
-alias tdc = complete_todo
+alias tda = ultralist add
+alias tdan = ultralist addnote
+alias tdd = ultralist delete
+alias tdc = ultralist complete
 alias tdo = ultralist up
 alias tdu = ultralist prioritize
-# alias tdp = list_project
+#alias tdp = ultralist list project:
 
+<<<<<<< HEAD
+=======
+
+def search_history [search_for] {
+  history | get 'command' | where ($it | str contains $search_for)
+}
+
+def command_complete [] {
+  notify-send "Command exited"
+}
+
+def docker_clean [] {
+  docker ps -a -q | lines | each {|it| docker stop $it}
+  docker ps -a -q | lines | each {|it| docker rm $it}
+  docker images -a -q | lines | each {|it| docker rmi $it -f}
+  docker network prune -f
+  # Would make sense to disinclude generic images
+}
+
+def show_package_manager_help [] {
+  echo '
+Installed package managers: Pacman, Yay, Snap
+
+Show installed:
+  pacman -Q
+  pacman -Qm
+  snap list
+
+Other help to follow...'
+}
+
+def taylor_business [] {
+  cd ~/ts/in_progress/
+  vim Kev_Nickells_-_Taylor_Swift_for_adults.tex
+}
+
+
+def jenkins [] {
+  vivaldi-stable http://localhost:8080 | ignore
+  ssh -L 8080:localhost:8080 jenkins
+}
+
+def git_add_commit_push [message: string] {
+  let status = (git status -z | into string)
+
+  echo $"adding / committing / pushing \n($status)"
+
+  git add .
+  git commit -m $message
+  git push
+}
+
+
+>>>>>>> 9b2f477 (Blah)
