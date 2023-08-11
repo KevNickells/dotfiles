@@ -15,6 +15,7 @@
 
 !/.nu_config.nu
 
+!.xmodmap
 !.zshrc
 !.zsh_plugins
 !.zsh_plugins.sh
