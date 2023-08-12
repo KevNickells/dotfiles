@@ -37,6 +37,10 @@ def git_add_commit_push [message: string] {
   git push
 }
 
+def list_by_project [project: string] {
+  ultralist list | ^grep $project
+}
+
 
 # show todo on startup
 echo 'Pending bitness...'
@@ -69,6 +73,7 @@ alias gc = git_add_commit_push # hoisting!
 # new to nu
 alias ts = taylor_business
 alias dcl = docker_clean
+alias dcu = docker-compose up
 alias dps = docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}'
 alias cmpl = command_complete
 alias hist = search_history
@@ -84,5 +89,5 @@ alias tdd = ultralist delete
 alias tdc = ultralist complete
 alias tdo = ultralist up
 alias tdu = ultralist prioritize
-#alias tdp = ultralist list project:
+alias tdp = list_by_project # bit hacky but whatevs
 
