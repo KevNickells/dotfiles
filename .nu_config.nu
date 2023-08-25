@@ -1,3 +1,7 @@
+
+# this file needs to be reeferenced in ~/.config/nushell/config.nu, eg
+# source ~/.nu_config.nu
+#
 #TODO - functions in a separate file
 def search_history [search_for] {
   history | get 'command' | where ($it | str contains $search_for)
@@ -78,7 +82,7 @@ alias dps = docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Po
 alias cmpl = command_complete
 alias hist = search_history
 alias kub = kubectl
-alias kill = shutdown now
+alias killl = shutdown now
 alias restart = reboot
 
 # ultralist shortcuts
