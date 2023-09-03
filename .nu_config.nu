@@ -1,8 +1,8 @@
-
 # this file needs to be reeferenced in ~/.config/nushell/config.nu, eg
 # source ~/.nu_config.nu
-#
-#TODO - functions in a separate file
+# TODO - functions in a separate file
+# TODO https://www.nushell.sh/book/coloring_and_theming.html - styling shell
+
 def search_history [search_for] {
   history | get 'command' | where ($it | str contains $search_for)
 }
@@ -19,12 +19,10 @@ def docker_clean [] {
   # Would make sense to disinclude generic images
 }
 
-
 def taylor_business [] {
   cd ~/ts/in_progress/
   vim Kev_Nickells_-_Taylor_Swift_for_adults.tex
 }
-
 
 def jenkins [] {
   vivaldi-stable http://localhost:8080 | ignore
@@ -45,10 +43,10 @@ def list_by_project [project: string] {
   ultralist list | ^grep $project
 }
 
-
 # show todo on startup
-echo 'Pending bitness...'
 ultralist l
+# show available updates on startup
+echo $"(ansi y)(checkupdates | length) updates available(ansi reset)"
 
 alias pkghelp = show_package_manager_help
 
