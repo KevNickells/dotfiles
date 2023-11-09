@@ -1,18 +1,7 @@
 <script>
 
 export default {
-  data() {
-  },
-  mounted() {
-  },
-  created() {
-  },
-  watch() {
-  },
-  methods: {
-  },
-  computed: {
-  }
+  data() { }, mounted() { }, created() { }, watch() { }, methods: { }, computed: { }
 }
 </script>
 

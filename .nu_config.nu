@@ -3,6 +3,9 @@
 # TODO - functions in a separate file
 # TODO https://www.nushell.sh/book/coloring_and_theming.html - styling shell
 
+$env.EDITOR = /usr/bin/nvim
+# this probably doesn't belong here
+
 def search_history [search_for] {
   history | get 'command' | where ($it | str contains $search_for)
 }
@@ -77,19 +80,31 @@ alias ts = taylor_business
 alias dcl = docker_clean
 alias dcu = docker-compose up
 alias dps = docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}'
+#comannd is complete
 alias cmpl = command_complete
 alias hist = search_history
 alias kub = kubectl
 alias killl = shutdown now
 alias restart = reboot
+alias flash = vim ~/flash-card/terms.json
 
-# ultralist shortcuts
+# just while I'm in dependency hell...
+alias npmm = npm install --save --legacy-peer-deps
+
+
+# show todos
 alias td = ultralist list
+# add to do
 alias tda = ultralist add
+# annotate todo
 alias tdan = ultralist addnote
+# delete from list
 alias tdd = ultralist delete
+# mark complete
 alias tdc = ultralist complete
+# prioritise down
 alias tdo = ultralist up
+# prioritise up
 alias tdu = ultralist prioritize
-alias tdp = list_by_project # bit hacky but whatevs
-
+# list by project
+alias tdp = list_by_project
