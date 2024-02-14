@@ -1,10 +1,12 @@
 [user]
 	name = KevT-plan
 	email = knickells@tplan.com
+[pull]
+    rebase = true
 [credential]
 	helper = store
 [core]
-	editor = vim
+	editor = nvim
 [color "push"]
   rejected = red bold reverse
 [color "status"]
@@ -12,10 +14,10 @@
   changed = red bold
   untracked = magenta bold
   branch = red bold reverse
-[diff]
-	tool = vimdiff
 [difftool]
 	prompt = false
 [alias]
 	d = difftool
 	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+[fetch]
+	prune = true

@@ -1,5 +1,4 @@
-# this file needs to be reeferenced in ~/.config/nushell/config.nu, eg
-# source ~/.nu_config.nu
+# this file needs to be reeferenced in ~/.config/nushell/config.nu, eg source ~/.nu_config.nu
 # TODO - functions in a separate file
 # TODO https://www.nushell.sh/book/coloring_and_theming.html - styling shell
 
@@ -42,9 +41,15 @@ def git_add_commit_push [message: string] {
   git push
 }
 
+def doom [] {
+  cd ~/snap/gzdoom/current/.config/gzdoom
+  gzdoom brutalv21.pk3 ./AV.WAD
+}
+
 def list_by_project [project: string] {
   ultralist list | ^grep $project
 }
+
 
 # show todo on startup
 ultralist l
@@ -87,9 +92,9 @@ alias kub = kubectl
 alias killl = shutdown now
 alias restart = reboot
 alias flash = vim ~/flash-card/terms.json
+alias gbr = ~/branches.sh
 
-# just while I'm in dependency hell...
-alias npmm = npm install --save --legacy-peer-deps
+alias ut = universal-ctags -R --exclude=node_modules --exclude=.git
 
 
 # show todos
