@@ -96,8 +96,7 @@ alias gbr = ~/branches.sh
 
 alias ut = universal-ctags -R --exclude=node_modules --exclude=.git
 
-alias r = cat ~/reminders.sh
-
+alias r = sh ~/reminders.sh
 
 # show todos
 alias td = ultralist list
