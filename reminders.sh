@@ -44,7 +44,11 @@ ${command_text}do${reset} ${body}- take right (do other) ${reset}
 ${command_text}dp${reset} ${body}- take left (do personal) ${reset}
 
 ${title}Squash commits (shrink history)${reset}
-${command_text}git reset --soft <<commit hash>>
+${command_text}git reset --hard <<commit hash>>
 git push --force${reset}
+
+${title}Squash with a new commit${reset}
+${command_text}git reset --soft <<commit hash>>
+
 
 EOF
