@@ -13,6 +13,8 @@
 !/.vim/dictionaries/
 !/.vim_my_settings/
 
+!reminders.sh
+
 !/.nu_config.nu
 
 !.xmodmap
