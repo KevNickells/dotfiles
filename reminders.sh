@@ -49,6 +49,10 @@ git push --force${reset}
 
 ${title}Squash with a new commit${reset}
 ${command_text}git reset --soft <<commit hash>>
+git push --force${reset}
+
+${title}oh-my-posh setup${reset}
+${command_text}source ~/.oh-my-posh.nu${reset}
 
 
 EOF

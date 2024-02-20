@@ -79,7 +79,6 @@ alias ngso = ng serve --open
 alias gb = git branch -a
 alias gc = git_add_commit_push # hoisting!
 
-
 # new to nu
 alias ts = taylor_business
 alias dcl = docker_clean
