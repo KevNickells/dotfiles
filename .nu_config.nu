@@ -54,7 +54,7 @@ def list_by_project [project: string] {
 # show todo on startup
 ultralist l
 # show available updates on startup
-echo $"(ansi y)(checkupdates | length) updates available(ansi reset)"
+#echo $"(ansi y)(checkupdates | length) updates available(ansi reset)"
 
 alias pkghelp = show_package_manager_help
 
