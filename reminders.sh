@@ -38,7 +38,7 @@ command_text=${dark_grey_background}${yellow_text}
 cat << EOF
 "${title}Conflict tool${reset}
 ${command_text}:DiffConflicts${reset} ${body}-> splits config file into two${reset}
-${command_text}:windo${reset} ${body}set modifiable -> allows editing on these files${reset}
+${command_text}:windo set modifiable ${reset} ${body} -> allows editing on these files${reset}
 
 ${command_text}do${reset} ${body}- take right (do other) ${reset}
 ${command_text}dp${reset} ${body}- take left (do personal) ${reset}
