@@ -43,6 +43,12 @@ ${command_text}:windo set modifiable ${reset} ${body} -> allows editing on these
 ${command_text}do${reset} ${body}- take right (do other) ${reset}
 ${command_text}dp${reset} ${body}- take left (do personal) ${reset}
 
+${title}Delete remote branch ${reset}
+${command_text}git push -d origin DELETE_THIS_BRANCH_NAME${reset}
+
+${title}show alias definition${reset}
+${command_text}help ALIAS_NAME${reset}
+
 ${title}Squash commits (shrink history)${reset}
 ${command_text}git reset --hard <<commit hash>>
 git push --force${reset}
