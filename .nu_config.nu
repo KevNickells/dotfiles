@@ -93,9 +93,12 @@ alias restart = reboot
 alias flash = vim ~/flash-card/terms.json
 alias gbr = ~/branches.sh
 
-alias ut = universal-ctags -R --exclude=node_modules --exclude=.git
+alias ut = universal-ctags -R --exclude=node_modules --exclude=.git --exclude=dist --exclude=build --exclude=coverage --exclude=public --exclude=vendor
 
 alias r = sh ~/reminders.sh
+
+# is a bash feature, might as well be an alias here
+alias time = timeit
 
 # show todos
 alias td = ultralist list

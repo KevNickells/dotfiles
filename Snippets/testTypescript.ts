@@ -1,25 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
+import { MockBuilder } from "ng-mocks";
+import { TESTTHIS } from "./LOCATION";
+import { TESTMODULE } from "./MODULELOCATION";
 
-import { HERE } from './HERE';
-
-describe('HERE', () => {
-  let component: HERE;
-  let fixture: ComponentFixture<HERE>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ HERE ]
-    })
-    .compileComponents();
-  }));
-
+describe("Test", () => {
   beforeEach(() => {
-    fixture = TestBed.createComponent(HERE);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    return MockBuilder(TESTTHIS, TESTMODULE);
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it("operate on class", () => {
+    const fixture = TestBed.createComponent(TESTTHIS);
+    expect(fixture).toBeDefined();
+    const spy = spyOn(fixture.componentInstance.showNewData, "emit");
+    fixture.componentInstance.showNewDataClicked();
+    expect(spy).toHaveBeenCalled();
   });
 });

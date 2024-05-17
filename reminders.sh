@@ -48,17 +48,17 @@ ${command_text}git push -d origin DELETE_THIS_BRANCH_NAME${reset}
 
 ${title}show alias definition${reset}
 ${command_text}help ALIAS_NAME${reset}
-
 ${title}Squash commits (shrink history)${reset}
 ${command_text}git reset --hard <<commit hash>>
 git push --force${reset}
 
-${title}Squash with a new commit${reset}
-${command_text}git reset --soft <<commit hash>>
-git push --force${reset}
+${title}disk space${reset}
+${command_text}df${reset}
 
 ${title}oh-my-posh setup${reset}
 ${command_text}source ~/.oh-my-posh.nu${reset}
 
+${title}heap space JS${reset}
+${command_text}\$env.NODE_OPTIONS = --max_old_space_size=4096; ${reset}
 
 EOF
